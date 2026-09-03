@@ -16,49 +16,61 @@ export default function Services() {
   const r = roles[activeIdx];
 
   return (
-    <section className="bg-[#20372a] text-[#edf0e7] py-[130px] scroll-mt-[90px] max-[760px]:py-[75px]" id="roles">
-      <div className="wrap">
-        <div className="eyebrow text-[#c4cdbd]">Our services</div>
-        <h2 className="max-w-[750px]">Everyday accounting.<br/>A stronger finance function.</h2>
-        
-        <div className="grid grid-cols-2 mt-[60px] border-t border-line border-l max-[760px]:mt-[40px] max-[420px]:grid-cols-1" role="group">
-          {roles.map((role, j) => {
-            const isActive = j === activeIdx;
-            return (
-              <button 
-                key={j}
-                className={`grid grid-cols-[32px_1fr_24px] items-center gap-[18px] text-left p-[30px] bg-transparent border-0 border-r border-b border-line text-inherit transition-colors duration-200 hover:bg-[#ffffff0d] max-[760px]:p-[22px_16px] max-[760px]:grid-cols-[23px_1fr_18px] max-[760px]:gap-[8px] cursor-pointer ${isActive ? 'bg-[#ffffff0d] shadow-[inset_3px_0_#cbd8c3]' : ''}`}
-                aria-pressed={isActive}
-                onClick={() => setActiveIdx(j)}
-              >
-                <span className="text-[11px] opacity-60">{String(j + 1).padStart(2, '0')}</span>
-                <span className="font-serif font-light text-[31px] leading-[1.1] max-[760px]:text-[25px]">{role.t}</span>
-                <span className="text-[23px] max-[760px]:text-[19px]" aria-hidden="true">↗</span>
-              </button>
-            );
-          })}
+    <section className="bg-forest text-forest-foreground py-28 lg:py-40 scroll-mt-[90px]" id="roles">
+      <div className="shell">
+        <div className="reveal">
+          <div className="eyebrow flex items-center gap-3 text-forest-foreground/60">
+            <span aria-hidden="true" className="inline-block size-[6px] rotate-45 bg-accent"></span>
+            Our services
+          </div>
+          <h2 className="display-lg mt-8 max-w-[16ch]">Everyday accounting.<br/>A stronger finance function.</h2>
         </div>
         
-        <div className="grid grid-cols-[1.2fr_1fr] gap-[60px] pt-[45px] max-[760px]:grid-cols-1 max-[760px]:gap-[30px] max-[760px]:pt-[32px]">
-          <div>
-            <h3 className="text-[40px] mb-[20px]">{r.t}</h3>
-            <p className="text-[#b9c6d6] text-[15px] mb-[18px]">{r.d}</p>
-            <ul className="list-none grid gap-[8px] text-[15px]">
-              {r.list.map((item, idx) => (
-                <li key={idx} className="flex"><span className="tick">✓</span>{item}</li>
-              ))}
-            </ul>
+        <div className="reveal" style={{ animationDelay: '140ms' }}>
+          <div className="grid grid-cols-2 mt-16 border-t border-hairline-light border-l max-[760px]:mt-[40px] max-[420px]:grid-cols-1" role="group">
+            {roles.map((role, j) => {
+              const isActive = j === activeIdx;
+              return (
+                <button 
+                  key={j}
+                  className={`group relative overflow-hidden grid grid-cols-[32px_1fr_24px] items-center gap-[18px] text-left p-8 lg:p-12 bg-transparent border-0 border-r border-b border-hairline-light text-inherit transition-colors duration-500 hover:bg-forest-foreground/[0.05] max-[760px]:p-[22px_16px] max-[760px]:grid-cols-[23px_1fr_18px] max-[760px]:gap-[8px] cursor-pointer ${isActive ? 'bg-forest-foreground/[0.05] shadow-[inset_3px_0_var(--color-accent)]' : ''}`}
+                  aria-pressed={isActive}
+                  onClick={() => setActiveIdx(j)}
+                >
+                  <span className="text-[11px] opacity-60 transition-colors duration-500 group-hover:text-accent/80">{String(j + 1).padStart(2, '0')}</span>
+                  <span className="font-display font-normal text-3xl leading-[1.1] max-[760px]:text-[25px]">{role.t}</span>
+                  <span className="text-2xl text-accent transition-transform duration-500 group-hover:translate-x-2 max-[760px]:text-[19px]" aria-hidden="true">→</span>
+                </button>
+              );
+            })}
           </div>
-          <div className="border-l border-line pl-[40px] grid gap-[23px] max-[760px]:border-l-0 max-[760px]:border-t max-[760px]:pl-0 max-[760px]:pt-[25px]">
+        </div>
+        
+        <div className="reveal" style={{ animationDelay: '200ms' }}>
+          <div className="grid grid-cols-[1.2fr_1fr] gap-16 pt-12 max-[760px]:grid-cols-1 max-[760px]:gap-[30px] max-[760px]:pt-[32px]">
             <div>
-              <div className="font-serif font-normal text-[28px]">{r.s1[0]}</div>
-              <div className="text-[13px] text-[#bec9bc] mt-[5px]">{r.s1[1]}</div>
+              <h3 className="font-display text-4xl font-normal mb-[20px]">{r.t}</h3>
+              <p className="text-forest-foreground/70 text-[0.95rem] leading-relaxed mb-6 max-w-lg">{r.d}</p>
+              <ul className="list-none grid gap-3 text-[1rem]">
+                {r.list.map((item, idx) => (
+                  <li key={idx} className="flex"><span className="tick text-accent">✓</span>{item}</li>
+                ))}
+              </ul>
             </div>
-            <div>
-              <div className="font-serif font-normal text-[28px]">{r.s2[0]}</div>
-              <div className="text-[13px] text-[#bec9bc] mt-[5px]">{r.s2[1]}</div>
+            <div className="border-l border-hairline-light pl-10 grid gap-6 max-[760px]:border-l-0 max-[760px]:border-t max-[760px]:pl-0 max-[760px]:pt-8">
+              <div>
+                <div className="font-display font-normal text-3xl">{r.s1[0]}</div>
+                <div className="text-[0.9rem] text-forest-foreground/60 mt-2">{r.s1[1]}</div>
+              </div>
+              <div>
+                <div className="font-display font-normal text-3xl">{r.s2[0]}</div>
+                <div className="text-[0.9rem] text-forest-foreground/60 mt-2">{r.s2[1]}</div>
+              </div>
+              <a className="group inline-flex self-start items-center gap-3 border px-7 py-4 mt-2 eyebrow tracking-[0.18em] transition-colors duration-500 border-background bg-background text-ink hover:bg-accent hover:border-accent hover:text-accent-foreground" href="#build">
+                <span>Discuss this service</span>
+                <span className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-0.5"><svg viewBox="0 0 16 16" className="size-3.5" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H5.5M12 4v6.5" stroke="currentColor" strokeWidth="1.2"></path></svg></span>
+              </a>
             </div>
-            <a className="btn btn-g self-start" href="#build">Discuss this service →</a>
           </div>
         </div>
       </div>

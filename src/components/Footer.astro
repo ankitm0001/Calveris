@@ -1,49 +1,67 @@
 ---
+const currentYear = new Date().getFullYear();
 ---
 
-<footer class="bg-[#111] text-[#e7e9df]">
-  <div class="wrap">
-    <div class="grid grid-cols-[1.4fr_1fr_1fr_1.2fr] gap-[60px] pt-[85px] pb-[80px] max-[1050px]:gap-[30px] max-[760px]:grid-cols-2 max-[760px]:gap-[35px] max-[760px]:pt-[60px] max-[760px]:pb-[50px] max-[420px]:grid-cols-1">
-      <div class="max-[760px]:col-span-full max-[420px]:col-auto">
-        <div class="font-serif font-normal text-[19px] tracking-[0.18em] leading-none mb-[14px]">
-          CALVERIS<span class="hidden">.</span>
-          <small class="block font-sans text-[10px] tracking-[0.35em] mt-[7px]">GLOBAL</small>
-        </div>
-        <p class="text-[#8ea0b8] text-[13.5px] max-w-[280px]">We do the boring brilliantly. Accounting and finance support, built around your business.</p>
+<footer class="bg-ink text-ink-foreground">
+  <div class="shell grid gap-14 py-20 lg:grid-cols-12 lg:py-28">
+    <div class="lg:col-span-5">
+      <div class="flex items-baseline gap-2">
+        <span class="font-display text-[1.4rem] tracking-[0.34em] flex items-center">
+          CALVERIS<span class="ml-[4px] font-body text-[10px] tracking-[0.35em] opacity-80">GLOBAL</span>
+        </span>
+        <span aria-hidden="true" class="inline-block size-[6px] rotate-45 bg-accent"></span>
       </div>
-      
-      <div>
-        <h5 class="text-[10px] tracking-[0.2em] uppercase text-[#a7b29d] mb-[24px]">Services</h5>
-        <ul class="list-none grid gap-[13px] text-[13px]">
-          <li><a href="#roles" class="hover:underline hover:underline-offset-4">Services</a></li>
-          <li><a href="#build" class="hover:underline hover:underline-offset-4">Build your team</a></li>
-          <li><a href="#drip" class="hover:underline hover:underline-offset-4">Get in touch</a></li>
-        </ul>
-      </div>
-      
-      <div>
-        <h5 class="text-[10px] tracking-[0.2em] uppercase text-[#a7b29d] mb-[24px]">Company</h5>
-        <ul class="list-none grid gap-[13px] text-[13px]">
-          <li><a href="#model" class="hover:underline hover:underline-offset-4">How we work</a></li>
-          <li><a href="#trust" class="hover:underline hover:underline-offset-4">Trust &amp; controls</a></li>
-          <li><a href="#founders" class="hover:underline hover:underline-offset-4">About us</a></li>
-          <li><a href="#faq" class="hover:underline hover:underline-offset-4">FAQ</a></li>
-        </ul>
-      </div>
-      
-      <div>
-        <h5 class="text-[10px] tracking-[0.2em] uppercase text-[#a7b29d] mb-[24px]">Enquiries</h5>
-        <ul class="list-none grid gap-[13px] text-[13px]">
-          <li><a href="mailto:info@calveris.co.uk" class="hover:underline hover:underline-offset-4">info@calveris.co.uk</a></li>
-          <li><a href="tel:+447999901081" class="hover:underline hover:underline-offset-4">+44 7999 901081</a></li>
-          <li><a href="https://wa.me/447999901081" target="_blank" rel="noopener" class="hover:underline hover:underline-offset-4">Talk to our team ↗</a></li>
-        </ul>
-      </div>
+      <p class="mt-6 max-w-sm font-display text-2xl font-light italic text-ink-foreground/80">
+        Your finance function.<br/>More capacity. Less complexity.
+      </p>
+      <p class="mt-6 max-w-sm text-sm leading-relaxed text-ink-foreground/55">
+        Calveris Global provides dedicated accounting and finance professionals to businesses worldwide. Your control. Our people.
+      </p>
     </div>
-    
-    <div class="flex justify-between gap-[25px] border-t border-line py-[25px] text-[10px] tracking-[0.06em] text-[#a4afa0] max-[760px]:flex-col max-[760px]:gap-[10px]">
-      <span>© 2026 Calveris Global. All rights reserved.</span>
-      <span>Accounting · Finance · Dedicated teams</span>
+
+    <div class="lg:col-span-2">
+      <p class="eyebrow text-ink-foreground/45">Navigation</p>
+      <ul class="mt-6 space-y-3">
+        <li><a href="#model" class="text-sm text-ink-foreground/75 transition-colors hover:text-accent">How we work</a></li>
+        <li><a href="#roles" class="text-sm text-ink-foreground/75 transition-colors hover:text-accent">Services</a></li>
+        <li><a href="#trust" class="text-sm text-ink-foreground/75 transition-colors hover:text-accent">Trust</a></li>
+        <li><a href="#founders" class="text-sm text-ink-foreground/75 transition-colors hover:text-accent">About us</a></li>
+        <li><a href="#faq" class="text-sm text-ink-foreground/75 transition-colors hover:text-accent">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="lg:col-span-2">
+      <p class="eyebrow text-ink-foreground/45">Services</p>
+      <ul class="mt-6 space-y-3">
+        <li><a href="#roles" class="text-sm text-ink-foreground/75 transition-colors hover:text-accent">Bookkeeping</a></li>
+        <li><a href="#roles" class="text-sm text-ink-foreground/75 transition-colors hover:text-accent">Payroll</a></li>
+        <li><a href="#roles" class="text-sm text-ink-foreground/75 transition-colors hover:text-accent">Reporting</a></li>
+        <li><a href="#roles" class="text-sm text-ink-foreground/75 transition-colors hover:text-accent">Year-end</a></li>
+      </ul>
+    </div>
+
+    <div class="lg:col-span-3">
+      <p class="eyebrow text-ink-foreground/45">Enquiries</p>
+      <ul class="mt-6 space-y-3 text-sm text-ink-foreground/75">
+        <li>
+          <a href="mailto:info@calveris.co.uk" class="transition-colors hover:text-accent">info@calveris.co.uk</a>
+        </li>
+        <li>
+          <a href="tel:+447999901081" class="transition-colors hover:text-accent">+44 7999 901081</a>
+        </li>
+        <li>
+          <a href="https://wa.me/447999901081" target="_blank" rel="noreferrer" class="transition-colors hover:text-accent">WhatsApp a founder ↗</a>
+        </li>
+        <li>Ahmedabad · Global</li>
+        <li>Founder-level access, always.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="border-t border-hairline-light">
+    <div class="shell flex flex-wrap items-center justify-between gap-4 py-8 text-xs text-ink-foreground/45">
+      <p>© {currentYear} Calveris Global. All rights reserved.</p>
+      <p class="eyebrow text-ink-foreground/40">For global businesses</p>
     </div>
   </div>
 </footer>

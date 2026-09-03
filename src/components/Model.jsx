@@ -11,68 +11,83 @@ const scenarios = [
 export default function Model() {
   const [fIdx, setFIdx] = useState(0);
 
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-    if (mediaQuery.matches) return;
-
-    const timer = setInterval(() => {
-      setFIdx(prev => (prev + 1) % scenarios.length);
-    }, 6500);
-
-    return () => clearInterval(timer);
-  }, []);
-
   const s = scenarios[fIdx];
 
   return (
-    <section className="bg-paper py-[130px] scroll-mt-[90px] border-b border-line-dark max-[760px]:py-[75px]" id="model">
-      <div className="wrap grid grid-cols-2 gap-[90px] items-center max-[1050px]:gap-[45px] max-[760px]:grid-cols-1 max-[760px]:gap-[40px]">
-        <div>
-          <div className="eyebrow">Built around your business</div>
-          <h2 className="max-w-[540px]">Your finance function.<br/>More capacity. Less complexity.</h2>
-          <div className="grid gap-[18px] mt-[35px]">
-            <div className="flex text-[15px] leading-[1.8]"><span className="tick">✓</span><span><b className="font-semibold">Direct founder involvement</b> <span className="text-mut-dark">on every engagement.</span></span></div>
-            <div className="flex text-[15px] leading-[1.8]"><span className="tick">✓</span><span><b className="font-semibold">Dedicated accounting professionals,</b> <span className="text-mut-dark">working in your systems and following your processes.</span></span></div>
-            <div className="flex text-[15px] leading-[1.8]"><span className="tick">✓</span><span><b className="font-semibold">Working hours agreed around you.</b> <span className="text-mut-dark">Clear handovers and scheduled review time.</span></span></div>
-            <div className="flex text-[15px] leading-[1.8]"><span className="tick">✓</span><span><b className="font-semibold">Access stays under your control.</b> <span className="text-mut-dark">Work in agreed systems with permissions managed by your firm.</span></span></div>
+    <section className="border-b border-hairline bg-background py-28 lg:py-40" id="model">
+      <div className="shell grid gap-16 lg:grid-cols-12">
+        <div className="lg:col-span-7">
+          <div className="reveal">
+            <p className="eyebrow flex items-center gap-3 text-muted-foreground">
+              <span aria-hidden="true" className="inline-block size-[6px] rotate-45 bg-accent"></span>
+              <span>Built around your business</span>
+            </p>
+            <h2 className="display-lg mt-8 max-w-[16ch]">
+              Your finance function.<br/>More capacity. Less complexity.
+            </h2>
+          </div>
+          
+          <div className="reveal" style={{ animationDelay: '120ms' }}>
+            <ul className="mt-10 border-t border-hairline">
+              <li className="flex items-start gap-4 border-b border-hairline py-5 text-[1.05rem]">
+                <span className="mt-1 text-accent"><span aria-hidden="true" className="inline-block size-[6px] rotate-45 bg-accent"></span></span>
+                <span><b className="font-semibold text-foreground">Direct founder involvement</b> <span className="text-muted-foreground">on every engagement.</span></span>
+              </li>
+              <li className="flex items-start gap-4 border-b border-hairline py-5 text-[1.05rem]">
+                <span className="mt-1 text-accent"><span aria-hidden="true" className="inline-block size-[6px] rotate-45 bg-accent"></span></span>
+                <span><b className="font-semibold text-foreground">Dedicated accounting professionals,</b> <span className="text-muted-foreground">working in your systems and following your processes.</span></span>
+              </li>
+              <li className="flex items-start gap-4 border-b border-hairline py-5 text-[1.05rem]">
+                <span className="mt-1 text-accent"><span aria-hidden="true" className="inline-block size-[6px] rotate-45 bg-accent"></span></span>
+                <span><b className="font-semibold text-foreground">Working hours agreed around you.</b> <span className="text-muted-foreground">Clear handovers and scheduled review time.</span></span>
+              </li>
+              <li className="flex items-start gap-4 border-b border-hairline py-5 text-[1.05rem]">
+                <span className="mt-1 text-accent"><span aria-hidden="true" className="inline-block size-[6px] rotate-45 bg-accent"></span></span>
+                <span><b className="font-semibold text-foreground">Access stays under your control.</b> <span className="text-muted-foreground">Work in agreed systems with permissions managed by your firm.</span></span>
+              </li>
+            </ul>
           </div>
         </div>
         
-        <div className="bg-[#eeeae2] border border-line-dark" aria-label="Capacity scenarios">
-          <div className="flex border-b border-line-dark" role="group">
-            {scenarios.map((sc, j) => (
-              <button 
-                key={j}
-                className={`flex-1 border-0 border-r border-line-dark p-[15px_10px] bg-transparent text-[13px] last:border-r-0 cursor-pointer ${j === fIdx ? 'bg-[#24392b] text-white' : 'text-mut-dark'}`}
-                aria-pressed={j === fIdx}
-                onClick={() => setFIdx(j)}
-              >
-                {sc.tab}
-              </button>
-            ))}
-          </div>
-          <div className="p-[35px] min-h-[350px] max-[420px]:p-[22px]">
-            <div className="flex justify-between gap-[15px] text-[10px] tracking-[0.08em] border-b border-line-dark pb-[18px] mb-[25px] max-[420px]:text-[9px]">
-              <span>SCENARIO {s.tab} · ILLUSTRATIVE</span>
-              <span>CALVERIS</span>
-            </div>
-            <div className="font-serif font-normal text-[35px] leading-[1.08] mb-[20px]">{s.title}</div>
-            <p className="text-[14px] leading-[1.85]">{s.story}</p>
-            <div className="border-l border-[#365440] pl-[18px] my-[23px]">
-              <div className="text-[10px] tracking-[0.12em] uppercase mb-[8px]">The Calveris response</div>
-              <p className="text-[14px] leading-[1.85]">{s.fix}</p>
-            </div>
-            <div className="flex justify-between items-center gap-[15px] border-t border-line-dark pt-[17px] max-[420px]:flex-wrap">
-              <span className="text-[10px] tracking-[0.05em]">{s.stamp}</span>
-              <div className="flex gap-[5px]">
-                {scenarios.map((_, j) => (
+        <div className="lg:col-span-5 self-center">
+          <div className="reveal" style={{ animationDelay: '200ms' }}>
+            <div className="bg-secondary text-foreground border border-hairline flex flex-col" aria-label="Capacity scenarios">
+              <div className="flex border-b border-hairline" role="group">
+                {scenarios.map((sc, j) => (
                   <button 
                     key={j}
-                    className={`h-[18px] w-[24px] border-0 border-b-2 bg-transparent cursor-pointer ${j === fIdx ? 'border-[#263e2e]' : 'border-[#bbc4b7]'}`}
-                    aria-label={`Scenario ${j + 1}`}
+                    className={`flex-1 border-0 border-r border-hairline p-[15px_10px] bg-transparent text-[13px] last:border-r-0 cursor-pointer transition-colors duration-300 ${j === fIdx ? 'bg-ink text-ink-foreground font-semibold' : 'text-muted-foreground hover:bg-forest/5'}`}
+                    aria-pressed={j === fIdx}
                     onClick={() => setFIdx(j)}
-                  ></button>
+                  >
+                    {sc.tab}
+                  </button>
                 ))}
+              </div>
+              <div className="p-[40px] flex flex-col max-[420px]:p-[25px]">
+                <div className="flex justify-between gap-[15px] text-[10px] tracking-[0.08em] border-b border-hairline pb-[18px] mb-[30px] max-[420px]:text-[9px]">
+                  <span className="text-muted-foreground">SCENARIO {s.tab} · ILLUSTRATIVE</span>
+                  <span className="text-muted-foreground">CALVERIS</span>
+                </div>
+                <div className="font-display font-normal text-[32px] leading-[1.1] mb-[20px]">{s.title}</div>
+                <p className="text-[14px] leading-[1.85] text-foreground/80">{s.story}</p>
+                <div className="border-l-2 border-accent pl-[18px] my-[30px]">
+                  <div className="text-[10px] tracking-[0.12em] uppercase mb-[10px] text-accent">The Calveris response</div>
+                  <p className="text-[14px] leading-[1.85] text-foreground">{s.fix}</p>
+                </div>
+                <div className="flex justify-between items-center gap-[15px] border-t border-hairline pt-[20px] max-[420px]:flex-wrap">
+                  <span className="text-[10px] tracking-[0.05em] text-muted-foreground">{s.stamp}</span>
+                  <div className="flex gap-[5px]">
+                    {scenarios.map((_, j) => (
+                      <button 
+                        key={j}
+                        className={`h-[18px] w-[24px] border-0 border-b-2 bg-transparent cursor-pointer transition-colors duration-300 ${j === fIdx ? 'border-accent' : 'border-hairline hover:border-accent/40'}`}
+                        aria-label={`Scenario ${j + 1}`}
+                        onClick={() => setFIdx(j)}
+                      ></button>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </div>

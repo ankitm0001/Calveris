@@ -19,29 +19,29 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-[130px] scroll-mt-[90px] border-b border-line-dark bg-[#eeece6] max-[760px]:py-[75px]">
-      <div className="wrap">
-        <div className="eyebrow flex justify-center text-center">On the record</div>
-        <h2 className="text-center max-w-[600px] mx-auto mb-1">A few things you might want to know.</h2>
+    <section className="bg-ink text-ink-foreground py-[130px] scroll-mt-[90px] border-b border-hairline-light max-[760px]:py-[75px]" id="faq">
+      <div className="shell">
+        <div className="eyebrow flex justify-center text-center text-ink-foreground/60">On the record</div>
+        <h2 className="display-lg text-center max-w-[600px] mx-auto mb-1">A few things you might want to know.</h2>
         
         <div className="max-w-[850px] mx-auto mt-[55px]">
           {faqs.map((f, i) => {
             const isOpen = openIndex === i;
             return (
-              <div key={i} className="border-b border-line-dark">
+              <div key={i} className="border-b border-hairline-light">
                 <button 
                   onClick={() => toggle(i)}
                   aria-expanded={isOpen}
-                  className="flex justify-between items-center w-full border-none bg-transparent text-ink text-left py-[26px] text-base font-medium cursor-pointer max-[760px]:text-[15px] focus-visible:outline focus-visible:outline-3 focus-visible:outline-[#7caa78] focus-visible:outline-offset-4"
+                  className="flex justify-between items-center w-full border-none bg-transparent text-ink-foreground text-left py-[26px] text-[1.05rem] cursor-pointer max-[760px]:text-[15px] focus-visible:outline focus-visible:outline-3 focus-visible:outline-accent focus-visible:outline-offset-4"
                 >
                   {f[0]}
-                  <span className={`text-[23px] font-normal transition-transform duration-250 ${isOpen ? 'rotate-45' : ''}`}>+</span>
+                  <span className={`text-[23px] font-normal transition-transform duration-250 text-accent ${isOpen ? 'rotate-45' : ''}`}>+</span>
                 </button>
                 <div 
                   className="overflow-hidden transition-[max-height] duration-250 ease-in-out"
                   style={{ maxHeight: isOpen ? '500px' : '0' }}
                 >
-                  <p className="text-[15px] text-mut-dark pr-[25px] pb-[25px]">{f[1]}</p>
+                  <p className="text-[15px] text-ink-foreground/60 pr-[25px] pb-[25px] leading-relaxed">{f[1]}</p>
                 </div>
               </div>
             );

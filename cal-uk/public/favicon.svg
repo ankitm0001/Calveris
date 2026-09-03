@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Calveris">
+  <rect width="64" height="64" rx="14" fill="#071a2f"/>
+  <path
+    d="M42.5 19.2c-2.9-3-6.7-4.5-11.2-4.5-9.7 0-16.7 7.2-16.7 17.3s7 17.3 16.7 17.3c4.7 0 8.5-1.5 11.5-4.6l-4.3-4.5c-1.9 1.9-4.1 2.8-6.8 2.8-6 0-10-4.4-10-11s4-11 10-11c2.6 0 4.8.9 6.6 2.8z"
+    fill="#f7f4ec"
+  />
+  <rect x="45.8" y="43.8" width="8.5" height="8.5" rx="1" transform="rotate(45 50.05 48.05)" fill="#9a3348"/>
+</svg>

@@ -14,8 +14,23 @@ import '../styles/global.css';
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
 	</head>
-	<body class="bg-paper text-ink font-sans text-base leading-[1.8] selection:bg-[#bdcbb7] selection:text-[#17271d]">
-		<a class="absolute -top-[120px] left-5 bg-white text-[#111] p-[14px] z-[100] focus:top-[10px]" href="#top">Skip to content</a>
+	<body class="bg-background text-foreground font-body text-[1.05rem] leading-relaxed selection:bg-accent selection:text-accent-foreground">
+		<a class="absolute -top-[120px] left-5 bg-background text-foreground p-[14px] z-[100] focus:top-[10px]" href="#top">Skip to content</a>
 		<slot />
+		
+		<script>
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+						entry.target.setAttribute('data-shown', 'true');
+						observer.unobserve(entry.target);
+					}
+				});
+			}, { rootMargin: '0px 0px -10% 0px' });
+
+			document.querySelectorAll('.reveal').forEach(el => {
+				observer.observe(el);
+			});
+		</script>
 	</body>
 </html>

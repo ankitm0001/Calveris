@@ -1,35 +1,65 @@
 ---
 ---
 
-<header class="relative min-h-[100svh] bg-[#181916] text-[#f4f2ec] flex items-center overflow-hidden pt-[185px] pb-[95px] max-[760px]:pt-[155px] max-[760px]:pb-[75px]" id="top">
-  <img class="absolute inset-0 w-full h-full object-cover object-center opacity-75" src="/images/img-1.jpeg" alt="Curved concrete and timber architecture viewed from below" width="1600" height="1200">
-  <div class="absolute inset-0 bg-[linear-gradient(90deg,#080d0bd4_0%,#090d0b8c_50%,#080c0940_100%),linear-gradient(0deg,#070b0980,transparent_70%)]" aria-hidden="true"></div>
+<header class="relative min-h-[100svh] overflow-hidden bg-ink" id="top">
+  <img class="absolute inset-0 size-full object-cover opacity-70" src="/images/img-1.jpeg" alt="Curved concrete and timber architecture viewed from below" width="1600" height="1200">
+  <div class="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/45 to-ink/85" aria-hidden="true"></div>
   
-  <div class="wrap relative w-full z-1">
-    <div class="max-w-[950px]">
-      <div class="eyebrow text-[#dedfd3] max-[760px]:text-[10px]">For businesses &amp; accountancy firms</div>
-      <h1 class="font-serif font-light text-[clamp(62px,7.5vw,112px)] leading-[0.98] tracking-[-0.035em] max-w-[950px] max-[1050px]:text-[88px] max-[760px]:text-[clamp(58px,11vw,84px)] max-[420px]:text-[56px]">
+  <div class="shell relative flex min-h-[100svh] flex-col justify-center pt-[120px] pb-16 text-ink-foreground">
+    <div class="mb-8 h-px w-full bg-hairline-light"></div>
+    <div class="reveal">
+      <p class="eyebrow flex items-center gap-3 text-ink-foreground/75">
+        <span aria-hidden="true" class="inline-block size-[6px] rotate-45 bg-accent"></span>
+        <span>For businesses &amp; accountancy firms</span>
+      </p>
+    </div>
+    
+    <div class="reveal" data-shown="true" style="animation-delay: 100ms">
+      <h1 class="display-xl mt-8 max-w-[14ch]">
         We do the boring<br><em class="italic text-inherit">brilliantly.</em>
       </h1>
-      <p class="max-w-[650px] text-[18px] leading-[1.9] mt-[35px] text-[#e3e1d9] max-[760px]:text-[16px]">Accounting, bookkeeping and finance support that keeps your business moving. From everyday transactions to clearer reporting, we work as an extension of your team.</p>
-      
-      <div class="flex gap-5 flex-wrap mt-[35px] max-[760px]:gap-[14px] max-[420px]:flex-col max-[420px]:items-start">
-        <a class="btn btn-g max-[760px]:text-[10px] max-[760px]:tracking-[0.1em] max-[760px]:px-[17px] max-[760px]:py-[14px]" href="#build">Build your team</a>
-        <a class="btn btn-o max-[760px]:text-[10px] max-[760px]:tracking-[0.1em] max-[760px]:px-[17px] max-[760px]:py-[14px]" href="https://wa.me/447999901081" target="_blank" rel="noopener">Talk to our team ↗</a>
+    </div>
+
+    <div class="mt-10 grid gap-10 lg:grid-cols-12">
+      <div class="reveal lg:col-span-6" data-shown="true" style="animation-delay: 200ms">
+        <p class="max-w-xl text-[1.05rem] leading-relaxed text-ink-foreground/80">
+          Accounting, bookkeeping and finance support that keeps your business moving. From everyday transactions to clearer reporting, we work as an extension of your team.
+        </p>
+        
+        <div class="mt-10 flex flex-wrap gap-4">
+          <a href="#build" class="group inline-flex items-center gap-3 border px-7 py-4 eyebrow tracking-[0.18em] transition-colors duration-500 border-background bg-background text-ink hover:bg-accent hover:border-accent hover:text-accent-foreground">
+            <span>Build Your Team</span>
+            <span class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-0.5">
+              <svg viewBox="0 0 16 16" class="size-3.5" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H5.5M12 4v6.5" stroke="currentColor" stroke-width="1.2"></path></svg>
+            </span>
+          </a>
+          <a href="https://wa.me/447999901081" target="_blank" rel="noopener" class="group inline-flex items-center gap-3 border px-7 py-4 eyebrow tracking-[0.18em] transition-colors duration-500 border-hairline-light text-ink-foreground hover:bg-background hover:text-ink">
+            <span>Talk to our team</span>
+            <span class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-0.5">
+              <svg viewBox="0 0 16 16" class="size-3.5" fill="none" aria-hidden="true"><path d="M2.5 8h11M9.5 4l4 4-4 4" stroke="currentColor" stroke-width="1.2"></path></svg>
+            </span>
+          </a>
+        </div>
       </div>
-      
-      <p class="mt-[40px] text-[12px] text-[#d1d2c7] tracking-[0.03em] max-[760px]:text-[11px]">
-        Bookkeeping. Payroll. Reporting. And the people behind it. 
-        <b class="block font-normal mt-[5px]">Let’s build your next chapter.</b>
-      </p>
+
+      <div class="reveal lg:col-span-6 lg:flex lg:items-end lg:justify-end" data-shown="true" style="animation-delay: 320ms">
+        <div class="border border-hairline-light bg-ink/40 p-8 backdrop-blur-sm lg:max-w-sm">
+          <p class="eyebrow text-ink-foreground/70">Bookkeeping. Payroll. Reporting.</p>
+          <p class="mt-3 font-display text-3xl font-light italic">Let’s build your next chapter.</p>
+        </div>
+      </div>
     </div>
   </div>
 </header>
 
-<div class="bg-[#1e3025] text-[#e8ece1] border-b border-[#ffffff2a]">
-  <div class="wrap flex justify-between gap-[25px] py-[23px] max-[760px]:flex-wrap max-[760px]:gap-x-[25px] max-[760px]:gap-y-[9px] max-[760px]:py-[18px]">
-    <span class="uppercase text-[11px] tracking-[0.13em] max-[760px]:text-[9px]">Your business. Your priorities.</span>
-    <span class="uppercase text-[11px] tracking-[0.13em] max-[760px]:text-[9px]">Our people. Your extended team.</span>
-    <span class="uppercase text-[11px] tracking-[0.13em] max-[760px]:hidden">Accounting · Finance · Delivery</span>
+<div class="bg-background">
+  <div class="overflow-hidden border-y py-6 border-hairline">
+    <div class="marquee-track flex w-max items-center gap-14 whitespace-nowrap">
+      <span class="flex items-center gap-14"><span class="font-display text-2xl font-light italic md:text-[2rem] text-foreground/70">Your business. Your priorities.</span><span aria-hidden="true" class="inline-block size-[6px] rotate-45 bg-accent"></span></span>
+      <span class="flex items-center gap-14"><span class="font-display text-2xl font-light italic md:text-[2rem] text-foreground/70">Our people. Your extended team.</span><span aria-hidden="true" class="inline-block size-[6px] rotate-45 bg-accent"></span></span>
+      <span class="flex items-center gap-14"><span class="font-display text-2xl font-light italic md:text-[2rem] text-foreground/70">Accounting · Finance · Delivery</span><span aria-hidden="true" class="inline-block size-[6px] rotate-45 bg-accent"></span></span>
+      <span class="flex items-center gap-14"><span class="font-display text-2xl font-light italic md:text-[2rem] text-foreground/70">Your business. Your priorities.</span><span aria-hidden="true" class="inline-block size-[6px] rotate-45 bg-accent"></span></span>
+      <span class="flex items-center gap-14"><span class="font-display text-2xl font-light italic md:text-[2rem] text-foreground/70">Our people. Your extended team.</span><span aria-hidden="true" class="inline-block size-[6px] rotate-45 bg-accent"></span></span>
+    </div>
   </div>
 </div>

@@ -1,46 +1,73 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <nav className="absolute inset-x-0 top-0 z-20 text-[#f4f2ec] border-b border-[#ffffff2b]">
-      <div className="wrap h-[104px] flex items-center justify-between gap-[35px] max-[760px]:h-[85px]">
-        <a className="font-serif font-normal text-[28px] tracking-[0.18em] leading-none" href="#top">
-          CALVERIS<span className="hidden">.</span>
-          <small className="block font-sans text-[10px] tracking-[0.35em] mt-[7px]">GLOBAL</small>
+    <header
+      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-700 ${
+        scrolled ? "bg-ink/95 backdrop-blur-sm" : "bg-ink/25 backdrop-blur-[2px]"
+      }`}
+    >
+      <div className="shell flex h-20 items-center justify-between">
+        <a href="#top" className="flex items-baseline gap-2" onClick={() => setOpen(false)}>
+          <span className="font-display text-[1.4rem] font-normal tracking-[0.34em] text-ink-foreground flex items-center">
+            CALVERIS<span className="ml-[4px] font-body text-[10px] tracking-[0.35em] opacity-80">GLOBAL</span>
+          </span>
+          <span aria-hidden="true" className="inline-block size-[6px] rotate-45 bg-accent"></span>
         </a>
-        
-        <div 
-          className={`flex items-center gap-[25px] max-[1050px]:gap-4 max-[760px]:hidden ${
-            isOpen 
-              ? 'max-[760px]:!flex max-[760px]:absolute max-[760px]:top-[85px] max-[760px]:inset-x-0 max-[760px]:bg-[#16241b] max-[760px]:flex-col max-[760px]:items-stretch max-[760px]:p-6 max-[760px]:gap-0'
-              : ''
-          }`}
-          id="navLinks"
-        >
-          <a className="text-[11px] tracking-[0.12em] uppercase hover:underline hover:underline-offset-8 max-[760px]:py-[14px]" href="#model" onClick={() => setIsOpen(false)}>How we work</a>
-          <a className="text-[11px] tracking-[0.12em] uppercase hover:underline hover:underline-offset-8 max-[760px]:py-[14px]" href="#founders" onClick={() => setIsOpen(false)}>About us</a>
-          <a className="text-[11px] tracking-[0.12em] uppercase hover:underline hover:underline-offset-8 max-[760px]:py-[14px]" href="#roles" onClick={() => setIsOpen(false)}>Services</a>
-          <a className="text-[11px] tracking-[0.12em] uppercase hover:underline hover:underline-offset-8 max-[760px]:py-[14px]" href="#trust" onClick={() => setIsOpen(false)}>Trust</a>
-          <a className="text-[11px] tracking-[0.12em] uppercase hover:underline hover:underline-offset-8 max-[760px]:py-[14px]" href="#faq" onClick={() => setIsOpen(false)}>FAQ</a>
-        </div>
-        
-        <div className="flex items-center gap-5">
-          <a className="btn bg-transparent text-white border-[#ffffff60] text-[10px] px-[17px] py-[13px] hover:bg-paper hover:text-ink max-[1050px]:hidden" href="#build">
-            Build your team
+
+        <nav className="hidden items-center gap-8 xl:flex">
+          <a href="#model" className="eyebrow tracking-[0.16em] text-ink-foreground/70 transition-colors duration-300 hover:text-ink-foreground">How we work</a>
+          <a href="#founders" className="eyebrow tracking-[0.16em] text-ink-foreground/70 transition-colors duration-300 hover:text-ink-foreground">About us</a>
+          <a href="#roles" className="eyebrow tracking-[0.16em] text-ink-foreground/70 transition-colors duration-300 hover:text-ink-foreground">Services</a>
+          <a href="#trust" className="eyebrow tracking-[0.16em] text-ink-foreground/70 transition-colors duration-300 hover:text-ink-foreground">Trust</a>
+          <a href="#faq" className="eyebrow tracking-[0.16em] text-ink-foreground/70 transition-colors duration-300 hover:text-ink-foreground">FAQ</a>
+        </nav>
+
+        <div className="hidden xl:block">
+          <a href="#build" className="group inline-flex items-center gap-3 border px-6 py-3 eyebrow tracking-[0.18em] transition-colors duration-500 border-hairline-light text-ink-foreground hover:bg-background hover:text-ink">
+            <span>Build Your Team</span>
+            <span className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-0.5"><svg viewBox="0 0 16 16" className="size-3.5" fill="none" aria-hidden="true"><path d="M2.5 8h11M9.5 4l4 4-4 4" stroke="currentColor" strokeWidth="1.2"></path></svg></span>
           </a>
-          <button 
-            className="hidden max-[760px]:block bg-none border-none text-inherit text-[27px] min-w-[44px] min-h-[44px] cursor-pointer"
-            id="burger" 
-            aria-label="Menu" 
-            aria-expanded={isOpen}
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            ☰
-          </button>
         </div>
+
+        <button
+          type="button"
+          onClick={() => setOpen(!open)}
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          className="flex size-10 flex-col items-center justify-center gap-1.5 text-ink-foreground xl:hidden"
+        >
+          <span className={`h-px w-6 bg-current transition-transform ${open ? 'translate-y-[3.5px] rotate-45' : ''}`} />
+          <span className={`h-px w-6 bg-current transition-transform ${open ? '-translate-y-[3.5px] -rotate-45' : ''}`} />
+        </button>
       </div>
-    </nav>
+
+      {open && (
+        <div className="border-t border-hairline-light bg-ink xl:hidden h-[100svh]">
+          <div className="shell flex flex-col gap-1 py-6">
+            <a href="#model" onClick={() => setOpen(false)} className="border-b border-hairline-light py-4 font-display text-2xl font-light text-ink-foreground">How we work</a>
+            <a href="#founders" onClick={() => setOpen(false)} className="border-b border-hairline-light py-4 font-display text-2xl font-light text-ink-foreground">About us</a>
+            <a href="#roles" onClick={() => setOpen(false)} className="border-b border-hairline-light py-4 font-display text-2xl font-light text-ink-foreground">Services</a>
+            <a href="#trust" onClick={() => setOpen(false)} className="border-b border-hairline-light py-4 font-display text-2xl font-light text-ink-foreground">Trust</a>
+            <a href="#faq" onClick={() => setOpen(false)} className="border-b border-hairline-light py-4 font-display text-2xl font-light text-ink-foreground">FAQ</a>
+            
+            <a href="#build" onClick={() => setOpen(false)} className="group mt-6 justify-center inline-flex items-center gap-3 border px-7 py-4 eyebrow tracking-[0.18em] transition-colors duration-500 border-background bg-background text-ink hover:bg-accent hover:border-accent hover:text-accent-foreground">
+              <span>Build Your Team</span>
+              <span className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-0.5"><svg viewBox="0 0 16 16" className="size-3.5" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H5.5M12 4v6.5" stroke="currentColor" strokeWidth="1.2"></path></svg></span>
+            </a>
+          </div>
+        </div>
+      )}
+    </header>
   );
 }
