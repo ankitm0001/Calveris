@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #111;
+  --color-navy-2: #1b2822;
+  --color-navy-3: #26372e;
+  --color-paper: #f6f4ef;
+  --color-paper-2: #ebe8e1;
+  --color-ink: #20221e;
+  --color-green: #d4dfce;
+  --color-green-deep: #344b3e;
+  --color-line: #ffffff2b;
+  --color-line-dark: #20221e26;
+  --color-mut: #b6bcb6;
+  --color-mut-dark: #65665e;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Manrope', Arial, sans-serif;
+  --font-mono: 'Manrope', Arial, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  a:focus-visible, button:focus-visible, input:focus-visible {
+    outline: 3px solid #7caa78;
+    outline-offset: 5px;
+  }
+}
+
+@layer components {
+  .wrap {
+    @apply max-w-[1344px] mx-auto px-6 max-[1050px]:px-8 max-[760px]:px-6;
+  }
+  
+  .eyebrow {
+    @apply uppercase font-sans tracking-[0.22em] text-[12px] leading-[1.6] font-semibold mb-7;
+  }
+  
+  .btn {
+    @apply inline-flex items-center justify-center gap-5 px-[25px] py-4 min-h-[52px] border border-current rounded-none font-sans font-semibold text-[12px] tracking-[0.14em] uppercase transition-colors duration-250 cursor-pointer;
+  }
+  
+  .btn-g {
+    @apply bg-paper border-paper text-[#19201a] hover:bg-green hover:border-green;
+  }
+  
+  .btn-o {
+    @apply bg-transparent text-current border-current hover:bg-paper hover:text-[#19201a];
+  }
+  
+  .tick {
+    @apply mr-2 text-inherit;
+  }
+}
