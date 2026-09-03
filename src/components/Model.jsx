@@ -56,7 +56,7 @@ export default function Model() {
                 {scenarios.map((sc, j) => (
                   <button 
                     key={j}
-                    className={`flex-1 border-0 border-r border-hairline p-[15px_10px] bg-transparent text-[13px] last:border-r-0 cursor-pointer transition-colors duration-300 ${j === fIdx ? 'bg-ink text-ink-foreground font-semibold' : 'text-muted-foreground hover:bg-forest/5'}`}
+                    className={`flex-1 border-0 border-r border-hairline p-[15px_10px] text-[13px] last:border-r-0 cursor-pointer transition-colors duration-300 ${j === fIdx ? 'bg-ink text-ink-foreground font-semibold' : 'bg-transparent text-muted-foreground hover:bg-forest/5'}`}
                     aria-pressed={j === fIdx}
                     onClick={() => setFIdx(j)}
                   >
