@@ -1,32 +1,49 @@
 ---
 ---
 
-<header class="relative min-h-[100svh] overflow-hidden bg-ink" id="top">
-  <img class="absolute inset-0 size-full object-cover opacity-70" src="/images/img-1.jpeg" alt="Curved concrete and timber architecture viewed from below" width="1600" height="1200">
-  <div class="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/45 to-ink/85" aria-hidden="true"></div>
-  
-  <div class="shell relative flex min-h-[100svh] flex-col justify-center pt-[120px] pb-16 text-ink-foreground">
-    <div class="mb-8 h-px w-full bg-hairline-light"></div>
-    <div class="reveal">
-      <p class="eyebrow flex items-center gap-3 text-ink-foreground/75">
-        <span aria-hidden="true" class="inline-block size-[6px] rotate-45 bg-accent"></span>
-        <span>For businesses &amp; accountancy firms</span>
-      </p>
-    </div>
-    
-    <div class="reveal" data-shown="true" style="animation-delay: 100ms">
-      <h1 class="display-xl mt-8 max-w-[14ch]">
-        We do the boring<br><em class="italic text-inherit">brilliantly.</em>
-      </h1>
-    </div>
+<header class="relative min-h-[100svh] overflow-hidden bg-ink flex flex-col" id="top">
+  <!-- Deep Background -->
+  <div class="absolute inset-0 z-0 bg-architectural opacity-80 pointer-events-none">
+    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDIiLz4KPC9zdmc+')] opacity-20"></div>
+  </div>
 
-    <div class="mt-10 grid gap-10 lg:grid-cols-12">
-      <div class="reveal lg:col-span-6" data-shown="true" style="animation-delay: 200ms">
-        <p class="max-w-xl text-[1.05rem] leading-relaxed text-ink-foreground/80">
-          Accounting, bookkeeping and finance support that keeps your business moving. From everyday transactions to clearer reporting, we work as an extension of your team.
-        </p>
+  <main class="flex-grow flex flex-col justify-center shell relative z-10 pt-[120px] pb-16">
+    <div class="w-full h-px bg-hairline-light mb-12"></div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center min-h-[60vh]">
+      <!-- Left Column: The Main Message -->
+      <div class="lg:col-span-7 flex flex-col justify-center relative z-20">
         
-        <div class="mt-10 flex flex-wrap gap-4">
+        <div class="flex items-center gap-3 mb-8 eyebrow text-ink-foreground/75 opacity-0 animate-fade-in" style="animation-delay: 0.2s;">
+          <span aria-hidden="true" class="inline-block size-[6px] rotate-45 bg-accent animate-pulse-slow"></span>
+          <span>UK Accounting & Finance Outsourcing</span>
+        </div>
+
+        <h1 class="font-display text-5xl md:text-6xl lg:text-[4.5rem] leading-[1.15] mb-8 max-w-4xl font-light">
+          <span class="text-dim opacity-0 animate-fade-in" style="animation-delay: 0.4s;">Get the</span>
+          <br>
+          <span class="reveal-mask">
+            <span class="text-emphasis opacity-0 animate-reveal-up" style="animation-delay: 0.5s;">Accountin</span>
+            <span class="inline-block text-[#ffffff] italic font-light opacity-0 animate-reveal-up" style="animation-delay: 0.5s;">g</span>
+            {' '}
+            <span class="text-emphasis opacity-0 animate-reveal-up" style="animation-delay: 0.5s;">Capacit</span>
+            <span class="inline-block text-[#ffffff] italic font-light opacity-0 animate-reveal-up" style="animation-delay: 0.5s;">y</span>
+          </span>
+          <br>
+          <span class="text-dim opacity-0 animate-fade-in" style="animation-delay: 0.8s;">you need without</span><br>
+          <span class="text-dim opacity-0 animate-fade-in" style="animation-delay: 0.9s;">building it all</span>
+          <br>
+          <span class="reveal-mask">
+            <span class="text-emphasis opacity-0 animate-reveal-up" style="animation-delay: 1.0s;">In House.</span>
+          </span>
+        </h1>
+
+        <p class="max-w-xl text-[1.05rem] leading-relaxed text-ink-foreground/80 mb-10 font-light opacity-0 animate-fade-in" style="animation-delay: 1.4s;">
+          Calveris provides experienced finance delivery capacity, without the recruitment, salaries and management overhead of hiring it all in house.
+        </p>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-wrap gap-4 opacity-0 animate-fade-in" style="animation-delay: 1.6s;">
           <a href="#build" class="group inline-flex items-center gap-3 border px-7 py-4 eyebrow tracking-[0.18em] transition-colors duration-500 border-background bg-background text-ink hover:bg-accent hover:border-accent hover:text-accent-foreground">
             <span>Build Your Team</span>
             <span class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-0.5">
@@ -42,14 +59,54 @@
         </div>
       </div>
 
-      <div class="reveal lg:col-span-6 lg:flex lg:items-end lg:justify-end" data-shown="true" style="animation-delay: 320ms">
-        <div class="border border-hairline-light bg-ink/40 p-8 backdrop-blur-sm lg:max-w-sm">
-          <p class="eyebrow text-ink-foreground/70">Bookkeeping. Payroll. Reporting.</p>
-          <p class="mt-3 font-display text-3xl font-light italic">Let’s build your next chapter.</p>
+      <!-- Right Column: Abstract Ambient Graph -->
+      <div class="lg:col-span-5 relative h-full min-h-[600px] hidden lg:block opacity-0 animate-fade-in" style="animation-delay: 1.8s;">
+        <!-- Deep background glow for integration -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-accent/5 rounded-full blur-3xl mix-blend-screen pointer-events-none"></div>
+
+        <!-- Borderless Big Abstract Graph -->
+        <div class="absolute inset-0 flex items-center justify-center -mr-[30%] pointer-events-none">
+          <svg viewBox="0 0 800 600" class="w-[140%] h-[140%] overflow-visible ambient-wave">
+            <defs>
+              <linearGradient id="glow-grad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="var(--color-ink)" stop-opacity="0" />
+                <stop offset="50%" stop-color="var(--color-accent)" stop-opacity="0.9" />
+                <stop offset="100%" stop-color="var(--color-ink)" stop-opacity="0" />
+              </linearGradient>
+              <linearGradient id="fade-grad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="var(--color-accent)" stop-opacity="0.2" />
+                <stop offset="80%" stop-color="var(--color-accent)" stop-opacity="0" />
+              </linearGradient>
+              <filter id="heavy-glow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="15" result="blur" />
+                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+              </filter>
+            </defs>
+
+            <g class="wave-group-1">
+              <path d="M-200,600 C0,500 250,150 500,250 C750,350 850,150 1000,50 L1000,800 L-200,800 Z" fill="url(#fade-grad)" />
+              <path d="M-200,550 C0,450 250,100 500,200 C750,300 850,100 1000,0" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5" />
+              <path d="M-200,570 C0,470 250,120 500,220 C750,320 850,120 1000,20" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+              <path d="M-200,590 C0,490 250,140 500,240 C750,340 850,140 1000,40" fill="none" stroke="rgba(255,255,255,0.02)" stroke-width="1" />
+              <path d="M-200,610 C0,510 250,160 500,260 C750,360 850,160 1000,60" fill="none" stroke="rgba(255,255,255,0.01)" stroke-width="1" />
+            </g>
+
+            <g class="wave-group-2" style="animation-delay: -3s;">
+              <path d="M-200,600 C50,550 300,250 550,280 C800,310 900,180 1100,150" fill="none" stroke="url(#glow-grad)" stroke-width="4" class="animated-flow" filter="url(#heavy-glow)" />
+              <path d="M-200,600 C50,550 300,250 550,280 C800,310 900,180 1100,150" fill="none" stroke="var(--color-accent)" stroke-width="1.5" class="animated-flow" />
+            </g>
+
+            <g class="wave-group-3" style="animation-delay: -7s;">
+              <path d="M-200,400 C150,400 350,300 600,250 C850,200 950,250 1100,50" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1" class="animated-flow-reverse" />
+              <path d="M-200,420 C150,420 350,320 600,270 C850,220 950,270 1100,70" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1" class="animated-flow-reverse" style="animation-delay: -4s;" />
+            </g>
+          </svg>
         </div>
       </div>
     </div>
-  </div>
+  </main>
+  
+  <div class="h-24 bg-gradient-to-t from-[#111] to-transparent pointer-events-none mt-auto z-10"></div>
 </header>
 
 <div class="bg-background">
@@ -63,3 +120,89 @@
     </div>
   </div>
 </div>
+
+<script>
+  function initHero() {
+    setTimeout(() => {
+      const texts = document.querySelectorAll('.text-emphasis');
+      texts.forEach((text, i) => {
+        setTimeout(() => text.classList.add('animate-underline'), i * 250);
+      });
+    }, 100);
+  }
+  
+  initHero();
+  document.addEventListener('astro:page-load', initHero);
+</script>
+
+<style>
+.bg-architectural {
+    background-color: var(--color-ink);
+    background-image: 
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.03) 0%, transparent 40%),
+        radial-gradient(circle at 20% 80%, rgba(0,0,0,0.4) 0%, transparent 60%);
+    box-shadow: inset 0 0 100px rgba(0,0,0,0.8);
+}
+
+.reveal-mask {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: bottom;
+}
+
+.text-emphasis {
+    display: inline-block;
+    color: #ffffff;
+    font-style: italic;
+    position: relative;
+    font-weight: 300;
+}
+
+.text-emphasis::after {
+    content: '';
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-accent);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    transition-delay: 1s;
+}
+
+.animate-underline::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.text-dim {
+    color: #888888;
+}
+
+.ambient-wave { animation: slowBreathe 15s ease-in-out infinite alternate; }
+.wave-group-1 { animation: waveShift 20s ease-in-out infinite alternate; transform-origin: center; }
+.wave-group-2 { animation: waveShift 25s ease-in-out infinite alternate-reverse; transform-origin: center; }
+.wave-group-3 { animation: waveShift 18s ease-in-out infinite alternate; transform-origin: center; }
+.animated-flow { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: dashFlow 12s linear infinite; }
+.animated-flow-reverse { stroke-dasharray: 2000; stroke-dashoffset: -2000; animation: dashFlowReverse 18s linear infinite; }
+
+@keyframes slowBreathe { 0% { transform: scale(1) translateY(0); } 100% { transform: scale(1.05) translateY(-20px); } }
+@keyframes waveShift { 0% { transform: rotate(-2deg) scale(1); } 100% { transform: rotate(2deg) scale(1.03); } }
+@keyframes dashFlow { to { stroke-dashoffset: 0; } }
+@keyframes dashFlowReverse { to { stroke-dashoffset: 0; } }
+@keyframes revealUp { 0% { transform: translateY(100%); opacity: 0; } 100% { transform: translateY(0); opacity: 1; } }
+@keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes customPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+
+.animate-reveal-up {
+    animation: revealUp 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+.animate-fade-in {
+    animation: fadeIn 1.5s ease-out forwards;
+}
+.animate-pulse-slow {
+    animation: customPulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+</style>
