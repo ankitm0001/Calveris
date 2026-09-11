@@ -1,122 +1,173 @@
 ---
+import InteractiveDeck from "./InteractiveDeck.jsx";
 ---
 
-<header class="relative min-h-[100svh] overflow-hidden bg-ink flex flex-col" id="top">
+<header
+  class="relative min-h-[100svh] overflow-hidden bg-forest flex flex-col"
+  id="top"
+>
   <!-- Deep Background -->
-  <div class="absolute inset-0 z-0 bg-architectural opacity-80 pointer-events-none">
-    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDIiLz4KPC9zdmc+')] opacity-20"></div>
+  <div
+    class="absolute inset-0 z-0 bg-architectural opacity-80 pointer-events-none"
+  >
+    <div
+      class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDIiLz4KPC9zdmc+')] opacity-20"
+    >
+    </div>
   </div>
 
-  <main class="flex-grow flex flex-col justify-center shell relative z-10 pt-[120px] pb-16">
+  <main
+    class="flex-grow flex flex-col justify-center w-full max-w-[90rem] mx-auto px-6 md:px-12 xl:px-20 relative z-10 pt-[120px] pb-16"
+  >
     <div class="w-full h-px bg-hairline-light mb-12"></div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center min-h-[60vh]">
+    <div
+      class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center min-h-[60vh]"
+    >
       <!-- Left Column: The Main Message -->
       <div class="lg:col-span-7 flex flex-col justify-center relative z-20">
-        
-        <div class="flex items-center gap-3 mb-8 eyebrow text-ink-foreground/75 opacity-0 animate-fade-in" style="animation-delay: 0.2s;">
-          <span aria-hidden="true" class="inline-block size-[6px] rotate-45 bg-accent animate-pulse-slow"></span>
+        <div
+          class="inline-flex w-fit items-center gap-2 px-6 py-2.5 rounded-full text-[9px] tracking-widest uppercase font-bold mb-8 opacity-0 animate-fade-in text-accent"
+          style="animation-delay: 200ms; background: #06100c; box-shadow: inset 6px 6px 12px #020605, inset -6px -6px 12px #0a1a13;"
+        >
+          <span
+            aria-hidden="true"
+            class="inline-block size-[6px] rotate-45 bg-accent"
+          ></span>
           <span>GLOBAL Accounting & Finance Outsourcing</span>
         </div>
 
-        <h1 class="font-display text-5xl md:text-6xl lg:text-[4.5rem] leading-[1.15] mb-8 max-w-4xl font-light">
-          <span class="text-dim opacity-0 animate-fade-in" style="animation-delay: 0.4s;">Get the</span>
-          <br>
+        <h1
+          class="font-display text-5xl md:text-6xl lg:text-[4.5rem] leading-[1.15] mb-8 max-w-4xl font-light"
+        >
+          <span
+            class="text-dim opacity-0 animate-fade-in"
+            style="animation-delay: 0.4s;">Get the</span
+          >
+          <br />
           <span class="reveal-mask">
-            <span class="text-emphasis opacity-0 animate-reveal-up" style="animation-delay: 0.5s;">Accountin</span>
-            <span class="inline-block text-[#ffffff] italic font-light opacity-0 animate-reveal-up" style="animation-delay: 0.5s;">g</span>
-            {' '}
-            <span class="text-emphasis opacity-0 animate-reveal-up" style="animation-delay: 0.5s;">Capacit</span>
-            <span class="inline-block text-[#ffffff] italic font-light opacity-0 animate-reveal-up" style="animation-delay: 0.5s;">y</span>
+            <span
+              class="text-emphasis opacity-0 animate-reveal-up"
+              style="animation-delay: 0.5s;">Accountin</span
+            >
+            <span
+              class="inline-block text-[#ffffff] italic font-light opacity-0 animate-reveal-up"
+              style="animation-delay: 0.5s;">g</span
+            >
+            {" "}
+            <span
+              class="text-emphasis opacity-0 animate-reveal-up"
+              style="animation-delay: 0.5s;">Capacit</span
+            >
+            <span
+              class="inline-block text-[#ffffff] italic font-light opacity-0 animate-reveal-up"
+              style="animation-delay: 0.5s;">y</span
+            >
           </span>
-          <br>
-          <span class="text-dim opacity-0 animate-fade-in" style="animation-delay: 0.8s;">you need without</span><br>
-          <span class="text-dim opacity-0 animate-fade-in" style="animation-delay: 0.9s;">building it all</span>
-          <br>
+          <br />
+          <span
+            class="text-dim opacity-0 animate-fade-in"
+            style="animation-delay: 0.8s;">you need without</span
+          ><br />
+          <span
+            class="text-dim opacity-0 animate-fade-in"
+            style="animation-delay: 0.9s;">building it all</span
+          >
+          <br />
           <span class="reveal-mask">
-            <span class="text-emphasis opacity-0 animate-reveal-up" style="animation-delay: 1.0s;">In House.</span>
+            <span
+              class="text-emphasis opacity-0 animate-reveal-up"
+              style="animation-delay: 1.0s;">In House.</span
+            >
           </span>
         </h1>
 
-        <p class="max-w-xl text-[1.05rem] leading-relaxed text-ink-foreground/80 mb-10 font-light opacity-0 animate-fade-in" style="animation-delay: 1.4s;">
-          Calveris provides experienced finance delivery capacity, without the recruitment, salaries and management overhead of hiring it all in house.
+        <p
+          class="max-w-xl text-[1.05rem] leading-relaxed text-ink-foreground/80 mb-10 font-light opacity-0 animate-fade-in"
+          style="animation-delay: 1.4s;"
+        >
+          Calveris provides experienced finance delivery capacity, without the
+          recruitment, salaries and management overhead of hiring it all in
+          house.
         </p>
 
         <!-- Action Buttons -->
-        <div class="flex flex-wrap gap-4 opacity-0 animate-fade-in" style="animation-delay: 1.6s;">
-          <a href="#build" class="group inline-flex items-center gap-3 border px-7 py-4 eyebrow tracking-[0.18em] transition-colors duration-500 border-background bg-background text-ink hover:bg-accent hover:border-accent hover:text-accent-foreground">
-            <span>Build Your Team</span>
-            <span class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-0.5">
-              <svg viewBox="0 0 16 16" class="size-3.5" fill="none" aria-hidden="true"><path d="M4 12L12 4M12 4H5.5M12 4v6.5" stroke="currentColor" stroke-width="1.2"></path></svg>
-            </span>
+        <div class="flex flex-wrap gap-6 items-center opacity-0 animate-fade-in" style="animation-delay: 1.6s;">
+          <a href="/contact" class="relative rounded-full p-[2px] overflow-hidden group/btn inline-flex items-center cursor-pointer shadow-[0_10px_40px_rgba(255,255,255,0.05)]">
+              <div class="absolute inset-[-150%] bg-[conic-gradient(from_0deg,transparent_0%,transparent_60%,#4ade80_100%)] animate-[spin_20s_linear_infinite]"></div>
+              <div class="relative flex items-center gap-4 bg-[#0d1b16] text-white pl-8 pr-2 py-2 rounded-full text-[11px] tracking-[0.2em] uppercase font-bold transition-all duration-300 w-full h-full group-hover/btn:bg-[#152821] group-hover/btn:shadow-[inset_0_0_20px_rgba(74,222,128,0.1)]">
+                  <span>Get Started</span>
+                  <div class="w-12 h-12 rounded-full bg-[#2a5a4a] flex items-center justify-center text-white transition-transform duration-300 group-hover/btn:rotate-45 group-hover/btn:scale-105 group-hover/btn:bg-[#3d7a66]">
+                      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                  </div>
+              </div>
           </a>
-          <a href="https://wa.me/447999901081" target="_blank" rel="noopener" class="group inline-flex items-center gap-3 border px-7 py-4 eyebrow tracking-[0.18em] transition-colors duration-500 border-hairline-light text-ink-foreground hover:bg-background hover:text-ink">
-            <span>Talk to our team</span>
-            <span class="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-0.5">
-              <svg viewBox="0 0 16 16" class="size-3.5" fill="none" aria-hidden="true"><path d="M2.5 8h11M9.5 4l4 4-4 4" stroke="currentColor" stroke-width="1.2"></path></svg>
-            </span>
+
+          <a href="https://wa.me/447999901081" target="_blank" rel="noopener" class="text-[11px] tracking-[0.2em] uppercase font-bold text-white px-6 py-4 flex items-center gap-3 hover:text-[#a3c2a3] transition-colors rounded-full opacity-80 hover:opacity-100">
+              Contact Sales <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </a>
         </div>
       </div>
 
-      <!-- Right Column: Abstract Ambient Graph -->
-      <div class="lg:col-span-5 relative h-full min-h-[600px] hidden lg:block opacity-0 animate-fade-in" style="animation-delay: 1.8s;">
-        <!-- Deep background glow for integration -->
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[150%] bg-accent/5 rounded-full blur-3xl mix-blend-screen pointer-events-none"></div>
-
-        <!-- Borderless Big Abstract Graph -->
-        <div class="absolute inset-0 flex items-center justify-center -mr-[30%] pointer-events-none">
-          <svg viewBox="0 0 800 600" class="w-[140%] h-[140%] overflow-visible ambient-wave">
-            <defs>
-              <linearGradient id="glow-grad" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0%" stop-color="var(--color-ink)" stop-opacity="0" />
-                <stop offset="50%" stop-color="var(--color-accent)" stop-opacity="0.9" />
-                <stop offset="100%" stop-color="var(--color-ink)" stop-opacity="0" />
-              </linearGradient>
-              <linearGradient id="fade-grad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="var(--color-accent)" stop-opacity="0.2" />
-                <stop offset="80%" stop-color="var(--color-accent)" stop-opacity="0" />
-              </linearGradient>
-              <filter id="heavy-glow" x="-20%" y="-20%" width="140%" height="140%">
-                <feGaussianBlur stdDeviation="15" result="blur" />
-                <feComposite in="SourceGraphic" in2="blur" operator="over" />
-              </filter>
-            </defs>
-
-            <g class="wave-group-1">
-              <path d="M-200,600 C0,500 250,150 500,250 C750,350 850,150 1000,50 L1000,800 L-200,800 Z" fill="url(#fade-grad)" />
-              <path d="M-200,550 C0,450 250,100 500,200 C750,300 850,100 1000,0" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5" />
-              <path d="M-200,570 C0,470 250,120 500,220 C750,320 850,120 1000,20" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
-              <path d="M-200,590 C0,490 250,140 500,240 C750,340 850,140 1000,40" fill="none" stroke="rgba(255,255,255,0.02)" stroke-width="1" />
-              <path d="M-200,610 C0,510 250,160 500,260 C750,360 850,160 1000,60" fill="none" stroke="rgba(255,255,255,0.01)" stroke-width="1" />
-            </g>
-
-            <g class="wave-group-2" style="animation-delay: -3s;">
-              <path d="M-200,600 C50,550 300,250 550,280 C800,310 900,180 1100,150" fill="none" stroke="url(#glow-grad)" stroke-width="4" class="animated-flow" filter="url(#heavy-glow)" />
-              <path d="M-200,600 C50,550 300,250 550,280 C800,310 900,180 1100,150" fill="none" stroke="var(--color-accent)" stroke-width="1.5" class="animated-flow" />
-            </g>
-
-            <g class="wave-group-3" style="animation-delay: -7s;">
-              <path d="M-200,400 C150,400 350,300 600,250 C850,200 950,250 1100,50" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1" class="animated-flow-reverse" />
-              <path d="M-200,420 C150,420 350,320 600,270 C850,220 950,270 1100,70" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1" class="animated-flow-reverse" style="animation-delay: -4s;" />
-            </g>
-          </svg>
-        </div>
+      <!-- Right Column: Interactive Deck -->
+      <div
+        class="lg:col-span-5 relative h-full min-h-[600px] hidden lg:block opacity-0 animate-fade-in"
+        style="animation-delay: 1.8s;"
+      >
+        <InteractiveDeck client:load />
       </div>
     </div>
   </main>
-  
-  <div class="h-24 bg-gradient-to-t from-[#111] to-transparent pointer-events-none mt-auto z-10"></div>
+
+  <div
+    class="h-24 bg-gradient-to-t from-[#111] to-transparent pointer-events-none mt-auto z-10"
+  >
+  </div>
 </header>
 
 <div class="bg-background">
   <div class="overflow-hidden border-y py-6 border-hairline">
     <div class="marquee-track flex w-max items-center gap-14 whitespace-nowrap">
-      <span class="flex items-center gap-14"><span class="font-display text-2xl font-light italic md:text-[2rem] text-foreground/70">Your business. Your priorities.</span><span aria-hidden="true" class="inline-block size-[6px] rotate-45 bg-accent"></span></span>
-      <span class="flex items-center gap-14"><span class="font-display text-2xl font-light italic md:text-[2rem] text-foreground/70">Our people. Your extended team.</span><span aria-hidden="true" class="inline-block size-[6px] rotate-45 bg-accent"></span></span>
-      <span class="flex items-center gap-14"><span class="font-display text-2xl font-light italic md:text-[2rem] text-foreground/70">Accounting · Finance · Delivery</span><span aria-hidden="true" class="inline-block size-[6px] rotate-45 bg-accent"></span></span>
-      <span class="flex items-center gap-14"><span class="font-display text-2xl font-light italic md:text-[2rem] text-foreground/70">Your business. Your priorities.</span><span aria-hidden="true" class="inline-block size-[6px] rotate-45 bg-accent"></span></span>
-      <span class="flex items-center gap-14"><span class="font-display text-2xl font-light italic md:text-[2rem] text-foreground/70">Our people. Your extended team.</span><span aria-hidden="true" class="inline-block size-[6px] rotate-45 bg-accent"></span></span>
+      <span class="flex items-center gap-14"
+        ><span
+          class="font-display text-2xl font-light italic md:text-[2rem] text-foreground/70"
+          >Your business. Your priorities.</span
+        ><span
+          aria-hidden="true"
+          class="inline-block size-[6px] rotate-45 bg-accent"></span></span
+      >
+      <span class="flex items-center gap-14"
+        ><span
+          class="font-display text-2xl font-light italic md:text-[2rem] text-foreground/70"
+          >Our people. Your extended team.</span
+        ><span
+          aria-hidden="true"
+          class="inline-block size-[6px] rotate-45 bg-accent"></span></span
+      >
+      <span class="flex items-center gap-14"
+        ><span
+          class="font-display text-2xl font-light italic md:text-[2rem] text-foreground/70"
+          >Accounting · Finance · Delivery</span
+        ><span
+          aria-hidden="true"
+          class="inline-block size-[6px] rotate-45 bg-accent"></span></span
+      >
+      <span class="flex items-center gap-14"
+        ><span
+          class="font-display text-2xl font-light italic md:text-[2rem] text-foreground/70"
+          >Your business. Your priorities.</span
+        ><span
+          aria-hidden="true"
+          class="inline-block size-[6px] rotate-45 bg-accent"></span></span
+      >
+      <span class="flex items-center gap-14"
+        ><span
+          class="font-display text-2xl font-light italic md:text-[2rem] text-foreground/70"
+          >Our people. Your extended team.</span
+        ><span
+          aria-hidden="true"
+          class="inline-block size-[6px] rotate-45 bg-accent"></span></span
+      >
     </div>
   </div>
 </div>
@@ -124,42 +175,46 @@
 <script>
   function initHero() {
     setTimeout(() => {
-      const texts = document.querySelectorAll('.text-emphasis');
+      const texts = document.querySelectorAll(".text-emphasis");
       texts.forEach((text, i) => {
-        setTimeout(() => text.classList.add('animate-underline'), i * 250);
+        setTimeout(() => text.classList.add("animate-underline"), i * 250);
       });
     }, 100);
   }
-  
+
   initHero();
-  document.addEventListener('astro:page-load', initHero);
+  document.addEventListener("astro:page-load", initHero);
 </script>
 
 <style>
-.bg-architectural {
+  .bg-architectural {
     background-color: var(--color-ink);
-    background-image: 
-        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.03) 0%, transparent 40%),
-        radial-gradient(circle at 20% 80%, rgba(0,0,0,0.4) 0%, transparent 60%);
-    box-shadow: inset 0 0 100px rgba(0,0,0,0.8);
-}
+    background-image:
+      radial-gradient(
+        circle at 80% 20%,
+        rgba(255, 255, 255, 0.03) 0%,
+        transparent 40%
+      ),
+      radial-gradient(circle at 20% 80%, rgba(0, 0, 0, 0.4) 0%, transparent 60%);
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.8);
+  }
 
-.reveal-mask {
+  .reveal-mask {
     display: inline-block;
     overflow: hidden;
     vertical-align: bottom;
-}
+  }
 
-.text-emphasis {
+  .text-emphasis {
     display: inline-block;
     color: #ffffff;
     font-style: italic;
     position: relative;
     font-weight: 300;
-}
+  }
 
-.text-emphasis::after {
-    content: '';
+  .text-emphasis::after {
+    content: "";
     position: absolute;
     bottom: 8px;
     left: 0;
@@ -170,39 +225,126 @@
     transform-origin: right;
     transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
     transition-delay: 1s;
-}
+  }
 
-.animate-underline::after {
+  .animate-underline::after {
     transform: scaleX(1);
     transform-origin: left;
-}
+  }
 
-.text-dim {
+  .text-dim {
     color: #888888;
-}
+  }
 
-.ambient-wave { animation: slowBreathe 15s ease-in-out infinite alternate; }
-.wave-group-1 { animation: waveShift 20s ease-in-out infinite alternate; transform-origin: center; }
-.wave-group-2 { animation: waveShift 25s ease-in-out infinite alternate-reverse; transform-origin: center; }
-.wave-group-3 { animation: waveShift 18s ease-in-out infinite alternate; transform-origin: center; }
-.animated-flow { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: dashFlow 12s linear infinite; }
-.animated-flow-reverse { stroke-dasharray: 2000; stroke-dashoffset: -2000; animation: dashFlowReverse 18s linear infinite; }
+  .ambient-wave {
+    animation: slowBreathe 15s ease-in-out infinite alternate;
+  }
+  .wave-group-1 {
+    animation: waveShift 20s ease-in-out infinite alternate;
+    transform-origin: center;
+  }
+  .wave-group-2 {
+    animation: waveShift 25s ease-in-out infinite alternate-reverse;
+    transform-origin: center;
+  }
+  .wave-group-3 {
+    animation: waveShift 18s ease-in-out infinite alternate;
+    transform-origin: center;
+  }
+  .animated-flow {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+    animation: dashFlow 12s linear infinite;
+  }
+  .animated-flow-reverse {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: -2000;
+    animation: dashFlowReverse 18s linear infinite;
+  }
 
-@keyframes slowBreathe { 0% { transform: scale(1) translateY(0); } 100% { transform: scale(1.05) translateY(-20px); } }
-@keyframes waveShift { 0% { transform: rotate(-2deg) scale(1); } 100% { transform: rotate(2deg) scale(1.03); } }
-@keyframes dashFlow { to { stroke-dashoffset: 0; } }
-@keyframes dashFlowReverse { to { stroke-dashoffset: 0; } }
-@keyframes revealUp { 0% { transform: translateY(100%); opacity: 0; } 100% { transform: translateY(0); opacity: 1; } }
-@keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
-@keyframes customPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+  @keyframes slowBreathe {
+    0% {
+      transform: scale(1) translateY(0);
+    }
+    100% {
+      transform: scale(1.05) translateY(-20px);
+    }
+  }
+  @keyframes waveShift {
+    0% {
+      transform: rotate(-2deg) scale(1);
+    }
+    100% {
+      transform: rotate(2deg) scale(1.03);
+    }
+  }
+  @keyframes dashFlow {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes dashFlowReverse {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes revealUp {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes customPulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
 
-.animate-reveal-up {
+  .animate-reveal-up {
     animation: revealUp 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
-}
-.animate-fade-in {
+  }
+  .animate-fade-in {
     animation: fadeIn 1.5s ease-out forwards;
-}
-.animate-pulse-slow {
+  }
+  .animate-pulse-slow {
     animation: customPulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
+  }
+
+  @keyframes floatUpDown {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes pulseGlow {
+    0%,
+    100% {
+      opacity: 0.1;
+      transform: scale(1) translate(-50%, -50%);
+    }
+    50% {
+      opacity: 0.2;
+      transform: scale(1.1) translate(-50%, -50%);
+    }
+  }
 </style>

@@ -99,42 +99,64 @@ export default function Services() {
   const globalProgress = scrollYProgress * (transformation.length - 1);
 
   return (
-    <section className="bg-forest text-forest-foreground py-28 lg:py-40 scroll-mt-[90px]" id="services" ref={sectionRef}>
+    <section 
+      className="bg-background text-foreground py-28 lg:py-40 scroll-mt-[90px]" 
+      id="services" 
+      ref={sectionRef}
+      style={{ borderBottom: '1px solid var(--color-hairline)' }}
+    >
       <div className="shell">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 relative">
           
           {/* LEFT SIDE - HEADER & SERVICES */}
-          <div className={`lg:sticky lg:top-[8vh] self-start transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] ${isRevealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-            <div className="eyebrow flex items-center gap-3 text-forest-foreground/60 mb-4">
-              <span aria-hidden="true" className="inline-block size-[6px] rotate-45 bg-accent"></span>
-              <span>Our services</span>
+          <div className={`lg:sticky lg:top-32 self-start transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] ${isRevealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <div 
+              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-[9px] tracking-widest uppercase font-bold mb-6" 
+              style={{ 
+                color: 'var(--color-accent)', 
+                background: 'var(--color-background)', 
+                boxShadow: 'inset 6px 6px 12px #c4c6cc, inset -6px -6px 12px #ffffff' 
+              }}
+            >
+              <span aria-hidden="true" className="inline-block size-[6px] rotate-45" style={{ background: 'var(--color-accent)' }}></span>
+              Our services
             </div>
-            <h2 className="display-lg mb-8 text-balance max-w-lg leading-[1.1]">
-              The accounting work your business needs handled.
+            <h2 className="display-lg mb-12 text-balance max-w-lg leading-[1.1]">
+              The exact accounting work your business needs handled.
             </h2>
             
-            <div className="border-t border-l border-r border-hairline-light" role="list">
+            <div className="flex flex-col gap-4" role="list">
               {services.map((service, j) => (
                 <div 
                   key={j}
-                  className="group relative overflow-hidden flex justify-between items-center text-left py-3.5 px-5 lg:py-4 lg:px-6 bg-transparent border-b border-hairline-light text-inherit transition-colors duration-500 hover:bg-forest-foreground/[0.05]"
+                  className="group relative flex justify-between items-center py-4 px-6 lg:py-5 lg:px-8 rounded-2xl transition-all duration-500 hover:-translate-y-1 cursor-default"
+                  style={{
+                    background: 'var(--color-background)',
+                    boxShadow: '10px 10px 20px #c4c6cc, -10px -10px 20px #ffffff'
+                  }}
                 >
                   <div className="flex gap-5 items-center">
-                    <span className="text-[10px] tracking-widest opacity-60 transition-colors duration-500 group-hover:text-accent/80 font-semibold">{String(j + 1).padStart(2, '0')}</span>
-                    <span className="font-display font-normal text-lg lg:text-xl leading-[1.1]">{service}</span>
+                    <span className="text-[11px] tracking-widest text-muted-foreground font-bold opacity-70 group-hover:text-accent transition-colors duration-500">
+                      {String(j + 1).padStart(2, '0')}
+                    </span>
+                    <span className="font-display font-medium text-xl text-foreground">
+                      {service}
+                    </span>
                   </div>
-                  <span className="text-base text-accent/60 transition-transform duration-500 group-hover:translate-x-1" aria-hidden="true">→</span>
+                  <span className="text-lg text-accent/60 transition-transform duration-500 group-hover:translate-x-1" aria-hidden="true">
+                    →
+                  </span>
                 </div>
               ))}
             </div>
           </div>
           
-          {/* RIGHT SIDE - TRANSFORMATION */}
-          <div className={`lg:pl-16 flex flex-col pt-12 lg:pt-0 transition-all duration-1000 delay-[140ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${isRevealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          {/* RIGHT SIDE - TRANSFORMATION TIMELINE */}
+          <div className={`lg:pl-12 flex flex-col pt-12 lg:pt-0 transition-all duration-1000 delay-[140ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${isRevealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
             <div className="relative" ref={timelineRef}>
               <div className="flex flex-col gap-0">
                 {transformation.map((step, i) => {
-                  const isActive = globalProgress >= i - 0.2; // Add a small threshold leeway so it highlights slightly before it hits the exact line
+                  const isActive = globalProgress >= i - 0.2; // Add a small threshold leeway
                   
                   // Calculate how full the line segment below this node should be (0 to 100%)
                   const segmentProgress = globalProgress - i;
@@ -146,40 +168,61 @@ export default function Services() {
                       className="flex gap-8 group"
                     >
                       {/* Node / Line column */}
-                      <div className="flex flex-col items-center mt-2">
-                        <div className={`size-[12px] rounded-full border-[2px] transition-colors duration-300 z-10 flex-shrink-0 ${
-                          i === transformation.length - 1 && globalProgress >= transformation.length - 1.1
-                            ? 'bg-accent border-accent' 
-                            : isActive 
-                              ? 'border-accent bg-forest' 
-                              : 'border-hairline-light bg-forest'
-                        }`}></div>
+                      <div className="flex flex-col items-center mt-1.5">
                         
-                        {/* Connecting line */}
+                        {/* Neumorphic Node */}
+                        <div 
+                          className="w-10 h-10 rounded-full flex items-center justify-center shrink-0 z-10 transition-all duration-500"
+                          style={{
+                            background: isActive ? 'var(--color-forest)' : 'var(--color-background)',
+                            boxShadow: isActive 
+                              ? 'inset 4px 4px 10px rgba(0,0,0,0.4), inset -2px -2px 6px rgba(255,255,255,0.1)' 
+                              : '6px 6px 12px #c4c6cc, -6px -6px 12px #ffffff',
+                          }}
+                        >
+                           <div 
+                             className="w-3 h-3 rounded-full transition-all duration-500"
+                             style={{
+                               background: isActive ? 'var(--color-accent)' : 'rgba(0,0,0,0.1)',
+                               boxShadow: isActive ? '0 0 10px rgba(124, 170, 120, 0.8)' : 'inset 1px 1px 3px rgba(0,0,0,0.2)'
+                             }}
+                           ></div>
+                        </div>
+                        
+                        {/* Neumorphic Connecting Groove */}
                         {i < transformation.length - 1 && (
-                          <div className="w-[1px] flex-grow my-1 min-h-[80px] lg:min-h-[120px] bg-hairline-light/30 relative overflow-hidden">
+                          <div 
+                            className="w-2.5 flex-grow my-3 min-h-[90px] lg:min-h-[140px] rounded-full relative overflow-hidden transition-all"
+                            style={{
+                              background: 'var(--color-background)',
+                              boxShadow: 'inset 3px 3px 6px #c4c6cc, inset -3px -3px 6px #ffffff'
+                            }}
+                          >
                             <div 
-                              className="absolute top-0 left-0 w-full bg-accent"
-                              style={{ height: `${lineFillPercent}%` }}
+                              className="absolute top-0 left-0 w-full rounded-full transition-all duration-100 ease-out"
+                              style={{ 
+                                height: `${lineFillPercent}%`, 
+                                background: 'var(--color-forest)',
+                              }}
                             ></div>
                           </div>
                         )}
                       </div>
                       
                       {/* Content */}
-                      <div className={`pt-0.5 ${i < transformation.length - 1 ? 'pb-16 lg:pb-24' : ''}`}>
-                        <div className={`text-[10px] tracking-[0.08em] uppercase font-semibold mb-3 transition-colors duration-500 ${
-                          isActive ? 'text-accent' : 'text-forest-foreground/40'
+                      <div className={`pt-1.5 ${i < transformation.length - 1 ? 'pb-16 lg:pb-24' : ''}`}>
+                        <div className={`text-[10px] tracking-[0.12em] uppercase font-bold mb-3 transition-colors duration-500 ${
+                          isActive ? 'text-accent' : 'text-muted-foreground/50'
                         }`}>
                           {step.step} / {step.label}
                         </div>
                         <h3 className={`font-display text-[26px] lg:text-[28px] leading-[1.2] mb-4 transition-colors duration-500 ${
-                          isActive ? 'text-forest-foreground' : 'text-forest-foreground/50'
+                          isActive ? 'text-foreground' : 'text-muted-foreground/50'
                         }`}>
                           {step.headline}
                         </h3>
                         <p className={`text-[15px] leading-relaxed max-w-[420px] transition-colors duration-500 ${
-                          isActive ? 'text-forest-foreground/80' : 'text-forest-foreground/30'
+                          isActive ? 'text-foreground/80' : 'text-muted-foreground/40'
                         }`}>
                           {step.text}
                         </p>

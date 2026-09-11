@@ -1,14 +1,14 @@
 ---
 ---
-<section id="workload" class="bg-background py-24 lg:py-32 border-b border-hairline">
+<section id="workload" class="workload-section py-24 lg:py-32 border-b border-hairline">
   <div class="shell">
     <h2 class="display-lg max-w-[20ch] mb-20 text-balance leading-[1.1]">
       Your finance workload has <em class="not-italic text-accent italic font-light">outgrown</em> your team.
     </h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16 border-t border-hairline pt-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 pt-12">
       <!-- Col 1 -->
-      <div class="workload-col group relative p-8 lg:p-10 border border-hairline bg-transparent hover:bg-black/[0.02] transition-colors duration-300 cursor-default">
+      <div class="workload-col group relative p-8 lg:p-10 rounded-[2rem] clay-card hover:clay-card-hover transition-all duration-500 cursor-default">
         <div class="indicator-line absolute top-[-1px] left-[-1px] right-[-1px] h-[2px] bg-accent transform scale-x-0 transition-transform origin-left duration-500 z-10"></div>
         <div class="eyebrow text-muted-foreground mb-4 transition-colors group-hover:text-foreground">01 / THE CATALYST</div>
         <h3 class="text-xl font-medium text-foreground mb-3">Business Grows</h3>
@@ -24,7 +24,7 @@
       </div>
 
       <!-- Col 2 -->
-      <div class="workload-col group relative p-8 lg:p-10 border border-hairline bg-transparent hover:bg-black/[0.02] transition-colors duration-300 cursor-default">
+      <div class="workload-col group relative p-8 lg:p-10 rounded-[2rem] clay-card hover:clay-card-hover transition-all duration-500 cursor-default">
         <div class="indicator-line absolute top-[-1px] left-[-1px] right-[-1px] h-[2px] bg-accent transform scale-x-0 transition-transform origin-left duration-500 z-10"></div>
         <div class="eyebrow text-muted-foreground mb-4 transition-colors group-hover:text-foreground">02 / THE REALITY</div>
         <h3 class="text-xl font-medium text-foreground mb-3">Workload Builds</h3>
@@ -40,7 +40,7 @@
       </div>
 
       <!-- Col 3 -->
-      <div class="workload-col group relative p-8 lg:p-10 border border-hairline bg-transparent hover:bg-black/[0.02] transition-colors duration-300 cursor-default">
+      <div class="workload-col group relative p-8 lg:p-10 rounded-[2rem] clay-card hover:clay-card-hover transition-all duration-500 cursor-default">
         <div class="indicator-line absolute top-[-1px] left-[-1px] right-[-1px] h-[2px] bg-accent transform scale-x-0 transition-transform origin-left duration-500 z-10"></div>
         <div class="eyebrow text-accent mb-4 transition-colors">03 / THE FRICTION</div>
         <h3 class="text-xl font-medium text-foreground mb-3">Capacity Gets Tight</h3>
@@ -49,9 +49,9 @@
     </div>
 
     <!-- The Box below -->
-    <div class="mt-24 lg:mt-32 border border-hairline bg-white/50 p-8 lg:p-16 relative shadow-[0_30px_60px_-15px_rgba(0,0,0,0.03)] overflow-hidden">
+    <div class="mt-24 lg:mt-32 rounded-[2rem] clay-card p-8 lg:p-16 relative overflow-hidden">
       <!-- Ambient background inside -->
-      <div class="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-l from-white via-white to-transparent pointer-events-none opacity-80"></div>
+      <div class="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-l from-white via-white to-transparent pointer-events-none opacity-60"></div>
       
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 relative z-10 items-center">
         <div>
@@ -70,7 +70,7 @@
         </div>
 
         <div class="flex flex-col justify-center gap-6">
-          <div class="group border border-hairline bg-white p-6 lg:p-8 flex items-center justify-between transition-colors hover:border-accent/30 cursor-default shadow-sm">
+          <div class="group rounded-2xl clay-inset p-6 lg:p-8 flex items-center justify-between transition-all cursor-default">
             <div>
               <div class="eyebrow text-muted-foreground mb-2 group-hover:text-foreground transition-colors">BUILD INTERNALLY</div>
               <div class="text-[10px] tracking-[0.15em] uppercase text-muted-foreground/60">ABSORBS RESOURCES</div>
@@ -81,7 +81,7 @@
             </div>
           </div>
 
-          <div class="group border border-accent/30 bg-[#f4f7f3] p-6 lg:p-8 flex items-center justify-between transition-colors hover:border-accent cursor-default shadow-sm">
+          <div class="group rounded-2xl clay-card border border-accent/10 p-6 lg:p-8 flex items-center justify-between transition-all cursor-default">
             <div>
               <div class="eyebrow text-accent mb-2">ADD EXTERNALLY</div>
               <div class="text-[10px] tracking-[0.15em] uppercase text-accent/60">PRESERVES RESOURCES</div>
@@ -98,6 +98,26 @@
 </section>
 
 <style>
+  .workload-section {
+    background-color: var(--color-background);
+  }
+
+  .clay-card {
+    background: var(--color-background);
+    box-shadow: 20px 20px 40px #c4c6cc, -20px -20px 40px #ffffff;
+  }
+
+  .clay-card:hover,
+  .clay-card-hover {
+    box-shadow: 25px 25px 50px #b8bac0, -25px -25px 50px #ffffff, inset 1px 1px 2px rgba(255, 255, 255, 0.8);
+    transform: translateY(-4px);
+  }
+
+  .clay-inset {
+    background: var(--color-background);
+    box-shadow: inset 8px 8px 16px #c4c6cc, inset -8px -8px 16px #ffffff;
+  }
+
   .workload-col.is-active .indicator-line {
     transform: scaleX(1);
   }

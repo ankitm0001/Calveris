@@ -2,68 +2,119 @@
 ---
 
 <section id="pilot" class="bg-background py-24 lg:py-32 border-b border-hairline overflow-hidden">
-  <div class="shell grid gap-16 lg:gap-20 lg:grid-cols-2 items-start">
+  <div class="shell grid gap-16 lg:gap-20 lg:grid-cols-[1fr_1.1fr] items-start">
     
     <!-- LEFT COLUMN -->
-    <div class="pr-0 lg:pr-8 relative reveal">
-      <div class="flex items-center gap-3 text-[11px] tracking-[0.18em] text-accent font-semibold mb-8 uppercase lg:-mt-[52px]">
+    <div class="pr-0 lg:pr-4 relative reveal">
+      
+      <!-- Eyebrow Pill -->
+      <div class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-[9px] tracking-widest uppercase font-bold mb-8 lg:-mt-[52px] text-accent clay-pressed">
         <span aria-hidden="true" class="inline-block size-[6px] rotate-45 bg-accent"></span>
         Before you commit
       </div>
+
       <h2 class="display-lg mb-8 max-w-md text-balance text-foreground">
         Test our delivery before you commit.
       </h2>
-      <p class="text-[17px] text-muted-foreground leading-relaxed max-w-md">
+      <p class="text-[1.05rem] text-muted-foreground leading-relaxed max-w-md mb-8">
         Start with a real accounting requirement. We'll complete up to 10 hours of work so you can evaluate the quality, communication and delivery before deciding how you want to proceed.
       </p>
+
+      <div class="mt-10">
+        <a href="/contact" class="group inline-flex w-fit items-center gap-3 px-8 py-4 rounded-full bg-forest text-white uppercase tracking-[0.18em] text-[11px] font-bold shadow-[0_8px_16px_rgba(42,90,74,0.3)] hover:shadow-[0_12px_24px_rgba(42,90,74,0.4)] hover:-translate-y-0.5 transition-all duration-300">
+          <span>Request a pilot</span>
+          <span class="transition-transform duration-500 group-hover:translate-x-1">
+            <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </span>
+        </a>
+      </div>
+
     </div>
 
-    <!-- RIGHT COLUMN -->
-    <div class="relative reveal flex flex-col items-center lg:items-start text-center">
-      <div class="flex flex-col items-center w-full max-w-sm mx-auto lg:mx-0 lg:ml-auto lg:mr-12">
+    <!-- RIGHT COLUMN (CLAY CARD FLOW) -->
+    <div class="relative reveal flex flex-col items-center lg:items-end w-full">
+      
+      <div class="w-full max-w-[550px] clay-pressed rounded-[2.5rem] p-8 sm:p-10 relative flex flex-col gap-8 sm:gap-10">
         
-        <!-- Stage 01 -->
-        <div class="flex flex-col items-center">
-          <h3 class="text-[13px] uppercase tracking-[0.1em] font-semibold text-foreground mb-1.5">Your real accounting requirement</h3>
-          <p class="text-[14px] text-muted-foreground">Share a suitable piece of accounting work.</p>
-        </div>
-        
-        <div class="py-5">
-          <span class="text-muted-foreground/60 text-[20px]">↓</span>
+        <!-- Vertical connecting line -->
+        <div class="absolute top-[80px] bottom-[80px] left-[55px] sm:left-[63px] w-[2px] bg-background clay-btn rounded-full z-0"></div>
+
+        <!-- Step 01 -->
+        <div class="relative z-10 flex gap-6 sm:gap-8 items-center group">
+          <div class="size-[48px] rounded-full clay-btn flex shrink-0 items-center justify-center text-[11px] font-bold text-muted-foreground group-hover:text-accent group-hover:clay-pressed transition-all duration-300">
+            01
+          </div>
+          <div class="flex-1">
+            <h3 class="text-[11px] sm:text-[12px] uppercase tracking-widest font-bold text-foreground mb-1.5">Your real accounting requirement</h3>
+            <p class="text-[14px] sm:text-[15px] text-muted-foreground">Share a suitable piece of accounting work.</p>
+          </div>
         </div>
 
-        <!-- Stage 02 -->
-        <div class="flex flex-col items-center">
-          <h3 class="text-[14px] uppercase tracking-[0.15em] font-bold text-foreground mb-1.5">Up to 10 hours of delivery</h3>
-          <p class="text-[15px] text-foreground/90 font-medium">Our team completes the agreed accounting work.</p>
-        </div>
-        
-        <div class="py-5">
-          <span class="text-muted-foreground/60 text-[20px]">↓</span>
-        </div>
-
-        <!-- Stage 03 -->
-        <div class="flex flex-col items-center">
-          <h3 class="text-[13px] uppercase tracking-[0.1em] font-semibold text-foreground mb-1.5">Review the result</h3>
-          <p class="text-[14px] text-muted-foreground">Evaluate the quality, communication and delivery.</p>
-        </div>
-        
-        <div class="py-5">
-          <span class="text-muted-foreground/60 text-[20px]">↓</span>
+        <!-- Step 02 (Dark Green - EMPHASIZED) -->
+        <div class="relative z-10 flex gap-5 sm:gap-6 items-stretch group">
+          <!-- Dark node with clock icon -->
+          <div class="size-[48px] rounded-full bg-[#0a1510] flex shrink-0 items-center justify-center text-[#7ec8a0] shadow-[0_6px_16px_rgba(0,0,0,0.5)] self-center transition-all duration-300 border border-[#2a5a4a]/50">
+            <!-- Clock icon -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <div class="flex-1 bg-forest rounded-3xl px-6 py-5 shadow-[0_14px_28px_rgba(42,90,74,0.4),inset_0_1px_0_rgba(255,255,255,0.08)] border border-[#3d7a62]">
+            <p class="text-[8px] sm:text-[9px] uppercase tracking-[0.18em] font-bold text-white/60 mb-1">Delivery commitment</p>
+            <h3 class="text-[1.1rem] sm:text-[1.25rem] font-display font-bold text-white mb-1.5 leading-tight">Up to <span class="text-[1.4rem] sm:text-[1.6rem]">10 hours</span> of delivery</h3>
+            <p class="text-[14px] sm:text-[15px] text-white/85 leading-relaxed">Our team completes the agreed accounting work.</p>
+          </div>
         </div>
 
-        <!-- Stage 04 -->
-        <div class="flex flex-col items-center">
-          <h3 class="text-[13px] uppercase tracking-[0.1em] font-semibold text-foreground mb-1.5">Decide with evidence</h3>
-          <p class="text-[14px] text-muted-foreground">Continue when you're confident the delivery model works for you.</p>
+        <!-- Step 03 -->
+        <div class="relative z-10 flex gap-6 sm:gap-8 items-center group">
+          <div class="size-[48px] rounded-full clay-btn flex shrink-0 items-center justify-center text-[11px] font-bold text-muted-foreground group-hover:text-accent group-hover:clay-pressed transition-all duration-300">
+            03
+          </div>
+          <div class="flex-1">
+            <h3 class="text-[11px] sm:text-[12px] uppercase tracking-widest font-bold text-foreground mb-1.5">Review the result</h3>
+            <p class="text-[14px] sm:text-[15px] text-muted-foreground">Evaluate the quality, communication and delivery.</p>
+          </div>
+        </div>
+
+        <!-- Step 04 (Dark node + clay-btn card - EMPHASIZED) -->
+        <div class="relative z-10 flex gap-5 sm:gap-6 items-stretch group">
+          <!-- Dark node with green checkmark icon -->
+          <div class="size-[48px] rounded-full bg-[#0a1510] flex shrink-0 items-center justify-center text-[#7ec8a0] shadow-[0_6px_16px_rgba(0,0,0,0.5)] self-center transition-all duration-300 border border-[#2a5a4a]/50">
+            <!-- Checkmark icon -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <div class="flex-1 clay-btn rounded-3xl px-6 py-5">
+            <p class="text-[8px] sm:text-[9px] uppercase tracking-[0.18em] font-bold text-muted-foreground/60 mb-1">Final step</p>
+            <h3 class="text-[1rem] sm:text-[1.1rem] font-display font-bold text-foreground mb-1.5">Decide with evidence</h3>
+            <p class="text-[14px] sm:text-[15px] text-muted-foreground leading-relaxed">Continue when you're confident the delivery model works for you.</p>
+          </div>
         </div>
 
       </div>
 
-      <div class="mt-16 text-[12px] text-muted-foreground/60 italic border-t border-hairline pt-6 max-w-sm w-full text-center mx-auto lg:mx-0 lg:ml-auto lg:mr-12">
-        *Available for eligible engagements. Scope and eligibility depend on the nature and volume of work. Full terms apply.
+      <div class="mt-8 pt-6 border-t border-hairline/50 w-full max-w-[550px] text-center lg:text-right">
+        <p class="text-[11px] text-muted-foreground/60 italic leading-relaxed inline-block max-w-[400px]">
+          *Available for eligible engagements. Scope and eligibility depend on the nature and volume of work. Full terms apply.
+        </p>
       </div>
+
     </div>
 
   </div>
 </section>
+
+<style>
+  .clay-card {
+    box-shadow: 20px 20px 40px #c4c6cc, -20px -20px 40px #ffffff;
+    background: var(--color-background);
+  }
+
+  .clay-btn {
+    box-shadow: 8px 8px 16px #c4c6cc, -8px -8px 16px #ffffff;
+    background: var(--color-background);
+  }
+
+  .clay-pressed {
+    box-shadow: inset 6px 6px 12px #c4c6cc, inset -6px -6px 12px #ffffff;
+    background: var(--color-background);
+  }
+</style>

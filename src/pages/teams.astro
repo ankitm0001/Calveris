@@ -1,0 +1,313 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer.astro";
+
+// ============================================================
+// TEAM MEMBER DATA
+// Replace placeholder data with real content when ready.
+// Each entry: name, role, image path, highlight.
+// If highlight is empty (""), the hover panel shows name/role only.
+// ============================================================
+
+const placeholderNames = [
+  "James Holden", "Naomi Nagata", "Amos Burton", "Alex Kamal", "Chrisjen Avasarala",
+  "Bobbie Draper", "Josephus Miller", "Fred Johnson", "Julie Mao", "Anderson Dawes",
+  "Clarissa Mao", "Marco Inaros", "Filip Inaros", "Camina Drummer", "Klaes Ashford",
+  "Praxidike Meng", "Monica Stuart", "Anna Volovodov", "Elvi Okoye", "Fayez Sarkis",
+  "Tilly Fagan", "Carlos c de Baca", "Michio Pa", "Carlos Bull", "Sam Rosenberg",
+  "Hector Cortez", "Garrity", "Winston Duarte", "Teresa Duarte", "Santiago Singh"
+];
+
+const placeholderRoles = [
+  "Delivery Lead",
+  "Finance Operations",
+  "Client Relations",
+  "Accounts Manager",
+  "Compliance",
+  "Strategy & Reporting",
+  "Systems & Technology"
+];
+
+const members = Array.from({ length: 30 }).map((_, i) => ({
+  name: placeholderNames[i] ?? `[NAME]`,
+  role: placeholderRoles[i % placeholderRoles.length],
+  // Use pravatar to give each placeholder a unique face
+  image: `https://i.pravatar.cc/600?img=${(i % 70) + 1}`,
+  highlight: "[HIGHLIGHT — e.g. " + (i % 2 === 0 ? "Ranked top 1% globally in ACCA exams." : "Spends weekends debating 4-pixel padding issues.") + "]"
+}));
+---
+
+<Layout>
+  <Navbar client:load />
+
+  <main class="bg-background pt-[150px] pb-[160px]">
+    <div class="shell">
+
+      <!-- PAGE INTRO -->
+      <section class="mb-[80px] reveal">
+        <div class="eyebrow flex items-center gap-3 text-muted-foreground">
+          <span aria-hidden="true" class="inline-block size-[6px] rotate-45 bg-accent"></span>
+          OUR PEOPLE
+        </div>
+        <div class="mt-8 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 border-b border-hairline pb-10">
+          <h1 class="display-lg max-w-[700px]">The people behind the work.</h1>
+          <p class="body-lg max-w-[400px] lg:text-right lg:mb-1 shrink-0">
+            Dependable finance functions are built by capable people, not just software.
+          </p>
+        </div>
+      </section>
+
+      <!-- TEAM GRID -->
+      <section class="team-grid">
+        {members.map((member, index) => (
+          <article
+            tabindex="0"
+            class="team-grid__member mc reveal"
+            style={`animation-delay: ${(index % 3) * 80}ms`}
+            aria-label={`${member.name}, ${member.role}`}
+          >
+            <div class="mc__portrait">
+              <img
+                src={member.image}
+                alt={member.name}
+                class="mc__img"
+                loading="lazy"
+              />
+
+              <div class="mc__panel">
+                <div class="mc__panel-inner">
+
+                  <div class="mc__role-row">
+                    <span class="mc__role">{member.role}</span>
+                    <div class="mc__arrow" aria-hidden="true">
+                      <svg class="mc__arrow-icon" viewBox="0 0 14 14" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2 12 L12 2 M4 2 H12 V10" />
+                      </svg>
+                    </div>
+                  </div>
+
+                  <h3 class="mc__name">{member.name}</h3>
+
+                  {member.highlight && (
+                    <div class="mc__highlight">
+                      <p class="mc__highlight-text">{member.highlight}</p>
+                    </div>
+                  )}
+
+                </div>
+              </div>
+            </div>
+          </article>
+        ))}
+      </section>
+
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* ─────────────────────────────────────────────
+     EDITORIAL TEAM GRID
+  ───────────────────────────────────────────── */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .team-grid__member { display: block; }
+
+  @media (max-width: 1024px) {
+    .team-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 640px) {
+    .team-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+  }
+
+
+
+
+  /* ─────────────────────────────────────────────
+     MEMBER CARD  (.mc)
+  ───────────────────────────────────────────── */
+  .mc {
+    cursor: default;
+    outline: none;
+  }
+
+  .mc:focus-visible .mc__portrait {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+
+  /* Portrait container — has the card border/edging */
+  .mc__portrait {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 3 / 4;
+    width: 100%;
+    background-color: var(--color-secondary);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+  }
+
+  /* Photo */
+  .mc__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%;
+    transform: scale(1);
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+  }
+
+  .mc:hover .mc__img,
+  .mc:focus .mc__img {
+    transform: scale(1.05);
+  }
+
+  /*
+    Panel — gradient starts fully transparent at the top,
+    darkening naturally toward the bottom (no hard edge).
+    Light backdrop-blur so the photo is still visible.
+  */
+  .mc__panel {
+    position: absolute;
+    inset-inline: 0;
+    bottom: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(18, 18, 16, 0.00)  0%,
+      rgba(18, 18, 16, 0.55) 25%,
+      rgba(18, 18, 16, 0.82) 100%
+    );
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    padding: 1.25rem;
+    transition: padding-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .mc:hover .mc__panel,
+  .mc:focus .mc__panel {
+    padding-top: 2.5rem;
+  }
+
+  .mc__panel-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  /* Role pill + arrow row */
+  .mc__role-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+  }
+
+  .mc__role {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.10em;
+    text-transform: uppercase;
+    color: rgba(244, 242, 236, 0.92);
+    background-color: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 0.3rem 0.8rem;
+    border-radius: 999px;
+    line-height: 1.2;
+  }
+
+  /* Arrow circle button */
+  .mc__arrow {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 999px;
+    background-color: rgba(18, 18, 16, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    transition: background-color 0.3s ease;
+  }
+
+  .mc:hover .mc__arrow,
+  .mc:focus .mc__arrow {
+    background-color: rgba(18, 18, 16, 0.85);
+  }
+
+  /* Arrow SVG — rotates 180° on hover (↗ becomes ↙) */
+  .mc__arrow-icon {
+    width: 13px;
+    height: 13px;
+    stroke: rgba(244, 242, 236, 0.92);
+    transform: rotate(0deg);
+    transition: transform 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .mc:hover .mc__arrow-icon,
+  .mc:focus .mc__arrow-icon {
+    transform: rotate(180deg);
+  }
+
+  /* Name */
+  .mc__name {
+    font-family: var(--font-display);
+    font-size: clamp(1.35rem, 2vw, 1.65rem);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--color-ink-foreground);
+    margin: 0;
+  }
+
+  /* Highlight — hidden by default, slides in on hover */
+  .mc__highlight {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition:
+      max-height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      opacity    0.4s ease 0.1s;
+  }
+
+  .mc:hover .mc__highlight,
+  .mc:focus .mc__highlight {
+    max-height: 160px;
+    opacity: 1;
+  }
+
+  .mc__highlight-text {
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 400;
+    line-height: 1.65;
+    color: rgba(244, 242, 236, 0.75);
+    padding-top: 0.5rem;
+  }
+
+  /* ── Reduced motion ── */
+  @media (prefers-reduced-motion: reduce) {
+    .mc__img,
+    .mc__panel,
+    .mc__highlight { transition: none; }
+
+    .mc:hover .mc__highlight,
+    .mc:focus .mc__highlight {
+      max-height: 140px;
+      opacity: 1;
+    }
+  }
+</style>

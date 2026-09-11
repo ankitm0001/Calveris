@@ -12,36 +12,102 @@ const faqs = [
 ];
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState(0);
 
   const toggle = (i) => {
     setOpenIndex(openIndex === i ? null : i);
   };
 
   return (
-    <section className="bg-ink text-ink-foreground py-[130px] scroll-mt-[90px] border-b border-hairline-light max-[760px]:py-[75px]" id="faq">
+    <section
+      className="py-[130px] scroll-mt-[90px] border-b border-hairline-light max-[760px]:py-[75px]"
+      id="faq"
+      style={{ background: '#0d1b16' }}
+    >
       <div className="shell">
-        <div className="eyebrow flex justify-center text-center text-ink-foreground/60">On the record</div>
-        <h2 className="display-lg text-center max-w-[600px] mx-auto mb-1">A few things you might want to know.</h2>
-        
-        <div className="max-w-[850px] mx-auto mt-[55px]">
+        {/* Eyebrow */}
+        <div className="flex justify-center mb-8">
+          <div
+            className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-[9px] tracking-widest uppercase font-bold"
+            style={{
+              color: '#7ec8a0',
+              background: '#0d1b16',
+              boxShadow: 'inset 4px 4px 8px #040907, inset -4px -4px 8px #183329'
+            }}
+          >
+            <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#7ec8a0', display: 'inline-block' }}></span>
+            FAQ
+          </div>
+        </div>
+
+        <h2
+          className="display-lg text-center max-w-[600px] mx-auto mb-[60px]"
+          style={{ color: '#f0f5f0' }}
+        >
+          A few things you might want to know.
+        </h2>
+
+        <div className="max-w-[850px] mx-auto flex flex-col gap-3">
           {faqs.map((f, i) => {
             const isOpen = openIndex === i;
             return (
-              <div key={i} className="border-b border-hairline-light">
-                <button 
+              <div
+                key={i}
+                style={{
+                  borderRadius: '1.25rem',
+                  background: '#0d1b16',
+                  boxShadow: isOpen
+                    ? 'inset 6px 6px 14px #040907, inset -6px -6px 14px #183329'
+                    : '10px 10px 20px #040907, -10px -10px 20px #183329',
+                  transition: 'box-shadow 0.3s ease',
+                  overflow: 'hidden',
+                }}
+              >
+                <button
                   onClick={() => toggle(i)}
                   aria-expanded={isOpen}
-                  className="flex justify-between items-center w-full border-none bg-transparent text-ink-foreground text-left py-[26px] text-[1.05rem] cursor-pointer max-[760px]:text-[15px] focus-visible:outline focus-visible:outline-3 focus-visible:outline-accent focus-visible:outline-offset-4"
+                  className="flex justify-between items-center w-full bg-transparent text-left px-7 py-6 cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                  style={{ border: 'none', color: '#f0f5f0', fontSize: '1rem', fontWeight: isOpen ? '600' : '400' }}
                 >
-                  {f[0]}
-                  <span className={`text-[23px] font-normal transition-transform duration-250 text-accent ${isOpen ? 'rotate-45' : ''}`}>+</span>
+                  <span>{f[0]}</span>
+                  <span
+                    style={{
+                      width: '32px',
+                      height: '32px',
+                      borderRadius: '50%',
+                      background: isOpen ? '#2a5a4a' : '#0d1b16',
+                      boxShadow: isOpen
+                        ? '0 4px 12px rgba(42,90,74,0.5)'
+                        : '4px 4px 8px #040907, -4px -4px 8px #183329',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      flexShrink: 0,
+                      transition: 'all 0.3s ease',
+                      color: isOpen ? '#ffffff' : '#7ec8a0',
+                      fontSize: '18px',
+                      fontWeight: '300',
+                      transform: isOpen ? 'rotate(45deg)' : 'rotate(0deg)',
+                    }}
+                  >
+                    +
+                  </span>
                 </button>
-                <div 
-                  className="overflow-hidden transition-[max-height] duration-250 ease-in-out"
-                  style={{ maxHeight: isOpen ? '500px' : '0' }}
+                <div
+                  className="grid transition-all duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)]"
+                  style={{
+                    gridTemplateRows: isOpen ? '1fr' : '0fr',
+                    opacity: isOpen ? 1 : 0,
+                  }}
                 >
-                  <p className="text-[15px] text-ink-foreground/60 pr-[25px] pb-[25px] leading-relaxed">{f[1]}</p>
+                  <div className="overflow-hidden">
+                    <p
+                      className="px-7 pb-7 leading-relaxed"
+                      style={{ fontSize: '14px', color: 'rgba(240,245,240,0.55)' }}
+                    >
+                      {f[1]}
+                    </p>
+                  </div>
                 </div>
               </div>
             );

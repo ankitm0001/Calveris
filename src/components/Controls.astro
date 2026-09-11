@@ -2,71 +2,81 @@
 ---
 
 <section id="controls" class="bg-background py-28 lg:py-40 scroll-mt-[90px] border-b border-hairline overflow-hidden">
-  <div class="shell grid gap-16 lg:gap-20 lg:grid-cols-2 items-start">
+  <div class="shell grid gap-16 lg:gap-20 lg:grid-cols-[1fr_1.1fr] items-start">
       
       <!-- LEFT COLUMN -->
-      <div class="pr-0 lg:pr-8 relative reveal">
-        <div class="flex items-center gap-3 text-[11px] tracking-[0.18em] text-accent font-semibold mb-8 uppercase lg:-mt-[52px]">
+      <div class="pr-0 lg:pr-4 relative reveal">
+        
+        <!-- Eyebrow Pill -->
+        <div class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-[9px] tracking-widest uppercase font-bold mb-8 lg:-mt-[52px] text-accent clay-pressed">
           <span aria-hidden="true" class="inline-block size-[6px] rotate-45 bg-accent"></span>
           Quality & Control
         </div>
+
         <h2 class="display-lg mb-8 max-w-md text-balance text-foreground">
           Quality isn't left to the final check.
         </h2>
-        <p class="text-[17px] text-muted-foreground leading-relaxed max-w-md">
+        <p class="text-[1.05rem] text-muted-foreground leading-relaxed max-w-md mb-16">
           It is built into the people, processes and controls behind every piece of work we deliver.
         </p>
 
-        <!-- VERTICAL REVIEW FLOW -->
-        <div class="mt-16 lg:mt-20 hidden lg:flex flex-col items-center text-center w-full max-w-md">
+        <!-- VERTICAL REVIEW FLOW (CLAY CARD) -->
+        <div class="mt-8 lg:mt-0 flex flex-col items-center w-full max-w-[500px] clay-card rounded-[2.5rem] p-8 sm:p-10 pb-12 border border-white/50">
           
+          <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full text-[8px] tracking-widest uppercase font-bold text-accent mb-10 clay-pressed">
+             <span class="w-1.5 h-1.5 rounded-full bg-accent"></span> DELIVERY PIPELINE
+          </div>
+
           <!-- Stage 01 -->
-          <div class="text-[11px] lg:text-[12px] uppercase tracking-[0.1em] font-medium text-muted-foreground">
+          <div class="w-full text-center py-3 px-6 rounded-2xl clay-btn text-[9px] sm:text-[10px] uppercase tracking-widest font-bold text-muted-foreground cursor-default transition-transform hover:-translate-y-0.5 duration-300">
             Accounting work received
           </div>
           
-          <div class="py-4">
-            <span class="text-muted-foreground/50 text-[16px]">↓</span>
-          </div>
+          <div class="py-1 text-muted-foreground/30 text-[14px]">↓</div>
 
           <!-- Stage 02 -->
-          <div class="text-[11px] lg:text-[12px] uppercase tracking-[0.1em] font-medium text-muted-foreground">
+          <div class="w-full text-center py-3 px-6 rounded-2xl clay-btn text-[9px] sm:text-[10px] uppercase tracking-widest font-bold text-muted-foreground cursor-default transition-transform hover:-translate-y-0.5 duration-300 flex items-center justify-center gap-2">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="text-muted-foreground/50"><polyline points="20 6 9 17 4 12"></polyline></svg>
             Accounting work completed
           </div>
           
-          <div class="py-4">
-            <span class="text-muted-foreground/50 text-[16px]">↓</span>
-          </div>
+          <div class="py-1 text-muted-foreground/30 text-[14px]">↓</div>
 
-          <!-- Stage 03 -->
-          <div class="text-[11px] lg:text-[12px] uppercase tracking-[0.1em] font-semibold text-accent">
-            Senior team review
+          <!-- QUALITY STANDARD WRAPPER -->
+          <div class="relative w-full pt-5 pb-5 px-4 sm:px-6 rounded-3xl clay-pressed flex flex-col items-center my-1">
+            
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-forest text-white px-5 py-1.5 rounded-full text-[8px] tracking-widest font-bold uppercase shadow-[0_4px_10px_rgba(42,90,74,0.3)]">
+              QUALITY STANDARD
+            </div>
+
+            <!-- Stage 03 -->
+            <div class="w-full text-center py-3 px-6 rounded-2xl text-[9px] sm:text-[10px] uppercase tracking-widest font-bold text-white bg-forest shadow-[0_8px_16px_rgba(42,90,74,0.4)] border border-[#48826d] flex items-center justify-center gap-2 cursor-default transition-transform hover:-translate-y-0.5 duration-300">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-70"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              Senior team review
+            </div>
+            
+            <div class="py-1 text-muted-foreground/30 text-[14px]">↓</div>
+
+            <!-- Stage 04 -->
+            <div class="w-full text-center py-3 px-6 rounded-2xl clay-pressed text-[9px] sm:text-[10px] uppercase tracking-widest font-bold text-[#d05c5c] flex items-center justify-center gap-2 cursor-default">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              Issues identified and corrected
+            </div>
+            
+            <div class="py-1 text-muted-foreground/30 text-[14px]">↓</div>
+
+            <!-- Stage 05 -->
+            <div class="w-full text-center py-3 px-6 rounded-2xl text-[9px] sm:text-[10px] uppercase tracking-widest font-bold text-white bg-forest shadow-[0_8px_16px_rgba(42,90,74,0.4)] border border-[#48826d] flex items-center justify-center gap-2 cursor-default transition-transform hover:-translate-y-0.5 duration-300">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Work reviewed and approved
+            </div>
           </div>
           
-          <div class="py-4">
-            <span class="text-accent/50 text-[16px]">↓</span>
-          </div>
-
-          <!-- Stage 04 -->
-          <div class="text-[11px] lg:text-[12px] uppercase tracking-[0.1em] font-medium text-muted-foreground">
-            Issues identified and corrected
-          </div>
-          
-          <div class="py-4">
-            <span class="text-muted-foreground/50 text-[16px]">↓</span>
-          </div>
-
-          <!-- Stage 05 -->
-          <div class="text-[11px] lg:text-[12px] uppercase tracking-[0.1em] font-semibold text-accent">
-            Work reviewed and approved
-          </div>
-          
-          <div class="py-4">
-            <span class="text-accent/50 text-[16px]">↓</span>
-          </div>
+          <div class="py-1 text-muted-foreground/30 text-[14px]">↓</div>
 
           <!-- Stage 06 -->
-          <div class="text-[11px] lg:text-[12px] uppercase tracking-[0.1em] font-medium text-muted-foreground">
+          <div class="w-full text-center py-4 px-6 rounded-2xl bg-[#0d1b16] text-[9px] sm:text-[10px] uppercase tracking-widest font-bold text-[#a3c2a3] shadow-[0_10px_20px_rgba(0,0,0,0.2)] flex items-center justify-center gap-2 cursor-default transition-transform hover:-translate-y-0.5 duration-300">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-70"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
             Delivered to you or your client
           </div>
 
@@ -74,40 +84,41 @@
       </div>
 
       <!-- RIGHT COLUMN: VERTICAL STACK -->
-      <div class="relative reveal">
+      <!-- Added lg:mt-[230px] to align "01" precisely with the top of the "Delivery Pipeline" card on the left -->
+      <div class="relative reveal lg:mt-[240px]">
         
-        <!-- Subtle vertical connecting line -->
-        <div class="absolute top-8 bottom-12 left-[19px] w-[1px] bg-hairline-light hidden sm:block"></div>
+        <!-- Subtle vertical connecting groove (neumorphic) -->
+        <div class="absolute top-5 bottom-8 left-[21px] w-[2px] rounded-full hidden sm:block z-0" style="background: var(--color-background); box-shadow: inset 1px 1px 2px #c4c6cc, inset -1px -1px 2px #ffffff"></div>
 
-        <div class="flex flex-col gap-14 sm:gap-20 relative z-10">
+        <div class="flex flex-col gap-16 sm:gap-24 relative z-10">
           
           <!-- CONTROL 01 -->
           <div class="relative flex gap-6 sm:gap-10 group">
-            <div class="hidden sm:flex flex-col items-center pt-1">
-              <div class="size-[38px] rounded-full border border-hairline bg-background flex items-center justify-center text-[10px] font-mono text-muted-foreground group-hover:text-accent group-hover:border-accent transition-colors duration-500">
+            <div class="hidden sm:flex flex-col items-center pt-0 z-10">
+              <div class="size-[44px] rounded-full bg-background clay-btn flex items-center justify-center text-[11px] font-bold text-muted-foreground group-hover:!bg-forest group-hover:text-white group-hover:!shadow-[0_4px_12px_rgba(42,90,74,0.5)] transition-all duration-300">
                 01
               </div>
             </div>
-            <div class="flex-1 pt-1 sm:pt-0">
-              <span class="sm:hidden text-[10px] text-accent font-mono tracking-widest mb-3 block">01</span>
-              <h3 class="text-[20px] sm:text-[22px] lg:text-[24px] font-display mb-4 text-foreground">ACCA-qualified accountants</h3>
-              <p class="text-[15px] text-muted-foreground leading-relaxed max-w-lg">
+            <div class="flex-1 pt-1 sm:pt-2">
+              <span class="sm:hidden text-[10px] text-accent font-bold tracking-widest mb-3 block">01</span>
+              <h3 class="text-[1.45rem] font-display mb-3 text-foreground tracking-tight">ACCA-qualified accountants</h3>
+              <p class="text-[1.05rem] text-muted-foreground leading-relaxed max-w-md">
                 All accountants on the delivery team are ACCA certified.
               </p>
             </div>
           </div>
 
-          <!-- CONTROL 02 (Slightly more emphasis) -->
+          <!-- CONTROL 02 -->
           <div class="relative flex gap-6 sm:gap-10 group">
-            <div class="hidden sm:flex flex-col items-center pt-1">
-              <div class="size-[38px] rounded-full border border-accent/50 bg-accent/5 flex items-center justify-center text-[10px] font-mono text-accent transition-colors duration-500">
+            <div class="hidden sm:flex flex-col items-center pt-0 z-10">
+              <div class="size-[44px] rounded-full bg-background clay-btn flex items-center justify-center text-[11px] font-bold text-muted-foreground group-hover:!bg-forest group-hover:text-white group-hover:!shadow-[0_4px_12px_rgba(42,90,74,0.5)] transition-all duration-300">
                 02
               </div>
             </div>
-            <div class="flex-1 pt-1 sm:pt-0 border-l-2 sm:border-l-0 border-accent pl-5 sm:pl-0 ml-[-5px] sm:ml-0">
-              <span class="sm:hidden text-[10px] text-accent font-mono tracking-widest mb-3 block">02</span>
-              <h3 class="text-[22px] sm:text-[25px] lg:text-[28px] font-display mb-4 text-foreground tracking-tight">Every piece is reviewed.</h3>
-              <p class="text-[16px] text-foreground/90 leading-relaxed max-w-lg font-medium">
+            <div class="flex-1 pt-1 sm:pt-2">
+              <span class="sm:hidden text-[10px] text-accent font-bold tracking-widest mb-3 block">02</span>
+              <h3 class="text-[1.45rem] font-display mb-3 text-foreground tracking-tight">Every piece is reviewed.</h3>
+              <p class="text-[1.05rem] text-muted-foreground leading-relaxed max-w-md">
                 Work is reviewed by senior team members before it reaches you or your clients.
               </p>
             </div>
@@ -115,15 +126,15 @@
 
           <!-- CONTROL 03 -->
           <div class="relative flex gap-6 sm:gap-10 group">
-            <div class="hidden sm:flex flex-col items-center pt-1">
-              <div class="size-[38px] rounded-full border border-hairline bg-background flex items-center justify-center text-[10px] font-mono text-muted-foreground group-hover:text-accent group-hover:border-accent transition-colors duration-500">
+            <div class="hidden sm:flex flex-col items-center pt-0 z-10">
+              <div class="size-[44px] rounded-full bg-background clay-btn flex items-center justify-center text-[11px] font-bold text-muted-foreground group-hover:!bg-forest group-hover:text-white group-hover:!shadow-[0_4px_12px_rgba(42,90,74,0.5)] transition-all duration-300">
                 03
               </div>
             </div>
-            <div class="flex-1 pt-1 sm:pt-0">
-              <span class="sm:hidden text-[10px] text-accent font-mono tracking-widest mb-3 block">03</span>
-              <h3 class="text-[20px] sm:text-[22px] lg:text-[24px] font-display mb-4 text-foreground">Controlled access & working environment</h3>
-              <p class="text-[15px] text-muted-foreground leading-relaxed max-w-lg">
+            <div class="flex-1 pt-1 sm:pt-2">
+              <span class="sm:hidden text-[10px] text-accent font-bold tracking-widest mb-3 block">03</span>
+              <h3 class="text-[1.45rem] font-display mb-3 text-foreground tracking-tight">Controlled access & working environment</h3>
+              <p class="text-[1.05rem] text-muted-foreground leading-relaxed max-w-md">
                 Sensitive client information is handled within defined data-protection controls and a controlled working environment, including a strict no-phone policy at workstations.
               </p>
             </div>
@@ -131,15 +142,15 @@
 
           <!-- CONTROL 04 -->
           <div class="relative flex gap-6 sm:gap-10 group">
-            <div class="hidden sm:flex flex-col items-center pt-1">
-              <div class="size-[38px] rounded-full border border-hairline bg-background flex items-center justify-center text-[10px] font-mono text-muted-foreground group-hover:text-accent group-hover:border-accent transition-colors duration-500">
+            <div class="hidden sm:flex flex-col items-center pt-0 z-10">
+              <div class="size-[44px] rounded-full bg-background clay-btn flex items-center justify-center text-[11px] font-bold text-muted-foreground group-hover:!bg-forest group-hover:text-white group-hover:!shadow-[0_4px_12px_rgba(42,90,74,0.5)] transition-all duration-300">
                 04
               </div>
             </div>
-            <div class="flex-1 pt-1 sm:pt-0">
-              <span class="sm:hidden text-[10px] text-accent font-mono tracking-widest mb-3 block">04</span>
-              <h3 class="text-[20px] sm:text-[22px] lg:text-[24px] font-display mb-4 text-foreground">GDPR certified</h3>
-              <p class="text-[15px] text-muted-foreground leading-relaxed max-w-lg">
+            <div class="flex-1 pt-1 sm:pt-2">
+              <span class="sm:hidden text-[10px] text-accent font-bold tracking-widest mb-3 block">04</span>
+              <h3 class="text-[1.45rem] font-display mb-3 text-foreground tracking-tight">GDPR certified</h3>
+              <p class="text-[1.05rem] text-muted-foreground leading-relaxed max-w-md">
                 Our operations are GDPR certified, supporting the way sensitive client and financial information is handled.
               </p>
             </div>
@@ -147,15 +158,15 @@
 
           <!-- CONTROL 05 -->
           <div class="relative flex gap-6 sm:gap-10 group">
-            <div class="hidden sm:flex flex-col items-center pt-1">
-              <div class="size-[38px] rounded-full border border-hairline bg-background flex items-center justify-center text-[10px] font-mono text-muted-foreground group-hover:text-accent group-hover:border-accent transition-colors duration-500">
+            <div class="hidden sm:flex flex-col items-center pt-0 z-10">
+              <div class="size-[44px] rounded-full bg-background clay-btn flex items-center justify-center text-[11px] font-bold text-muted-foreground group-hover:!bg-forest group-hover:text-white group-hover:!shadow-[0_4px_12px_rgba(42,90,74,0.5)] transition-all duration-300">
                 05
               </div>
             </div>
-            <div class="flex-1 pt-1 sm:pt-0">
-              <span class="sm:hidden text-[10px] text-accent font-mono tracking-widest mb-3 block">05</span>
-              <h3 class="text-[20px] sm:text-[22px] lg:text-[24px] font-display mb-4 text-foreground">Working when your business works</h3>
-              <p class="text-[15px] text-muted-foreground leading-relaxed max-w-lg">
+            <div class="flex-1 pt-1 sm:pt-2">
+              <span class="sm:hidden text-[10px] text-accent font-bold tracking-widest mb-3 block">05</span>
+              <h3 class="text-[1.45rem] font-display mb-3 text-foreground tracking-tight">Working when your business works</h3>
+              <p class="text-[1.05rem] text-muted-foreground leading-relaxed max-w-md">
                 Our delivery team works to both UK and US business hours, so communication and accounting work stay within your working day.
               </p>
             </div>
@@ -166,3 +177,20 @@
       
     </div>
 </section>
+
+<style>
+  .clay-card {
+    box-shadow: 20px 20px 40px #c4c6cc, -20px -20px 40px #ffffff;
+    background: var(--color-background);
+  }
+
+  .clay-btn {
+    box-shadow: 8px 8px 16px #c4c6cc, -8px -8px 16px #ffffff;
+    background: var(--color-background);
+  }
+
+  .clay-pressed {
+    box-shadow: inset 6px 6px 12px #c4c6cc, inset -6px -6px 12px #ffffff;
+    background: var(--color-background);
+  }
+</style>

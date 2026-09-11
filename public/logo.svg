@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1260 500" width="100%" height="100%">
+<defs>
+    <!-- Primary Dark Teal Metallic Gradient -->
+    <linearGradient id="darkTealPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#3de8c5" />
+        <stop offset="25%" stop-color="#158b73" />
+        <stop offset="65%" stop-color="#094337" />
+        <stop offset="100%" stop-color="#021a14" />
+    </linearGradient>
+
+    <!-- Specular Teal Highlight Gradient -->
+    <linearGradient id="darkTealHighlight" x1="0%" y1="50%" x2="100%" y2="50%">
+        <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9" />
+        <stop offset="18%" stop-color="#4effd8" stop-opacity="0.85" />
+        <stop offset="50%" stop-color="#083d32" stop-opacity="0.2" />
+        <stop offset="85%" stop-color="#168b72" stop-opacity="0.9" />
+        <stop offset="100%" stop-color="#031b15" stop-opacity="0.95" />
+    </linearGradient>
+
+    <!-- Chrome Blade Gradient -->
+    <linearGradient id="darkChromeBlade" x1="15%" y1="0%" x2="85%" y2="100%">
+        <stop offset="0%" stop-color="#ffffff" />
+        <stop offset="30%" stop-color="#b6d5ce" />
+        <stop offset="55%" stop-color="#2d5248" />
+        <stop offset="75%" stop-color="#ffffff" />
+        <stop offset="100%" stop-color="#102520" />
+    </linearGradient>
+</defs>
+
+<!-- Dark Luxury Backdrop so the chrome & metallic highlights pop in browser preview -->
+<rect width="100%" height="100%" fill="#050b09" rx="16" />
+
+<!-- EMBLEM: TRIPLE-BLADE CRESCENT (C) -->
+<g transform="translate(40, 20)">
+    <!-- Outer Emerald Blade -->
+    <path d="M 440 140 C 400 65 315 20 215 20 C 95 20 0 115 0 235 C 0 355 95 450 215 450 C 315 450 400 405 440 330 C 345 375 235 370 160 320 C 75 260 65 175 125 105 C 185 35 320 50 440 140 Z" fill="url(#darkTealPrimary)" />
+
+    <!-- Middle Chrome/Silver Feather Blade -->
+    <path d="M 410 160 C 365 95 290 55 210 55 C 110 55 35 135 35 235 C 35 335 110 415 210 415 C 290 415 365 375 410 310 C 320 340 230 325 175 275 C 115 220 120 150 175 105 C 230 60 320 90 410 160 Z" fill="url(#darkChromeBlade)" />
+
+    <!-- Inner Specular Blade Sheen -->
+    <path d="M 370 178 C 330 130 270 95 205 95 C 130 95 70 155 70 235 C 70 315 130 375 205 375 C 270 375 330 340 370 292 C 300 310 225 295 180 255 C 135 210 145 155 185 125 C 225 95 300 125 370 178 Z" fill="url(#darkTealHighlight)" />
+</g>
+
+<!-- LOGO WORDMARK: ALVERIS -->
+<g fill="url(#darkTealPrimary)" stroke="url(#darkTealHighlight)" stroke-width="2">
+    <!-- Letter A -->
+    <path d="M 285 315 L 340 155 L 395 315 L 360 315 L 340 250 L 320 315 Z M 340 200 L 330 232 L 350 232 Z" />
+    <!-- Letter L -->
+    <path d="M 430 155 L 458 155 L 458 287 L 515 287 L 515 315 L 430 315 Z" />
+    <!-- Letter V -->
+    <path d="M 545 155 L 575 155 L 608 268 L 640 155 L 670 155 L 625 315 L 590 315 Z" />
+    <!-- Letter E -->
+    <path d="M 700 155 L 780 155 L 780 183 L 730 183 L 730 220 L 775 220 L 775 248 L 730 248 L 730 287 L 782 287 L 782 315 L 700 315 Z" />
+    <!-- Letter R -->
+    <path d="M 815 155 L 875 155 C 905 155 922 170 922 195 C 922 215 910 230 890 236 L 930 315 L 897 315 L 860 242 L 845 242 L 845 315 L 815 315 Z M 845 181 L 845 218 L 870 218 C 885 218 893 210 893 200 C 893 188 885 181 870 181 Z" />
+    <!-- Letter I -->
+    <path d="M 960 155 L 990 155 L 990 315 L 960 315 Z" />
+    <!-- Letter S -->
+    <path d="M 1030 280 C 1040 302 1060 318 1088 318 C 1118 318 1135 302 1135 282 C 1135 258 1115 248 1080 240 C 1045 232 1025 220 1025 192 C 1025 168 1048 152 1080 152 C 1105 152 1125 162 1138 180 L 1115 200 C 1105 188 1092 180 1080 180 C 1062 180 1052 188 1052 198 C 1052 212 1068 220 1098 226 C 1135 235 1162 248 1162 280 C 1162 312 1132 342 1088 342 C 1050 342 1020 322 1005 295 Z" />
+</g>
+
+<!-- HORIZONTAL SPEAR DIVIDER -->
+<path d="M 330 365 L 750 368 L 1165 365 L 750 371 Z" fill="url(#darkTealHighlight)" />
+
+<!-- SUBTITLE: G L O B A L -->
+<g fill="#ffffff" font-family="sans-serif" font-weight="700" font-size="36" letter-spacing="24">
+    <text x="750" y="425" text-anchor="middle">GLOBAL</text>
+</g>
+</svg>

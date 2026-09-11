@@ -1,29 +1,59 @@
 ---
 ---
 
-<section id="cta" class="bg-forest text-forest-foreground py-20 lg:py-28 border-b border-hairline-light">
-  <div class="shell flex flex-col lg:flex-row lg:items-center justify-between gap-12 lg:gap-16 reveal">
+<section id="cta" class="cta-dark-section text-forest-foreground py-24 lg:py-36 border-b border-hairline-light overflow-hidden">
+  <div class="shell flex flex-col lg:flex-row lg:items-center justify-between gap-16 lg:gap-24 reveal">
     
     <div class="max-w-2xl">
-      <div class="flex items-center gap-3 text-[11px] tracking-[0.18em] text-accent font-semibold mb-6 uppercase">
-        <span aria-hidden="true" class="inline-block size-[6px] rotate-45 bg-accent"></span>
+
+      <!-- Eyebrow Pill (dark neumorphic) -->
+      <div class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-[9px] tracking-widest uppercase font-bold mb-8 eyebrow-pill">
+        <span aria-hidden="true" class="inline-block size-[6px] rounded-full bg-[#7ec8a0]"></span>
         Ready when you are
       </div>
-      <h2 class="display-lg mb-6 text-balance text-forest-foreground">
+
+      <h2 class="display-lg mb-6 text-balance" style="color: #f0f5f0;">
         Get the capacity.<br />
-        <span class="text-forest-foreground/70">Keep the resources for growth.</span>
+        <span style="color: rgba(240,245,240,0.55);">Keep the resources for growth.</span>
       </h2>
-      <p class="text-[17px] text-forest-foreground/60 leading-relaxed max-w-md">
+      <p class="text-[1.1rem] leading-relaxed max-w-md" style="color: rgba(240,245,240,0.50);">
         Let's look at what the business actually needs.
       </p>
     </div>
 
     <div class="flex-shrink-0">
-      <a href="mailto:info@calveris.co.uk" class="group inline-flex items-center gap-3 border px-8 py-5 text-[11px] uppercase tracking-[0.18em] font-semibold transition-colors duration-500 border-background bg-background text-forest hover:bg-accent hover:border-accent hover:text-accent-foreground rounded-sm">
+      <a href="/contact" class="cta-btn group inline-flex items-center gap-4 px-10 py-5 rounded-full uppercase tracking-[0.18em] text-[11px] font-bold transition-all duration-300" style="color: #f0f5f0;">
         <span>Start a conversation</span>
-        <span class="transition-transform duration-500 group-hover:translate-x-1"><svg viewBox="0 0 16 16" class="size-3.5" fill="none" aria-hidden="true"><path d="M2.5 8h11M9.5 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"></path></svg></span>
+        <span class="transition-transform duration-300 group-hover:translate-x-1">
+          <svg viewBox="0 0 16 16" class="size-3.5" fill="none" aria-hidden="true">
+            <path d="M2.5 8h11M9.5 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"></path>
+          </svg>
+        </span>
       </a>
     </div>
 
   </div>
 </section>
+
+<style>
+  .cta-dark-section {
+    background: #0d1b16;
+  }
+
+  .eyebrow-pill {
+    color: #7ec8a0;
+    background: #0d1b16;
+    box-shadow: inset 4px 4px 8px #040907, inset -4px -4px 8px #183329;
+  }
+
+  .cta-btn {
+    background: #0d1b16;
+    box-shadow: 12px 12px 24px #040907, -12px -12px 24px #183329;
+  }
+
+  .cta-btn:hover {
+    box-shadow: 8px 8px 16px #040907, -8px -8px 16px #183329, 0 0 30px rgba(126,200,160,0.08);
+    transform: translateY(-2px);
+    color: #7ec8a0;
+  }
+</style>
