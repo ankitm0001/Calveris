@@ -75,6 +75,7 @@ export default function Navbar() {
           <div className="hidden md:flex space-x-10">
             {[
               { label: 'Home', href: '/' },
+              { label: 'About', href: '/about' },
               { label: 'Our Team', href: '/teams' },
               { label: 'Contact Us', href: '/contact' },
             ].map(({ label, href }) => (
@@ -157,6 +158,9 @@ export default function Navbar() {
         />
         <a href="/" onClick={() => setOpen(false)} className="font-serif text-4xl text-white hover:text-white/70 transition-colors">
           Home
+        </a>
+        <a href="/about" onClick={() => setOpen(false)} className="font-serif text-4xl text-white hover:text-white/70 transition-colors">
+          About
         </a>
         <a href="/teams" onClick={() => setOpen(false)} className="font-serif text-4xl text-white hover:text-white/70 transition-colors">
           Our Team
