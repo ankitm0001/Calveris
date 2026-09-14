@@ -8,32 +8,30 @@ import ContactBuilder from "../components/ContactBuilder";
 <Layout>
   <Navbar client:load />
   
-  <header class="relative overflow-hidden bg-forest flex flex-col" id="top">
-    <!-- Deep Background -->
-    <div class="absolute inset-0 z-0 bg-architectural opacity-80 pointer-events-none">
-      <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0IiBoZWlnaHQ9IjQiPgo8cmVjdCB3aWR0aD0iNCIgaGVpZ2h0PSI0IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDIiLz4KPC9zdmc+')] opacity-20"></div>
-    </div>
+  <header class="contact-hero relative overflow-hidden flex flex-col" id="top">
 
-    <main class="flex flex-col justify-center shell relative z-10 pt-[120px] pb-8">
-      <div class="w-full h-px bg-hairline-light mb-10"></div>
+    <main class="flex flex-col justify-center shell relative z-10 pt-[120px] pb-10">
+      <div class="w-full h-px mb-10" style="background: rgba(126,200,160,0.15);"></div>
 
       <div class="flex flex-col justify-center relative z-20">
-        <div class="flex items-center gap-3 mb-6 eyebrow text-forest-foreground/75 opacity-0 animate-fade-in" style="animation-delay: 0.2s;">
-          <span aria-hidden="true" class="inline-block size-[6px] rotate-45 bg-accent"></span>
-          <span>CONTACT</span>
+
+        <!-- Eyebrow pill -->
+        <div class="inline-flex w-fit items-center gap-2 px-6 py-2.5 rounded-full text-[9px] tracking-widest uppercase font-bold mb-8 contact-eyebrow opacity-0 animate-fade-in" style="animation-delay: 0.2s;">
+          <span aria-hidden="true" class="inline-block size-[6px] rounded-full" style="background:#7ec8a0;"></span>
+          Contact
         </div>
 
-        <h1 class="font-display text-5xl md:text-6xl lg:text-[4.5rem] leading-[1.15] mb-6 max-w-4xl font-light text-forest-foreground">
+        <h1 class="font-display text-5xl md:text-6xl lg:text-[4.5rem] leading-[1.15] mb-6 max-w-4xl font-light" style="color: #f0f5f0;">
           <span class="opacity-0 animate-fade-in" style="animation-delay: 0.4s;">Let's build the</span>
           <br>
           <span class="reveal-mask">
-            <span class="text-white italic opacity-0 animate-reveal-up" style="animation-delay: 0.5s;">right support</span>
+            <span class="italic opacity-0 animate-reveal-up" style="animation-delay: 0.5s; color: #7ec8a0;">right support</span>
           </span>
           <br>
           <span class="opacity-0 animate-fade-in" style="animation-delay: 0.8s;">for your business.</span>
         </h1>
 
-        <p class="max-w-xl text-[1.05rem] leading-relaxed text-forest-foreground/80 mb-0 font-light opacity-0 animate-fade-in" style="animation-delay: 1.0s;">
+        <p class="max-w-xl text-[1.05rem] leading-relaxed font-light opacity-0 animate-fade-in" style="animation-delay: 1.0s; color: rgba(240,245,240,0.6);">
           Tell us what you need support with. Select what applies, add anything we should know, and we'll take it from there.
         </p>
       </div>
@@ -60,54 +58,29 @@ import ContactBuilder from "../components/ContactBuilder";
 </script>
 
 <style>
-.bg-architectural {
-    background-color: var(--color-ink);
-    background-image: 
-        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.03) 0%, transparent 40%),
-        radial-gradient(circle at 20% 80%, rgba(0,0,0,0.4) 0%, transparent 60%);
-    box-shadow: inset 0 0 100px rgba(0,0,0,0.8);
+.contact-hero {
+  background: #0d1b16;
+}
+
+.contact-eyebrow {
+  color: #7ec8a0;
+  background: #0d1b16;
+  box-shadow: inset 4px 4px 8px #040907, inset -4px -4px 8px #183329;
 }
 
 .reveal-mask {
-    display: inline-block;
-    overflow: hidden;
-    vertical-align: bottom;
-}
-
-.text-emphasis {
-    display: inline-block;
-    color: #ffffff;
-    font-style: italic;
-    position: relative;
-    font-weight: 300;
-}
-
-.text-emphasis::after {
-    content: '';
-    position: absolute;
-    bottom: 8px;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background-color: var(--color-accent);
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
-    transition-delay: 1s;
-}
-
-.animate-underline::after {
-    transform: scaleX(1);
-    transform-origin: left;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
 }
 
 @keyframes revealUp { 0% { transform: translateY(100%); opacity: 0; } 100% { transform: translateY(0); opacity: 1; } }
 @keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
 
 .animate-reveal-up {
-    animation: revealUp 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  animation: revealUp 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
 }
 .animate-fade-in {
-    animation: fadeIn 1.5s ease-out forwards;
+  animation: fadeIn 1.5s ease-out forwards;
 }
 </style>

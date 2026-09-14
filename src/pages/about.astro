@@ -1,0 +1,1363 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout>
+  <Navbar client:load />
+
+  <!-- ================================================================
+       SECTION 01 — HERO
+  ================================================================ -->
+  <header class="about-hero relative overflow-hidden flex flex-col" id="top">
+    <!-- Background image -->
+    <div class="about-hero-bg" aria-hidden="true"></div>
+    <!-- Gradient overlay: fades from transparent at top to off-white at bottom for section blend -->
+    <div class="about-hero-gradient" aria-hidden="true"></div>
+
+    <main
+      class="flex flex-col justify-center shell relative z-10 pt-[140px] pb-24"
+    >
+      <div
+        class="w-full h-px mb-14"
+        style="background: rgba(42,90,74,0.15);"
+      >
+      </div>
+
+      <!-- Eyebrow -->
+      <div
+        class="inline-flex w-fit items-center gap-2 px-6 py-2.5 rounded-full text-[9px] tracking-widest uppercase font-bold mb-10 about-eyebrow opacity-0 a-fade-in"
+        style="animation-delay: 0.15s;"
+      >
+        <span
+          aria-hidden="true"
+          class="inline-block size-[6px] rotate-45"
+          style="background: #7caa78;"
+        ></span>
+        <span>About Calveris</span>
+      </div>
+
+      <div class="max-w-5xl">
+        <h1
+          class="font-display leading-[1.1] font-light"
+          style="font-size: clamp(2.5rem, 5vw, 4.5rem); color: #0d1b16;"
+        >
+          <span class="block opacity-0 a-fade-in" style="animation-delay: 0.3s;"
+            >Nothing should hold back</span
+          >
+          <span class="reveal-mask block">
+            <span
+              class="block italic opacity-0 a-reveal-up"
+              style="animation-delay: 0.5s; color: #2a5a4a;"
+              >a business built to grow.</span
+            >
+          </span>
+        </h1>
+
+        <p
+          class="mt-10 max-w-lg text-[1.1rem] leading-relaxed opacity-0 a-fade-in font-medium"
+          style="animation-delay: 0.9s; color: #0d1b16;"
+        >
+          We provide the accounting capacity to keep growth moving.
+        </p>
+      </div>
+    </main>
+  </header>
+
+  <!-- ================================================================
+       SECTION 02 — WHY WE EXIST
+  ================================================================ -->
+  <section class="why-section bg-background py-24 lg:py-36 border-b border-hairline">
+    <div class="shell">
+
+      <!-- Section header -->
+      <div class="mb-20 md:mb-32 reveal text-center flex flex-col items-center">
+        <div class="eyebrow text-muted-foreground mb-6 flex items-center justify-center gap-3">
+          <span aria-hidden="true" class="inline-block size-[6px] rotate-45 bg-accent"></span>
+          Why we exist
+          <span aria-hidden="true" class="inline-block size-[6px] rotate-45 bg-accent"></span>
+        </div>
+        <h2 class="display-lg max-w-[22ch] text-balance leading-[1.1]">
+          Growth should create more opportunity,
+          <br class="hidden md:block" />
+          <em class="not-italic italic font-light text-muted-foreground">not more accounting overhead.</em>
+        </h2>
+      </div>
+
+      <!-- Serpentine Flow Container -->
+      <div class="relative max-w-5xl mx-auto mb-32" id="serpentine-flow">
+        
+        <!-- SVG Canvas for the connecting line -->
+        <svg class="absolute inset-0 w-full h-full pointer-events-none z-0" id="flow-svg">
+          <!-- Background dashed line -->
+          <path id="flow-path-bg" d="" stroke="rgba(126, 200, 160, 0.3)" stroke-width="2" stroke-dasharray="6 6" fill="none" />
+          <!-- Animated foreground line -->
+          <path id="flow-path-active" d="" stroke="#7caa78" stroke-width="3" fill="none" class="transition-all duration-1000 ease-out" />
+        </svg>
+
+        <div class="flex flex-col gap-12 md:gap-24 relative z-10 w-full">
+
+          <!-- Step 01 (Left) -->
+          <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-0 flow-step reveal">
+            <!-- Mobile Step Label -->
+            <div class="md:hidden eyebrow text-accent">STEP 01</div>
+            <!-- Card -->
+            <div class="w-full md:w-1/2 flex md:justify-end md:pr-12">
+              <div class="w-full max-w-md rounded-[2.5rem] p-3 flex items-center gap-4 clay-card group hover:-translate-y-1 transition-all duration-300">
+                <div class="flex-grow pl-6 py-3 text-lg font-medium text-foreground">Business grows</div>
+                <div class="w-14 h-14 rounded-full clay-inset flex items-center justify-center shrink-0 flow-dot">
+                  <div class="w-3 h-3 rounded-full bg-accent opacity-50 group-hover:opacity-100 transition-opacity shadow-[0_0_10px_rgba(124,170,120,0.5)]"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Desktop Step Label -->
+            <div class="hidden md:flex w-1/2 justify-start pl-12">
+              <div class="text-3xl font-display font-light text-accent/50 tracking-widest uppercase">
+                <span class="text-sm font-body font-bold mr-2">STEP</span>01
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 02 (Right) -->
+          <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-0 flow-step reveal">
+            <!-- Mobile Step Label -->
+            <div class="md:hidden eyebrow text-accent">STEP 02</div>
+            <!-- Desktop Step Label -->
+            <div class="hidden md:flex w-1/2 justify-end pr-12">
+              <div class="text-3xl font-display font-light text-accent/50 tracking-widest uppercase">
+                <span class="text-sm font-body font-bold mr-2">STEP</span>02
+              </div>
+            </div>
+            <!-- Card -->
+            <div class="w-full md:w-1/2 flex md:justify-start md:pl-12">
+              <div class="w-full max-w-md rounded-[2.5rem] p-3 flex items-center flex-row-reverse md:flex-row gap-4 clay-card group hover:-translate-y-1 transition-all duration-300">
+                <div class="w-14 h-14 rounded-full clay-inset flex items-center justify-center shrink-0 flow-dot">
+                  <div class="w-3 h-3 rounded-full bg-accent opacity-50 group-hover:opacity-100 transition-opacity shadow-[0_0_10px_rgba(124,170,120,0.5)]"></div>
+                </div>
+                <div class="flex-grow pr-6 md:pr-0 md:pl-2 py-3 text-lg font-medium text-foreground text-right md:text-left">Accounting work grows</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 03 (Left) -->
+          <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-0 flow-step reveal">
+            <!-- Mobile Step Label -->
+            <div class="md:hidden eyebrow text-accent">STEP 03</div>
+            <!-- Card -->
+            <div class="w-full md:w-1/2 flex md:justify-end md:pr-12">
+              <div class="w-full max-w-md rounded-[2.5rem] p-3 flex items-center gap-4 clay-card group hover:-translate-y-1 transition-all duration-300">
+                <div class="flex-grow pl-6 py-3 text-lg font-medium text-foreground">Existing capacity gets tight</div>
+                <div class="w-14 h-14 rounded-full clay-inset flex items-center justify-center shrink-0 flow-dot">
+                  <div class="w-3 h-3 rounded-full bg-accent opacity-50 group-hover:opacity-100 transition-opacity shadow-[0_0_10px_rgba(124,170,120,0.5)]"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Desktop Step Label -->
+            <div class="hidden md:flex w-1/2 justify-start pl-12">
+              <div class="text-3xl font-display font-light text-accent/50 tracking-widest uppercase">
+                <span class="text-sm font-body font-bold mr-2">STEP</span>03
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 04 (Right) -->
+          <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-0 flow-step reveal">
+            <!-- Mobile Step Label -->
+            <div class="md:hidden eyebrow text-accent">STEP 04</div>
+            <!-- Desktop Step Label -->
+            <div class="hidden md:flex w-1/2 justify-end pr-12">
+              <div class="text-3xl font-display font-light text-accent tracking-widest uppercase">
+                <span class="text-sm font-body font-bold mr-2">STEP</span>04
+              </div>
+            </div>
+            <!-- Card -->
+            <div class="w-full md:w-1/2 flex md:justify-start md:pl-12">
+              <div class="w-full max-w-md rounded-[2.5rem] p-3 flex items-center flex-row-reverse md:flex-row gap-4 clay-card group hover:-translate-y-1 transition-all duration-300 border border-accent/20">
+                <div class="w-14 h-14 rounded-full clay-inset flex items-center justify-center shrink-0 flow-dot flow-dot-final relative">
+                  <!-- Pulse effect -->
+                  <div class="absolute inset-0 rounded-full bg-accent opacity-20 animate-ping"></div>
+                  <div class="w-4 h-4 rounded-full bg-accent shadow-[0_0_15px_rgba(124,170,120,0.8)] relative z-10"></div>
+                </div>
+                <div class="flex-grow pr-6 md:pr-0 md:pl-2 py-3 text-lg font-medium text-foreground text-right md:text-left">More capacity is needed</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- The Climax / Fork -->
+      <div class="max-w-4xl mx-auto reveal mt-12">
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center gap-6 md:gap-8">
+          
+          <!-- Option A -->
+          <div class="rounded-3xl clay-inset p-8 flex flex-col h-full hover:scale-[1.02] transition-transform">
+            <div class="eyebrow text-muted-foreground/60 mb-2">OPTION A</div>
+            <h3 class="text-xl font-medium text-muted-foreground mb-8">Build everything internally</h3>
+            <div class="mt-auto flex items-center gap-3 text-[#c96a4a] bg-background clay-pressed w-fit px-4 py-2 rounded-full">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              <span class="text-[10px] tracking-widest uppercase font-bold">Absorbs resources</span>
+            </div>
+          </div>
+
+          <!-- Divider -->
+          <div class="font-display italic text-muted-foreground/50 text-2xl text-center">or</div>
+
+          <!-- Option B -->
+          <div class="rounded-3xl dark-card p-8 flex flex-col h-full relative overflow-hidden group hover:scale-[1.02] transition-transform cursor-pointer border border-[#2a5a4a]/30 hover:border-[#2a5a4a]">
+            <!-- Ambient Glow -->
+            <div class="absolute top-0 right-0 w-32 h-32 bg-[#2a5a4a] rounded-full blur-[50px] opacity-40 -translate-y-1/2 translate-x-1/3 pointer-events-none group-hover:opacity-70 transition-opacity"></div>
+            
+            <div class="relative z-10">
+              <div class="eyebrow text-accent/70 mb-2">OPTION B</div>
+              <h3 class="text-xl font-medium text-white mb-8">Add the capacity you need</h3>
+              <div class="mt-auto flex items-center gap-3 text-accent bg-[#2a5a4a]/30 border border-[#2a5a4a] w-fit px-4 py-2 rounded-full backdrop-blur-sm">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-[10px] tracking-widest uppercase font-bold">Preserves resources</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Highlighted statement -->
+        <div class="mt-20 text-center max-w-2xl mx-auto">
+          <p class="font-display font-light italic leading-snug mb-6" style="font-size: clamp(1.8rem, 4vw, 2.5rem); color: #0d1b16;">
+            Calveris exists for the second path.
+          </p>
+          <p class="text-[1.05rem] leading-relaxed text-muted-foreground">
+            We provide the accounting capacity behind the work, so businesses can add what they need without automatically building an entire function around it.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Script for Serpentine SVG drawing and Scroll Animation -->
+  <script>
+    function drawSerpentineFlow() {
+      const container = document.getElementById('serpentine-flow');
+      const svg = document.getElementById('flow-svg');
+      const pathBg = document.getElementById('flow-path-bg');
+      const pathActive = document.getElementById('flow-path-active');
+      const dots = document.querySelectorAll('.flow-dot');
+      
+      if (!container || !svg || dots.length < 2) return;
+
+      // Ensure SVG is the exact size of the container
+      svg.setAttribute('width', container.offsetWidth.toString());
+      svg.setAttribute('height', container.offsetHeight.toString());
+
+      // Get container bounds to calculate relative positions
+      const containerRect = container.getBoundingClientRect();
+      
+      // Calculate center points of each dot relative to the container
+      const points = Array.from(dots).map(dot => {
+        const rect = dot.getBoundingClientRect();
+        return {
+          x: (rect.left + rect.width / 2) - containerRect.left,
+          y: (rect.top + rect.height / 2) - containerRect.top
+        };
+      });
+
+      // Construct SVG path data (S-curve)
+      let d = `M ${points[0].x} ${points[0].y}`;
+      
+      for (let i = 0; i < points.length - 1; i++) {
+        const current = points[i];
+        const next = points[i + 1];
+        
+        // Control points for the bezier curve to create an S-shape
+        // We extend the curve vertically to make it snake elegantly
+        const midY = (current.y + next.y) / 2;
+        
+        d += ` C ${current.x} ${midY}, ${next.x} ${midY}, ${next.x} ${next.y}`;
+      }
+
+      // Apply path to both SVG elements
+      pathBg.setAttribute('d', d);
+      pathActive.setAttribute('d', d);
+
+      // Setup Scroll Animation for the active line
+      const pathLength = pathActive.getTotalLength();
+      
+      // Initial state: fully hidden
+      pathActive.style.strokeDasharray = `${pathLength} ${pathLength}`;
+      pathActive.style.strokeDashoffset = pathLength.toString();
+
+      // Setup Intersection Observer to animate when in view
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Un-offset the dash to reveal the line
+            pathActive.style.strokeDashoffset = '0';
+            // Stop observing once animated
+            observer.disconnect();
+          }
+        });
+      }, { threshold: 0.3 });
+
+      observer.observe(container);
+    }
+
+    // Run on load and resize
+    window.addEventListener('load', drawSerpentineFlow);
+    window.addEventListener('resize', drawSerpentineFlow);
+    document.addEventListener('astro:page-load', drawSerpentineFlow); // Support for view transitions
+  </script>
+
+  <!-- ================================================================
+       SECTION 03 — OUR STORY
+  ================================================================ -->
+  <section class="bg-secondary py-28 lg:py-40 border-b border-hairline">
+    <div class="shell">
+      <div class="reveal mb-20">
+        <div class="about-eyebrow-light mb-6">How we got here</div>
+        <h2
+          class="font-display font-light leading-[1.15] mb-0"
+          style="font-size: clamp(2rem, 4vw, 3rem); color: #0d1b16;"
+        >
+          We didn't start with a model.<br />
+          <span style="color: #65665e;">We started with the work.</span>
+        </h2>
+      </div>
+
+      <!-- Narrative -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start mb-24">
+        <div class="lg:col-span-5 reveal">
+          <p
+            class="text-[1.05rem] leading-relaxed mb-5"
+            style="color: #65665e;"
+          >
+            Accounting work has a way of revealing what a business actually
+            needs.
+          </p>
+          <p
+            class="text-[1.05rem] leading-relaxed mb-5"
+            style="color: #65665e;"
+          >
+            More work creates pressure on existing teams. More clients create
+            more deadlines. As volume increases, adding capacity becomes just as
+            important as doing the work itself.
+          </p>
+          <p
+            class="text-[1.05rem] leading-relaxed font-medium"
+            style="color: #0d1b16;"
+          >
+            Calveris grew around that reality.
+          </p>
+        </div>
+        <div class="lg:col-span-5 lg:col-start-8 reveal">
+          <p class="text-[1.05rem] leading-relaxed" style="color: #65665e;">
+            We built the people, processes and delivery structure required to
+            handle the work reliably — then kept building as the work grew.
+          </p>
+        </div>
+      </div>
+
+      <!-- 3-Stage Progression -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-0 reveal">
+        <div class="story-stage">
+          <div class="story-num">01</div>
+          <h3 class="story-title">The Work</h3>
+          <p class="story-copy">
+            Real accounting requirements came first. We learned by handling the
+            work businesses and accounting professionals actually needed
+            delivered.
+          </p>
+        </div>
+
+        <div class="story-stage-divider" aria-hidden="true">
+          <div class="story-divider-line"></div>
+          <div class="story-divider-arrow">→</div>
+        </div>
+
+        <div class="story-stage">
+          <div class="story-num">02</div>
+          <h3 class="story-title">The Capacity</h3>
+          <p class="story-copy">
+            More work required more than individual effort. People, experience
+            and delivery systems had to grow with the workload.
+          </p>
+        </div>
+
+        <div class="story-stage-divider" aria-hidden="true">
+          <div class="story-divider-line"></div>
+          <div class="story-divider-arrow">→</div>
+        </div>
+
+        <div class="story-stage story-stage-accent">
+          <div class="story-num story-num-accent">03</div>
+          <h3 class="story-title story-title-accent">Calveris</h3>
+          <p class="story-copy">
+            The experience became a model. A dedicated accounting delivery
+            partner built to provide capacity around the way businesses already
+            work.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       SECTION 04 — WHAT WE HAVE BUILT (dark)
+  ================================================================ -->
+  <section
+    class="about-dark-section py-28 lg:py-40 border-b border-[#183329]/40"
+  >
+    <div class="shell">
+      <div class="reveal mb-20">
+        <div class="about-eyebrow-dark mb-6">Built through delivery</div>
+        <h2
+          class="font-display font-light leading-[1.15]"
+          style="font-size: clamp(2rem, 4vw, 3rem); color: #f0f5f0;"
+        >
+          Five years of doing the work<br />
+          <span style="color: rgba(240,245,240,0.45);"
+            >changes what you can handle.</span
+          >
+        </h2>
+        <p
+          class="mt-6 max-w-2xl text-[1rem] leading-relaxed"
+          style="color: rgba(240,245,240,0.5);"
+        >
+          Experience compounds. Every account handled, deadline met and piece of
+          work reviewed adds to the people, judgment and delivery capability
+          behind the next one.
+        </p>
+      </div>
+
+      <!-- Numbers grid -->
+      <div class="numbers-grid reveal">
+        <div class="number-item">
+          <div class="number-val">5+</div>
+          <div class="number-label">Years delivering accounting</div>
+        </div>
+        <div class="number-divider" aria-hidden="true"></div>
+        <div class="number-item">
+          <div class="number-val">500+</div>
+          <div class="number-label">Businesses supported</div>
+        </div>
+        <div class="number-divider" aria-hidden="true"></div>
+        <div class="number-item">
+          <div class="number-val">400K+</div>
+          <div class="number-label">Accounting tasks completed</div>
+        </div>
+        <div class="number-divider" aria-hidden="true"></div>
+        <div class="number-item">
+          <div class="number-val">30+</div>
+          <div class="number-label">ACCA-qualified accountants</div>
+        </div>
+        <div class="number-divider" aria-hidden="true"></div>
+        <div class="number-item">
+          <div class="number-val">98%</div>
+          <div class="number-label">On-time delivery</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       SECTION 05 — WHAT WE BELIEVE
+  ================================================================ -->
+  <section class="bg-background py-28 lg:py-40 border-b border-hairline">
+    <div class="shell">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+        <div class="lg:col-span-4 reveal">
+          <div class="about-eyebrow-light mb-6">What we believe</div>
+          <h2
+            class="font-display font-light leading-[1.15]"
+            style="font-size: clamp(2rem, 4vw, 3rem); color: #0d1b16;"
+          >
+            You shouldn't have to build everything<br />
+            to handle everything.
+          </h2>
+        </div>
+
+        <div
+          class="lg:col-span-6 lg:col-start-6 flex flex-col justify-center reveal"
+        >
+          <div class="belief-block">
+            <p class="belief-copy">
+              A growing business doesn't always need a larger internal
+              accounting department. Sometimes it needs more capacity.
+            </p>
+          </div>
+          <div class="belief-block">
+            <p class="belief-copy">
+              A finance professional doesn't always need another senior person.
+              Sometimes the senior person simply needs the right team behind
+              them.
+            </p>
+          </div>
+          <div class="belief-block">
+            <p class="belief-copy">
+              An accounting firm doesn't always need to turn away work because
+              delivery capacity is full. Sometimes it needs a team that can
+              extend what the firm can deliver.
+            </p>
+          </div>
+
+          <div class="mt-10 pt-10 border-t border-hairline">
+            <p
+              class="font-display font-light italic"
+              style="font-size: clamp(1.4rem, 2.5vw, 1.9rem); color: #0d1b16;"
+            >
+              That's the role Calveris is built to play.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       SECTION 06 — THE PEOPLE
+  ================================================================ -->
+  <section class="bg-secondary py-28 lg:py-40 border-b border-hairline">
+    <div class="shell">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+        <div class="lg:col-span-5 reveal">
+          <div class="about-eyebrow-light mb-6">The people</div>
+          <h2
+            class="font-display font-light leading-[1.15] mb-8"
+            style="font-size: clamp(2rem, 4vw, 3rem); color: #0d1b16;"
+          >
+            The people behind the work.
+          </h2>
+          <p class="text-[1rem] leading-relaxed mb-5" style="color: #65665e;">
+            The work is only as good as the people responsible for it.
+          </p>
+          <p class="text-[1rem] leading-relaxed mb-10" style="color: #65665e;">
+            That's why Calveris is built around accounting professionals, not
+            simply a technology layer between you and the work.
+          </p>
+
+          <div class="flex flex-col gap-4 mb-10">
+            <div class="people-stat">
+              <span class="people-stat-num">30+</span>
+              <span class="people-stat-label">ACCA-qualified accountants</span>
+            </div>
+            <div class="people-stat">
+              <span class="people-stat-num">35+</span>
+              <span class="people-stat-label">Experienced team members</span>
+            </div>
+          </div>
+
+          <a href="/teams" class="about-link-arrow">
+            Meet the Calveris team
+            <svg
+              viewBox="0 0 16 16"
+              class="size-3.5"
+              fill="none"
+              aria-hidden="true"
+              ><path
+                d="M2.5 8h11M9.5 4l4 4-4 4"
+                stroke="currentColor"
+                stroke-width="1.5"></path></svg
+            >
+          </a>
+        </div>
+
+        <!-- Team image mosaic -->
+        <div class="lg:col-span-6 lg:col-start-7 reveal">
+          <div class="team-mosaic">
+            <div class="team-mosaic-primary">
+              <img
+                src="/images/team.jpg"
+                alt="The Calveris team"
+                class="team-mosaic-img"
+                loading="lazy"
+              />
+              <div class="team-mosaic-overlay">
+                <span class="team-mosaic-tag">Ahmedabad · Global</span>
+              </div>
+            </div>
+            <div class="team-mosaic-strip">
+              {
+                [1, 2, 3].map((i) => (
+                  <div class="team-mosaic-thumb">
+                    <img
+                      src={`https://i.pravatar.cc/300?img=${i + 20}`}
+                      alt="Team member"
+                      class="team-mosaic-img"
+                      loading="lazy"
+                    />
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       SECTION 07 — HOW WE THINK ABOUT DELIVERY
+  ================================================================ -->
+  <section class="bg-background py-28 lg:py-40 border-b border-hairline">
+    <div class="shell">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+        <div class="lg:col-span-4 reveal">
+          <div class="about-eyebrow-light mb-6">How we work</div>
+          <h2
+            class="font-display font-light leading-[1.15] mb-8"
+            style="font-size: clamp(2rem, 4vw, 3rem); color: #0d1b16;"
+          >
+            Good delivery is a system,<br />
+            not a promise.
+          </h2>
+          <p class="text-[1rem] leading-relaxed mb-6" style="color: #65665e;">
+            Accounting work needs to be accurate, understood and delivered when
+            it is needed.
+          </p>
+          <p class="text-[1rem] leading-relaxed mb-10" style="color: #65665e;">
+            That doesn't happen because someone says "quality". It comes from
+            the way the work is organised.
+          </p>
+          <a
+            href="#"
+            class="about-link-arrow"
+            aria-label="See how we work — link coming soon"
+          >
+            See how we work
+            <svg
+              viewBox="0 0 16 16"
+              class="size-3.5"
+              fill="none"
+              aria-hidden="true"
+              ><path
+                d="M2.5 8h11M9.5 4l4 4-4 4"
+                stroke="currentColor"
+                stroke-width="1.5"></path></svg
+            >
+          </a>
+        </div>
+
+        <div class="lg:col-span-7 lg:col-start-6 reveal">
+          <div class="principles-list">
+            <div class="principle-item">
+              <div class="principle-num">01</div>
+              <div class="principle-content">
+                <h3 class="principle-title">People</h3>
+                <p class="principle-copy">
+                  Experienced accounting professionals doing the work.
+                </p>
+              </div>
+            </div>
+
+            <div class="principle-divider"></div>
+
+            <div class="principle-item">
+              <div class="principle-num">02</div>
+              <div class="principle-content">
+                <h3 class="principle-title">Review</h3>
+                <p class="principle-copy">
+                  Senior team members checking work before delivery.
+                </p>
+              </div>
+            </div>
+
+            <div class="principle-divider"></div>
+
+            <div class="principle-item">
+              <div class="principle-num">03</div>
+              <div class="principle-content">
+                <h3 class="principle-title">Reliability</h3>
+                <p class="principle-copy">
+                  Work delivered within agreed requirements and timelines.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       SECTION 08 — STILL BUILDING (dark)
+  ================================================================ -->
+  <section
+    class="about-dark-section py-28 lg:py-40 border-b border-[#183329]/40"
+  >
+    <div class="shell">
+      <div class="reveal max-w-3xl">
+        <div class="about-eyebrow-dark mb-8">What's next</div>
+
+        <h2
+          class="font-display font-light leading-[1.1] mb-10"
+          style="font-size: clamp(2.5rem, 5vw, 4rem); color: #f0f5f0;"
+        >
+          We're still building.
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-0">
+          <p
+            class="text-[1.05rem] leading-relaxed"
+            style="color: rgba(240,245,240,0.55);"
+          >
+            Calveris is growing because the need for dependable accounting
+            capacity keeps growing.
+          </p>
+          <p
+            class="text-[1.05rem] leading-relaxed"
+            style="color: rgba(240,245,240,0.55);"
+          >
+            We're building the team, systems and relationships to meet that need
+            — without losing the standards that made people trust us with the
+            work in the first place.
+          </p>
+        </div>
+      </div>
+
+      <!-- Three pillars -->
+      <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-0 reveal">
+        <div class="still-building-col">
+          <div class="still-building-dot"></div>
+          <p class="still-building-text">
+            Established.<br />More than five years in.
+          </p>
+        </div>
+        <div class="still-building-col still-building-col-border">
+          <div class="still-building-dot"></div>
+          <p class="still-building-text">
+            Growing.<br />More clients, more capacity, more trust.
+          </p>
+        </div>
+        <div class="still-building-col still-building-col-border">
+          <div class="still-building-dot"></div>
+          <p class="still-building-text">
+            Principled.<br />Standards don't compress as we scale.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       SECTION 09 — TESTIMONIALS
+  ================================================================ -->
+  <section class="bg-background py-28 lg:py-40 border-b border-hairline">
+    <div class="shell">
+      <div class="reveal mb-16">
+        <div class="about-eyebrow-light mb-6">Trusted through the work</div>
+        <h2
+          class="font-display font-light leading-[1.15]"
+          style="font-size: clamp(2rem, 4vw, 3rem); color: #0d1b16;"
+        >
+          The work speaks louder<br />than the introduction.
+        </h2>
+      </div>
+
+      <div class="testimonials-grid reveal">
+        <blockquote class="testimonial-card">
+          <p class="testimonial-quote">
+            "Working with Calveris has given our firm the breathing room to take
+            on more clients without stretching the team. The delivery is
+            consistent and the communication is clear — exactly what we needed."
+          </p>
+          <footer class="testimonial-footer">
+            <div class="testimonial-name">Sarah Mitchell</div>
+            <div class="testimonial-role">
+              Director · Mitchell & Partners Accountants
+            </div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testimonial-card">
+          <p class="testimonial-quote">
+            "We brought Calveris in during a particularly demanding period and
+            they handled the workload without missing a beat. Three months
+            later, they're still part of the operation."
+          </p>
+          <footer class="testimonial-footer">
+            <div class="testimonial-name">James Okafor</div>
+            <div class="testimonial-role">CFO · Redwood Retail Group</div>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testimonial-card">
+          <p class="testimonial-quote">
+            "The quality of the work and the responsiveness of the team has been
+            genuinely impressive. It doesn't feel like outsourcing — it feels
+            like a proper extension of our finance function."
+          </p>
+          <footer class="testimonial-footer">
+            <div class="testimonial-name">Priya Sharma</div>
+            <div class="testimonial-role">
+              Finance Manager · Vantage Digital Ltd
+            </div>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       SECTION 10 — FINAL CTA
+  ================================================================ -->
+  <section
+    class="about-dark-section py-24 lg:py-36 border-b border-[#183329]/40"
+  >
+    <div
+      class="shell flex flex-col lg:flex-row lg:items-center justify-between gap-16 lg:gap-24 reveal"
+    >
+      <div class="max-w-2xl">
+        <div class="about-eyebrow-dark mb-8">Let's talk</div>
+        <h2
+          class="font-display font-light leading-[1.15] mb-6"
+          style="font-size: clamp(2rem, 4vw, 3rem); color: #f0f5f0;"
+        >
+          Get the capacity.<br />
+          <span style="color: rgba(240,245,240,0.45);"
+            >Keep the resources for growth.</span
+          >
+        </h2>
+        <p class="text-[1.05rem]" style="color: rgba(240,245,240,0.5);">
+          Let's look at what the business actually needs.
+        </p>
+      </div>
+
+      <div class="flex-shrink-0">
+        <a
+          href="/contact"
+          class="about-cta-btn group inline-flex items-center gap-4 px-10 py-5 rounded-full uppercase tracking-[0.18em] text-[11px] font-bold transition-all duration-300"
+          style="color: #f0f5f0;"
+        >
+          <span>Start a conversation</span>
+          <span
+            class="transition-transform duration-300 group-hover:translate-x-1"
+          >
+            <svg
+              viewBox="0 0 16 16"
+              class="size-3.5"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M2.5 8h11M9.5 4l4 4-4 4"
+                stroke="currentColor"
+                stroke-width="1.5"></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* ── Design tokens ───────────────────────────── */
+  :root {
+    --c-dark: #0d1b16;
+    --c-dark-d: #040907;
+    --c-dark-l: #183329;
+    --c-accent: #7ec8a0;
+  }
+
+  /* ── Hero ────────────────────────────────────── */
+  .about-hero {
+    background: #e8ebe5;
+    min-height: 90svh;
+    position: relative;
+  }
+
+  .about-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('/images/about-hero.png');
+    background-size: cover;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+
+  .about-hero-gradient {
+    position: absolute;
+    inset: 0;
+    /* Gentle vignette so left-side text stays readable; clear in the centre */
+    background:
+      linear-gradient(to right, rgba(232,235,229,0.82) 0%, rgba(232,235,229,0.4) 45%, rgba(232,235,229,0) 70%),
+      linear-gradient(to top, rgba(232,235,229,0.95) 0%, rgba(232,235,229,0) 35%);
+    z-index: 1;
+  }
+
+  /* ── Eyebrows ────────────────────────────────── */
+  .about-eyebrow {
+    color: #7caa78;
+    background: rgba(232, 235, 229, 0.4);
+    backdrop-filter: blur(8px);
+    box-shadow: 
+      inset 4px 4px 8px rgba(0, 0, 0, 0.08), 
+      inset -4px -4px 8px rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .about-eyebrow-light {
+    font-family: var(--font-body);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #2a5a4a;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .about-eyebrow-light::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #7caa78;
+  }
+
+  .about-eyebrow-dark {
+    font-family: var(--font-body);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(126, 200, 160, 0.6);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .about-eyebrow-dark::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #7ec8a0;
+  }
+
+  /* ── Reveal mask animation ───────────────────── */
+  .reveal-mask {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: bottom;
+    padding-bottom: 0.15em;
+    padding-right: 0.1em;
+    margin-bottom: -0.15em;
+    margin-right: -0.1em;
+  }
+
+  /* ── Hero animations ─────────────────────────── */
+  @keyframes aFadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes aRevealUp {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .a-fade-in {
+    animation: aFadeIn 1.4s ease-out forwards;
+  }
+  .a-reveal-up {
+    animation: aRevealUp 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  }
+
+  /* ── Why We Exist — clay chain ───────────────── */
+  .why-section .clay-card {
+    background: var(--color-background);
+    box-shadow: 20px 20px 40px #c4c6cc, -20px -20px 40px #ffffff;
+  }
+  .why-section .clay-inset {
+    background: var(--color-background);
+    box-shadow: inset 8px 8px 16px #c4c6cc, inset -8px -8px 16px #ffffff;
+  }
+
+  .dark-card {
+    background-color: #06100c;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  /* ── Dark background sections ───────────────── */
+  .about-dark-section {
+    background: #0d1b16;
+  }
+
+  /* ── Dark background sections ───────────────── */
+    color: #7ec8a0;
+    border: 1px solid rgba(126, 200, 160, 0.2);
+  }
+  .causal-fork-divider {
+    font-family: var(--font-display);
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #aaa;
+    flex-shrink: 0;
+  }
+
+  /* ── Story stages ────────────────────────────── */
+  .story-stage {
+    padding: 32px 28px;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    background: #fff;
+    border-radius: 1.5rem;
+  }
+  .story-stage-accent {
+    background: #0d1b16;
+    border-color: rgba(126, 200, 160, 0.1);
+  }
+  .story-stage-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+    color: #7caa78;
+    font-size: 1.2rem;
+  }
+  @media (max-width: 768px) {
+    .story-stage-divider {
+      display: none;
+    }
+  }
+  .story-divider-line {
+    display: none;
+  }
+  .story-divider-arrow {
+    font-size: 1.5rem;
+    opacity: 0.6;
+  }
+
+  .story-num {
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: #7caa78;
+    margin-bottom: 16px;
+  }
+  .story-num-accent {
+    color: rgba(126, 200, 160, 0.7);
+  }
+
+  .story-title {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #0d1b16;
+    margin-bottom: 12px;
+  }
+  .story-title-accent {
+    color: #f0f5f0;
+  }
+
+  .story-copy {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #65665e;
+  }
+  .story-stage-accent .story-copy {
+    color: rgba(240, 245, 240, 0.55);
+  }
+
+  /* ── Numbers ─────────────────────────────────── */
+  .numbers-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+    border: 1px solid rgba(126, 200, 160, 0.08);
+    border-radius: 2rem;
+    overflow: hidden;
+  }
+
+  @media (max-width: 900px) {
+    .numbers-grid {
+      grid-template-columns: repeat(2, 1fr);
+      border-radius: 1.5rem;
+    }
+    .number-divider {
+      display: none;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .numbers-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .number-item {
+    padding: 40px 32px;
+    border-right: 1px solid rgba(126, 200, 160, 0.08);
+  }
+  .number-item:last-child {
+    border-right: none;
+  }
+  .number-divider {
+    display: none;
+  }
+
+  .number-val {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: 300;
+    color: #7ec8a0;
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+
+  .number-label {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(240, 245, 240, 0.4);
+    line-height: 1.5;
+  }
+
+  /* ── Belief blocks ───────────────────────────── */
+  .belief-block {
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+  .belief-block:first-child {
+    padding-top: 0;
+  }
+
+  .belief-copy {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #65665e;
+  }
+
+  /* ── People stats ────────────────────────────── */
+  .people-stat {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .people-stat-num {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 300;
+    color: #0d1b16;
+    line-height: 1;
+  }
+  .people-stat-label {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: #65665e;
+  }
+
+  /* ── Team mosaic ─────────────────────────────── */
+  .team-mosaic {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .team-mosaic-primary {
+    position: relative;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    aspect-ratio: 4/3;
+  }
+  .team-mosaic-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .team-mosaic-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 24px;
+    background: linear-gradient(
+      to top,
+      rgba(13, 27, 22, 0.85) 0%,
+      transparent 100%
+    );
+    display: flex;
+    align-items: flex-end;
+  }
+  .team-mosaic-tag {
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(240, 245, 240, 0.7);
+  }
+  .team-mosaic-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .team-mosaic-thumb {
+    border-radius: 1rem;
+    overflow: hidden;
+    aspect-ratio: 1;
+  }
+
+  /* ── Principles ──────────────────────────────── */
+  .principles-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .principle-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 28px 0;
+  }
+  .principle-divider {
+    height: 1px;
+    background: rgba(0, 0, 0, 0.06);
+  }
+  .principle-num {
+    font-family: var(--font-body);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: #7caa78;
+    padding-top: 5px;
+    flex-shrink: 0;
+  }
+  .principle-content {
+    flex: 1;
+  }
+  .principle-title {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #0d1b16;
+    margin-bottom: 6px;
+  }
+  .principle-copy {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #65665e;
+  }
+
+  /* ── Still building ──────────────────────────── */
+  .still-building-col {
+    padding: 40px 0 40px;
+  }
+  .still-building-col-border {
+    border-left: 1px solid rgba(126, 200, 160, 0.1);
+    padding-left: 40px;
+    margin-left: 40px;
+  }
+  .still-building-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #7ec8a0;
+    margin-bottom: 20px;
+  }
+  .still-building-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba(240, 245, 240, 0.55);
+  }
+
+  /* ── Testimonials ────────────────────────────── */
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+  @media (max-width: 768px) {
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .testimonial-card {
+    background: #fff;
+    border-radius: 1.5rem;
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .testimonial-quote {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 300;
+    line-height: 1.65;
+    color: #0d1b16;
+    font-style: italic;
+    margin: 0 0 28px;
+  }
+
+  .testimonial-footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+    padding-top: 20px;
+  }
+  .testimonial-name {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #0d1b16;
+    margin-bottom: 4px;
+  }
+  .testimonial-role {
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    color: #aaa;
+    letter-spacing: 0.03em;
+  }
+
+  /* ── Links ───────────────────────────────────── */
+  .about-link-arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #2a5a4a;
+    transition:
+      gap 0.3s,
+      color 0.2s;
+  }
+  .about-link-arrow:hover {
+    gap: 14px;
+    color: #0d1b16;
+  }
+
+  /* ── CTA button ──────────────────────────────── */
+  .about-cta-btn {
+    background: #0d1b16;
+    box-shadow:
+      12px 12px 24px #040907,
+      -12px -12px 24px #183329;
+  }
+  .about-cta-btn:hover {
+    box-shadow:
+      8px 8px 16px #040907,
+      -8px -8px 16px #183329,
+      0 0 30px rgba(126, 200, 160, 0.08);
+    transform: translateY(-2px);
+    color: #7ec8a0 !important;
+  }
+</style>
