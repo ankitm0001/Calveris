@@ -71,164 +71,144 @@ import Footer from "../components/Footer.astro";
   <section class="why-section bg-background py-24 lg:py-36 border-b border-hairline">
     <div class="shell">
 
-      <!-- Section header -->
-      <div class="mb-20 md:mb-32 reveal text-center flex flex-col items-center">
-        <div class="eyebrow text-muted-foreground mb-6 flex items-center justify-center gap-3">
-          <span aria-hidden="true" class="inline-block size-[6px] rotate-45 bg-accent"></span>
-          Why we exist
-          <span aria-hidden="true" class="inline-block size-[6px] rotate-45 bg-accent"></span>
-        </div>
-        <h2 class="display-lg max-w-[22ch] text-balance leading-[1.1]">
-          Growth should create more opportunity,
-          <br class="hidden md:block" />
-          <em class="not-italic italic font-light text-muted-foreground">not more accounting overhead.</em>
-        </h2>
-      </div>
-
-      <!-- Serpentine Flow Container -->
-      <div class="relative max-w-5xl mx-auto mb-32" id="serpentine-flow">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
         
-        <!-- SVG Canvas for the connecting line -->
-        <svg class="absolute inset-0 w-full h-full pointer-events-none z-0" id="flow-svg">
-          <!-- Background dashed line -->
-          <path id="flow-path-bg" d="" stroke="rgba(126, 200, 160, 0.3)" stroke-width="2" stroke-dasharray="6 6" fill="none" />
-          <!-- Animated foreground line -->
-          <path id="flow-path-active" d="" stroke="#7caa78" stroke-width="3" fill="none" class="transition-all duration-1000 ease-out" />
-        </svg>
-
-        <div class="flex flex-col gap-12 md:gap-24 relative z-10 w-full">
-
-          <!-- Step 01 (Left) -->
-          <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-0 flow-step reveal">
-            <!-- Mobile Step Label -->
-            <div class="md:hidden eyebrow text-accent">STEP 01</div>
-            <!-- Card -->
-            <div class="w-full md:w-1/2 flex md:justify-end md:pr-12">
-              <div class="w-full max-w-md rounded-[2.5rem] p-3 flex items-center gap-4 clay-card group hover:-translate-y-1 transition-all duration-300">
-                <div class="flex-grow pl-6 py-3 text-lg font-medium text-foreground">Business grows</div>
-                <div class="w-14 h-14 rounded-full clay-inset flex items-center justify-center shrink-0 flow-dot">
-                  <div class="w-3 h-3 rounded-full bg-accent opacity-50 group-hover:opacity-100 transition-opacity shadow-[0_0_10px_rgba(124,170,120,0.5)]"></div>
-                </div>
-              </div>
-            </div>
-            <!-- Desktop Step Label -->
-            <div class="hidden md:flex w-1/2 justify-start pl-12">
-              <div class="text-3xl font-display font-light text-accent/50 tracking-widest uppercase">
-                <span class="text-sm font-body font-bold mr-2">STEP</span>01
-              </div>
-            </div>
+        <!-- Left: Header -->
+        <div class="lg:col-span-5 lg:sticky top-40 reveal">
+          <div class="inline-flex w-fit items-center gap-2 px-6 py-2.5 rounded-full text-[9px] tracking-widest uppercase font-bold mb-6 about-eyebrow">
+            <span aria-hidden="true" class="inline-block size-[6px] rotate-45" style="background: #7caa78;"></span>
+            <span>Why we exist</span>
           </div>
-
-          <!-- Step 02 (Right) -->
-          <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-0 flow-step reveal">
-            <!-- Mobile Step Label -->
-            <div class="md:hidden eyebrow text-accent">STEP 02</div>
-            <!-- Desktop Step Label -->
-            <div class="hidden md:flex w-1/2 justify-end pr-12">
-              <div class="text-3xl font-display font-light text-accent/50 tracking-widest uppercase">
-                <span class="text-sm font-body font-bold mr-2">STEP</span>02
-              </div>
-            </div>
-            <!-- Card -->
-            <div class="w-full md:w-1/2 flex md:justify-start md:pl-12">
-              <div class="w-full max-w-md rounded-[2.5rem] p-3 flex items-center flex-row-reverse md:flex-row gap-4 clay-card group hover:-translate-y-1 transition-all duration-300">
-                <div class="w-14 h-14 rounded-full clay-inset flex items-center justify-center shrink-0 flow-dot">
-                  <div class="w-3 h-3 rounded-full bg-accent opacity-50 group-hover:opacity-100 transition-opacity shadow-[0_0_10px_rgba(124,170,120,0.5)]"></div>
-                </div>
-                <div class="flex-grow pr-6 md:pr-0 md:pl-2 py-3 text-lg font-medium text-foreground text-right md:text-left">Accounting work grows</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Step 03 (Left) -->
-          <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-0 flow-step reveal">
-            <!-- Mobile Step Label -->
-            <div class="md:hidden eyebrow text-accent">STEP 03</div>
-            <!-- Card -->
-            <div class="w-full md:w-1/2 flex md:justify-end md:pr-12">
-              <div class="w-full max-w-md rounded-[2.5rem] p-3 flex items-center gap-4 clay-card group hover:-translate-y-1 transition-all duration-300">
-                <div class="flex-grow pl-6 py-3 text-lg font-medium text-foreground">Existing capacity gets tight</div>
-                <div class="w-14 h-14 rounded-full clay-inset flex items-center justify-center shrink-0 flow-dot">
-                  <div class="w-3 h-3 rounded-full bg-accent opacity-50 group-hover:opacity-100 transition-opacity shadow-[0_0_10px_rgba(124,170,120,0.5)]"></div>
-                </div>
-              </div>
-            </div>
-            <!-- Desktop Step Label -->
-            <div class="hidden md:flex w-1/2 justify-start pl-12">
-              <div class="text-3xl font-display font-light text-accent/50 tracking-widest uppercase">
-                <span class="text-sm font-body font-bold mr-2">STEP</span>03
-              </div>
-            </div>
-          </div>
-
-          <!-- Step 04 (Right) -->
-          <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-0 flow-step reveal">
-            <!-- Mobile Step Label -->
-            <div class="md:hidden eyebrow text-accent">STEP 04</div>
-            <!-- Desktop Step Label -->
-            <div class="hidden md:flex w-1/2 justify-end pr-12">
-              <div class="text-3xl font-display font-light text-accent tracking-widest uppercase">
-                <span class="text-sm font-body font-bold mr-2">STEP</span>04
-              </div>
-            </div>
-            <!-- Card -->
-            <div class="w-full md:w-1/2 flex md:justify-start md:pl-12">
-              <div class="w-full max-w-md rounded-[2.5rem] p-3 flex items-center flex-row-reverse md:flex-row gap-4 clay-card group hover:-translate-y-1 transition-all duration-300 border border-accent/20">
-                <div class="w-14 h-14 rounded-full clay-inset flex items-center justify-center shrink-0 flow-dot flow-dot-final relative">
-                  <!-- Pulse effect -->
-                  <div class="absolute inset-0 rounded-full bg-accent opacity-20 animate-ping"></div>
-                  <div class="w-4 h-4 rounded-full bg-accent shadow-[0_0_15px_rgba(124,170,120,0.8)] relative z-10"></div>
-                </div>
-                <div class="flex-grow pr-6 md:pr-0 md:pl-2 py-3 text-lg font-medium text-foreground text-right md:text-left">More capacity is needed</div>
-              </div>
-            </div>
-          </div>
-
+          <h2 class="display-lg text-balance leading-[1.1]">
+            Growth should create more opportunity,
+            <em class="not-italic italic font-light text-muted-foreground block mt-2">not more accounting overhead.</em>
+          </h2>
         </div>
-      </div>
 
-      <!-- The Climax / Fork -->
-      <div class="max-w-4xl mx-auto reveal mt-12">
-        <div class="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center gap-6 md:gap-8">
+        <!-- Right: Flow and Fork -->
+        <div class="lg:col-span-7">
           
-          <!-- Option A -->
-          <div class="rounded-3xl clay-inset p-8 flex flex-col h-full hover:scale-[1.02] transition-transform">
-            <div class="eyebrow text-muted-foreground/60 mb-2">OPTION A</div>
-            <h3 class="text-xl font-medium text-muted-foreground mb-8">Build everything internally</h3>
-            <div class="mt-auto flex items-center gap-3 text-[#c96a4a] bg-background clay-pressed w-fit px-4 py-2 rounded-full">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
-              <span class="text-[10px] tracking-widest uppercase font-bold">Absorbs resources</span>
-            </div>
-          </div>
-
-          <!-- Divider -->
-          <div class="font-display italic text-muted-foreground/50 text-2xl text-center">or</div>
-
-          <!-- Option B -->
-          <div class="rounded-3xl dark-card p-8 flex flex-col h-full relative overflow-hidden group hover:scale-[1.02] transition-transform cursor-pointer border border-[#2a5a4a]/30 hover:border-[#2a5a4a]">
-            <!-- Ambient Glow -->
-            <div class="absolute top-0 right-0 w-32 h-32 bg-[#2a5a4a] rounded-full blur-[50px] opacity-40 -translate-y-1/2 translate-x-1/3 pointer-events-none group-hover:opacity-70 transition-opacity"></div>
+          <!-- Serpentine Flow Container -->
+          <div class="relative w-full mb-24" id="serpentine-flow">
             
-            <div class="relative z-10">
-              <div class="eyebrow text-accent/70 mb-2">OPTION B</div>
-              <h3 class="text-xl font-medium text-white mb-8">Add the capacity you need</h3>
-              <div class="mt-auto flex items-center gap-3 text-accent bg-[#2a5a4a]/30 border border-[#2a5a4a] w-fit px-4 py-2 rounded-full backdrop-blur-sm">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                <span class="text-[10px] tracking-widest uppercase font-bold">Preserves resources</span>
+            <!-- SVG Canvas for the connecting line -->
+            <svg class="absolute inset-0 w-full h-full pointer-events-none z-0" id="flow-svg">
+              <path id="flow-path-bg" d="" stroke="rgba(126, 200, 160, 0.3)" stroke-width="2" stroke-dasharray="6 6" fill="none" />
+              <path id="flow-path-active" d="" stroke="#7caa78" stroke-width="3" fill="none" class="transition-all duration-1000 ease-out" />
+            </svg>
+
+            <div class="flex flex-col gap-12 relative z-10 w-full">
+
+              <!-- Step 01 (Left) -->
+              <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-0 flow-step reveal">
+                <div class="w-full md:w-1/2 flex md:justify-end md:pr-8">
+                  <div class="w-full rounded-[2rem] p-2 flex items-center gap-4 clay-card group hover:-translate-y-1 transition-all duration-300">
+                    <div class="flex-grow pl-5 py-2 text-md font-medium text-foreground">Business grows</div>
+                    <div class="w-12 h-12 rounded-full clay-inset flex items-center justify-center shrink-0 flow-dot">
+                      <div class="w-2.5 h-2.5 rounded-full bg-accent opacity-50 group-hover:opacity-100 transition-opacity shadow-[0_0_10px_rgba(124,170,120,0.5)]"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Empty spacer to maintain layout -->
+                <div class="hidden md:block w-1/2"></div>
               </div>
+
+              <!-- Step 02 (Right) -->
+              <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-0 flow-step reveal">
+                <!-- Empty spacer to maintain layout -->
+                <div class="hidden md:block w-1/2"></div>
+                <div class="w-full md:w-1/2 flex md:justify-start md:pl-8">
+                  <div class="w-full rounded-[2rem] p-2 flex items-center flex-row-reverse md:flex-row gap-4 clay-card group hover:-translate-y-1 transition-all duration-300">
+                    <div class="w-12 h-12 rounded-full clay-inset flex items-center justify-center shrink-0 flow-dot">
+                      <div class="w-2.5 h-2.5 rounded-full bg-accent opacity-50 group-hover:opacity-100 transition-opacity shadow-[0_0_10px_rgba(124,170,120,0.5)]"></div>
+                    </div>
+                    <div class="flex-grow pr-5 md:pr-0 md:pl-2 py-2 text-md font-medium text-foreground text-right md:text-left">Accounting work grows</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 03 (Left) -->
+              <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-0 flow-step reveal">
+                <div class="w-full md:w-1/2 flex md:justify-end md:pr-8">
+                  <div class="w-full rounded-[2rem] p-2 flex items-center gap-4 clay-card group hover:-translate-y-1 transition-all duration-300">
+                    <div class="flex-grow pl-5 py-2 text-md font-medium text-foreground leading-snug">Existing capacity gets tight</div>
+                    <div class="w-12 h-12 rounded-full clay-inset flex items-center justify-center shrink-0 flow-dot">
+                      <div class="w-2.5 h-2.5 rounded-full bg-accent opacity-50 group-hover:opacity-100 transition-opacity shadow-[0_0_10px_rgba(124,170,120,0.5)]"></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Empty spacer to maintain layout -->
+                <div class="hidden md:block w-1/2"></div>
+              </div>
+
+              <!-- Step 04 (Right) -->
+              <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-0 flow-step reveal relative">
+                <!-- Empty spacer to maintain layout -->
+                <div class="hidden md:block w-1/2"></div>
+                <div class="w-full md:w-1/2 flex md:justify-start md:pl-8">
+                  <div class="w-full rounded-[2rem] p-2 flex items-center flex-row-reverse md:flex-row gap-4 clay-card group hover:-translate-y-1 transition-all duration-300 border border-accent/20">
+                    <div class="w-12 h-12 rounded-full clay-inset flex items-center justify-center shrink-0 flow-dot flow-dot-final relative">
+                      <div class="absolute inset-0 rounded-full bg-accent opacity-20 animate-ping"></div>
+                      <div class="w-3 h-3 rounded-full bg-accent shadow-[0_0_15px_rgba(124,170,120,0.8)] relative z-10"></div>
+                    </div>
+                    <div class="flex-grow pr-5 md:pr-0 md:pl-2 py-2 text-md font-medium text-foreground text-right md:text-left leading-snug">More capacity is needed</div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
 
-        </div>
+          <!-- The Climax / Fork -->
+          <div class="w-full reveal mt-24 relative">
+            
+            <!-- Vertical line connecting Step 04 to the fork -->
+            <div class="hidden lg:block absolute left-1/2 top-0 -translate-x-1/2 -mt-24 w-[2px] h-24 border-l-2 border-dashed border-accent/40 z-0"></div>
 
-        <!-- Highlighted statement -->
-        <div class="mt-20 text-center max-w-2xl mx-auto">
-          <p class="font-display font-light italic leading-snug mb-6" style="font-size: clamp(1.8rem, 4vw, 2.5rem); color: #0d1b16;">
-            Calveris exists for the second path.
-          </p>
-          <p class="text-[1.05rem] leading-relaxed text-muted-foreground">
-            We provide the accounting capacity behind the work, so businesses can add what they need without automatically building an entire function around it.
-          </p>
+            <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] items-stretch gap-6 relative z-10">
+              
+              <!-- Horizontal line connecting A and B -->
+              <div class="hidden lg:block absolute top-1/2 left-[20%] right-[20%] h-0 border-t-2 border-dashed border-accent/40 -z-10"></div>
+              
+              <!-- Option A -->
+              <div class="rounded-3xl clay-inset p-6 flex flex-col hover:scale-[1.02] transition-transform bg-background">
+                <div class="eyebrow text-muted-foreground/60 mb-2">OPTION A</div>
+                <h3 class="text-lg font-medium text-muted-foreground mb-6 leading-tight">Build everything internally</h3>
+                <div class="mt-auto flex items-center gap-2 text-[#c96a4a] bg-background clay-pressed w-fit px-3 py-1.5 rounded-full">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                  <span class="text-[9px] tracking-widest uppercase font-bold">Absorbs resources</span>
+                </div>
+              </div>
+
+              <!-- Divider -->
+              <div class="font-display italic text-muted-foreground/50 text-xl flex items-center justify-center py-2 lg:py-0 bg-background px-4">or</div>
+
+              <!-- Option B -->
+              <div class="rounded-3xl dark-card p-6 flex flex-col relative overflow-hidden group hover:scale-[1.02] transition-transform cursor-pointer border border-[#2a5a4a]/30 hover:border-[#2a5a4a]">
+                <div class="absolute top-0 right-0 w-24 h-24 bg-[#2a5a4a] rounded-full blur-[40px] opacity-40 -translate-y-1/2 translate-x-1/3 pointer-events-none group-hover:opacity-70 transition-opacity"></div>
+                <div class="relative z-10 h-full flex flex-col">
+                  <div class="eyebrow text-accent/70 mb-2">OPTION B</div>
+                  <h3 class="text-lg font-medium text-white mb-6 leading-tight">Add the capacity you need</h3>
+                  <div class="mt-auto flex items-center gap-2 text-accent bg-[#2a5a4a]/30 border border-[#2a5a4a] w-fit px-3 py-1.5 rounded-full backdrop-blur-sm">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span class="text-[9px] tracking-widest uppercase font-bold">Preserves resources</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Highlighted statement -->
+            <div class="mt-16 max-w-2xl text-center mx-auto">
+              <p class="font-display font-light italic leading-snug mb-5" style="font-size: clamp(1.6rem, 3vw, 2rem); color: #0d1b16;">
+                Calveris exists for the second path.
+              </p>
+              <p class="text-[1rem] leading-relaxed text-muted-foreground">
+                We provide the accounting capacity behind the work, so businesses can add what they need without automatically building an entire function around it.
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -302,46 +282,135 @@ import Footer from "../components/Footer.astro";
       observer.observe(container);
     }
 
+    function drawStoryFlow() {
+      const container = document.getElementById('story-flow');
+      const svg = document.getElementById('story-svg');
+      const path = document.getElementById('story-path');
+      const dots = document.querySelectorAll('.story-dot');
+      
+      if (!container || !svg || !path || dots.length < 2) return;
+
+      svg.setAttribute('width', container.offsetWidth.toString());
+      svg.setAttribute('height', container.offsetHeight.toString());
+
+      const containerRect = container.getBoundingClientRect();
+      const points = Array.from(dots).map(dot => {
+        const rect = dot.getBoundingClientRect();
+        return {
+          x: (rect.left + rect.width / 2) - containerRect.left,
+          y: (rect.top + rect.height / 2) - containerRect.top
+        };
+      });
+
+      let d = `M ${points[0].x} ${points[0].y}`;
+      for (let i = 0; i < points.length - 1; i++) {
+        const current = points[i];
+        const next = points[i + 1];
+        
+        const midY = (current.y + next.y) / 2;
+        d += ` C ${current.x} ${midY}, ${next.x} ${midY}, ${next.x} ${next.y}`;
+      }
+
+      path.setAttribute('d', d);
+
+      const pathLength = path.getTotalLength();
+      path.style.strokeDasharray = `${pathLength} ${pathLength}`;
+      path.style.strokeDashoffset = pathLength.toString();
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            path.style.strokeDashoffset = '0';
+            observer.disconnect();
+          }
+        });
+      }, { threshold: 0.3 });
+
+      observer.observe(container);
+    }
+
+    function initCountUp() {
+      const counters = document.querySelectorAll('.count-up');
+      if (counters.length === 0) return;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            if (el.classList.contains('counted')) return;
+            el.classList.add('counted');
+            
+            const target = parseInt(el.getAttribute('data-val') || '0', 10);
+            const duration = 2000;
+            let startTimestamp = null;
+            
+            const step = (timestamp) => {
+              if (!startTimestamp) startTimestamp = timestamp;
+              const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+              const easeProgress = 1 - Math.pow(1 - progress, 4);
+              el.innerText = Math.floor(easeProgress * target).toString();
+              if (progress < 1) {
+                window.requestAnimationFrame(step);
+              } else {
+                el.innerText = target.toString();
+              }
+            };
+            window.requestAnimationFrame(step);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      counters.forEach(counter => observer.observe(counter));
+    }
+
     // Run on load and resize
-    window.addEventListener('load', drawSerpentineFlow);
-    window.addEventListener('resize', drawSerpentineFlow);
-    document.addEventListener('astro:page-load', drawSerpentineFlow); // Support for view transitions
+    window.addEventListener('load', () => { drawSerpentineFlow(); drawStoryFlow(); initCountUp(); });
+    window.addEventListener('resize', () => { drawSerpentineFlow(); drawStoryFlow(); });
+    document.addEventListener('astro:page-load', () => { drawSerpentineFlow(); drawStoryFlow(); initCountUp(); });
   </script>
 
   <!-- ================================================================
        SECTION 03 — OUR STORY
   ================================================================ -->
-  <section class="bg-secondary py-28 lg:py-40 border-b border-hairline">
+  <section class="bg-background py-28 lg:py-40 border-b border-hairline">
     <div class="shell">
-      <div class="reveal mb-20">
-        <div class="about-eyebrow-light mb-6">How we got here</div>
-        <h2
-          class="font-display font-light leading-[1.15] mb-0"
-          style="font-size: clamp(2rem, 4vw, 3rem); color: #0d1b16;"
-        >
-          We didn't start with a model.<br />
-          <span style="color: #65665e;">We started with the work.</span>
-        </h2>
-      </div>
-
-      <!-- Narrative -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start mb-24">
-        <div class="lg:col-span-5 reveal">
+      <!-- Main Content -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start mb-16">
+        
+        <!-- Left Side: Narrative and Bullet Points -->
+        <div class="lg:col-span-6 reveal">
+          <div class="about-eyebrow-light mb-6">How we got here</div>
+          <h2
+            class="font-display font-light leading-[1.15] mb-12"
+            style="font-size: clamp(2rem, 4vw, 3rem); color: #0d1b16;"
+          >
+            We didn't start with a model.<br />
+            <span style="color: #65665e;">We started with the work.</span>
+          </h2>
+          
           <p
-            class="text-[1.05rem] leading-relaxed mb-5"
+            class="text-[1.05rem] leading-relaxed mb-6"
             style="color: #65665e;"
           >
             Accounting work has a way of revealing what a business actually
             needs.
           </p>
-          <p
-            class="text-[1.05rem] leading-relaxed mb-5"
-            style="color: #65665e;"
-          >
-            More work creates pressure on existing teams. More clients create
-            more deadlines. As volume increases, adding capacity becomes just as
-            important as doing the work itself.
-          </p>
+          
+          <ul class="text-[1.05rem] leading-relaxed mb-8 list-none space-y-4" style="color: #65665e;">
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-1.5 text-xs">◆</span>
+              <span>More work creates pressure on existing teams.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-1.5 text-xs">◆</span>
+              <span>More clients create more deadlines.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent mt-1.5 text-xs">◆</span>
+              <span>As volume increases, <span class="brand-highlight">adding capacity becomes just as important as doing the work itself.</span></span>
+            </li>
+          </ul>
+
           <p
             class="text-[1.05rem] leading-relaxed font-medium"
             style="color: #0d1b16;"
@@ -349,54 +418,95 @@ import Footer from "../components/Footer.astro";
             Calveris grew around that reality.
           </p>
         </div>
-        <div class="lg:col-span-5 lg:col-start-8 reveal">
-          <p class="text-[1.05rem] leading-relaxed" style="color: #65665e;">
-            We built the people, processes and delivery structure required to
-            handle the work reliably — then kept building as the work grew.
-          </p>
+
+        <!-- Right Side: Vertical Wavy Flow -->
+        <div class="lg:col-span-6 lg:col-start-7 reveal">
+          <div class="relative w-full pb-12 mt-4 lg:mt-0" id="story-flow">
+            
+            <!-- SVG Canvas for the connecting line -->
+            <svg class="absolute inset-0 w-full h-full pointer-events-none z-20" id="story-svg">
+              <path id="story-path" d="" stroke="rgba(126, 200, 160, 0.4)" stroke-width="2" fill="none" class="transition-all duration-1000 ease-out" />
+            </svg>
+
+            <div class="flex flex-col gap-20 relative z-10 w-full">
+              
+              <!-- Step 01 (Right Text) -->
+              <div class="flex items-center w-full relative group">
+                <!-- Huge Faded Number -->
+                <div class="absolute left-0 top-1/2 -translate-y-1/2 text-[10rem] font-display font-light text-[#0d1b16]/[0.03] -z-10 leading-none select-none transition-transform group-hover:scale-110 duration-700">1</div>
+                
+                <div class="w-[35%] flex justify-end pr-4 sm:pr-8">
+                  <!-- Node on curve -->
+                  <div class="w-12 h-12 shrink-0 clay-inset rounded-xl flex items-center justify-center story-dot relative z-10 rotate-45 group-hover:-translate-y-1 transition-transform">
+                    <div class="w-3 h-3 bg-accent rounded-sm -rotate-45 shadow-[0_0_10px_rgba(124,170,120,0.5)]"></div>
+                  </div>
+                </div>
+                
+                <div class="w-[65%] pl-2 sm:pl-4">
+                  <div class="clay-card rounded-[2rem] p-5 sm:p-6 max-w-sm">
+                    <h3 class="font-display text-xl text-[#0d1b16] mb-2">The Work</h3>
+                    <p class="text-[0.95rem] text-[#65665e] leading-relaxed">
+                      Real accounting requirements came first. We learned by handling the
+                      work businesses and accounting professionals actually needed.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 02 (Left Text) -->
+              <div class="flex items-center w-full relative group">
+                <div class="absolute right-0 top-1/2 -translate-y-1/2 text-[10rem] font-display font-light text-[#0d1b16]/[0.03] -z-10 leading-none select-none transition-transform group-hover:scale-110 duration-700">2</div>
+                
+                <div class="w-[65%] pr-2 sm:pr-4 text-right flex justify-end">
+                  <div class="clay-card rounded-[2rem] p-5 sm:p-6 max-w-sm">
+                    <h3 class="font-display text-xl text-[#0d1b16] mb-2">The Capacity</h3>
+                    <p class="text-[0.95rem] text-[#65665e] leading-relaxed">
+                      More work required more than individual effort. People, experience
+                      and delivery systems had to grow with the workload.
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="w-[35%] flex justify-start pl-4 sm:pl-8">
+                  <!-- Node on curve -->
+                  <div class="w-12 h-12 shrink-0 clay-inset rounded-xl flex items-center justify-center story-dot relative z-10 rotate-45 group-hover:-translate-y-1 transition-transform">
+                    <div class="w-3 h-3 bg-accent rounded-sm -rotate-45 shadow-[0_0_10px_rgba(124,170,120,0.5)]"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Step 03 (Right Text) -->
+              <div class="flex items-center w-full relative group">
+                <div class="absolute left-0 top-1/2 -translate-y-1/2 text-[10rem] font-display font-light text-[#0d1b16]/[0.03] -z-10 leading-none select-none transition-transform group-hover:scale-110 duration-700">3</div>
+                
+                <div class="w-[35%] flex justify-end pr-4 sm:pr-8">
+                  <div class="w-12 h-12 shrink-0 clay-inset rounded-xl flex items-center justify-center story-dot relative z-10 rotate-45 group-hover:-translate-y-1 transition-transform">
+                    <div class="w-3 h-3 bg-accent rounded-sm -rotate-45 shadow-[0_0_10px_rgba(124,170,120,0.8)]"></div>
+                  </div>
+                </div>
+                
+                <div class="w-[65%] pl-2 sm:pl-4">
+                  <div class="bg-[#0d1b16] text-white rounded-[2rem] p-5 sm:p-6 max-w-sm" style="box-shadow: 12px 12px 24px rgba(0,0,0,0.1), -12px -12px 24px rgba(255,255,255,0.7), inset 1px 1px 2px rgba(255, 255, 255, 0.1), inset -1px -1px 2px rgba(0, 0, 0, 0.2);">
+                    <h3 class="font-display text-xl text-white mb-2">Calveris</h3>
+                    <p class="text-[0.95rem] text-white/70 leading-relaxed">
+                      The experience became a model. A dedicated accounting delivery
+                      partner built to provide capacity around the way businesses already
+                      work.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- 3-Stage Progression -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-0 reveal">
-        <div class="story-stage">
-          <div class="story-num">01</div>
-          <h3 class="story-title">The Work</h3>
-          <p class="story-copy">
-            Real accounting requirements came first. We learned by handling the
-            work businesses and accounting professionals actually needed
-            delivered.
-          </p>
-        </div>
-
-        <div class="story-stage-divider" aria-hidden="true">
-          <div class="story-divider-line"></div>
-          <div class="story-divider-arrow">→</div>
-        </div>
-
-        <div class="story-stage">
-          <div class="story-num">02</div>
-          <h3 class="story-title">The Capacity</h3>
-          <p class="story-copy">
-            More work required more than individual effort. People, experience
-            and delivery systems had to grow with the workload.
-          </p>
-        </div>
-
-        <div class="story-stage-divider" aria-hidden="true">
-          <div class="story-divider-line"></div>
-          <div class="story-divider-arrow">→</div>
-        </div>
-
-        <div class="story-stage story-stage-accent">
-          <div class="story-num story-num-accent">03</div>
-          <h3 class="story-title story-title-accent">Calveris</h3>
-          <p class="story-copy">
-            The experience became a model. A dedicated accounting delivery
-            partner built to provide capacity around the way businesses already
-            work.
-          </p>
-        </div>
+      <!-- Bottom Middle Text -->
+      <div class="max-w-2xl mx-auto text-center reveal mt-4">
+        <p class="text-[1.1rem] leading-relaxed font-medium" style="color: #65665e;">
+          We built the people, processes and delivery structure required to handle the work reliably, then kept building as the work grew.
+        </p>
       </div>
     </div>
   </section>
@@ -429,31 +539,55 @@ import Footer from "../components/Footer.astro";
         </p>
       </div>
 
-      <!-- Numbers grid -->
-      <div class="numbers-grid reveal">
-        <div class="number-item">
-          <div class="number-val">5+</div>
-          <div class="number-label">Years delivering accounting</div>
-        </div>
-        <div class="number-divider" aria-hidden="true"></div>
-        <div class="number-item">
-          <div class="number-val">500+</div>
-          <div class="number-label">Businesses supported</div>
-        </div>
-        <div class="number-divider" aria-hidden="true"></div>
-        <div class="number-item">
-          <div class="number-val">400K+</div>
-          <div class="number-label">Accounting tasks completed</div>
-        </div>
-        <div class="number-divider" aria-hidden="true"></div>
-        <div class="number-item">
-          <div class="number-val">30+</div>
-          <div class="number-label">ACCA-qualified accountants</div>
-        </div>
-        <div class="number-divider" aria-hidden="true"></div>
-        <div class="number-item">
-          <div class="number-val">98%</div>
-          <div class="number-label">On-time delivery</div>
+      <!-- Numbers grid (Matched to homepage) -->
+      <div class="reveal mt-16">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8">
+          
+          <div class="relative group flex flex-col items-center justify-center text-center p-8 lg:p-10 rounded-[2rem] bg-[#0d1b16] dark-clay-card hover:-translate-y-2 transition-transform duration-500 cursor-default">
+            <div class="font-display text-5xl xl:text-6xl mb-4 text-white group-hover:text-[#a3c2a3] transition-colors duration-500">
+              <span class="count-up" data-val="5">0</span>+
+            </div>
+            <div class="text-[11px] xl:text-[12px] text-[#9ca3af] uppercase tracking-[0.1em] font-semibold mt-auto">
+              Years delivering
+            </div>
+          </div>
+
+          <div class="relative group flex flex-col items-center justify-center text-center p-8 lg:p-10 rounded-[2rem] bg-[#0d1b16] dark-clay-card hover:-translate-y-2 transition-transform duration-500 cursor-default">
+            <div class="font-display text-5xl xl:text-6xl mb-4 text-white group-hover:text-[#a3c2a3] transition-colors duration-500">
+              <span class="count-up" data-val="500">0</span>+
+            </div>
+            <div class="text-[11px] xl:text-[12px] text-[#9ca3af] uppercase tracking-[0.1em] font-semibold mt-auto">
+              Businesses supported
+            </div>
+          </div>
+
+          <div class="relative group flex flex-col items-center justify-center text-center p-8 lg:p-10 rounded-[2rem] bg-[#0d1b16] dark-clay-card hover:-translate-y-2 transition-transform duration-500 cursor-default">
+            <div class="font-display text-5xl xl:text-6xl mb-4 text-white group-hover:text-[#a3c2a3] transition-colors duration-500">
+              <span class="count-up" data-val="400">0</span>k+
+            </div>
+            <div class="text-[11px] xl:text-[12px] text-[#9ca3af] uppercase tracking-[0.1em] font-semibold mt-auto">
+              Work completed
+            </div>
+          </div>
+
+          <div class="relative group flex flex-col items-center justify-center text-center p-8 lg:p-10 rounded-[2rem] bg-[#0d1b16] dark-clay-card hover:-translate-y-2 transition-transform duration-500 cursor-default">
+            <div class="font-display text-5xl xl:text-6xl mb-4 text-white group-hover:text-[#a3c2a3] transition-colors duration-500">
+              <span class="count-up" data-val="30">0</span>+
+            </div>
+            <div class="text-[11px] xl:text-[12px] text-[#9ca3af] uppercase tracking-[0.1em] font-semibold mt-auto">
+              ACCA accountants
+            </div>
+          </div>
+
+          <div class="relative group flex flex-col items-center justify-center text-center p-8 lg:p-10 rounded-[2rem] bg-[#0d1b16] dark-clay-card hover:-translate-y-2 transition-transform duration-500 cursor-default">
+            <div class="font-display text-5xl xl:text-6xl mb-4 text-white group-hover:text-[#a3c2a3] transition-colors duration-500">
+              <span class="count-up" data-val="98">0</span>%
+            </div>
+            <div class="text-[11px] xl:text-[12px] text-[#9ca3af] uppercase tracking-[0.1em] font-semibold mt-auto">
+              On-time delivery
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -900,42 +1034,60 @@ import Footer from "../components/Footer.astro";
   }
 
   .about-eyebrow-light {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 24px;
+    border-radius: 9999px;
     font-family: var(--font-body);
     font-size: 9px;
     font-weight: 700;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: #2a5a4a;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    color: #7caa78;
+    background: rgba(232, 235, 229, 0.4);
+    backdrop-filter: blur(8px);
+    box-shadow: 
+      inset 4px 4px 8px rgba(0, 0, 0, 0.08), 
+      inset -4px -4px 8px rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: fit-content;
   }
   .about-eyebrow-light::before {
     content: "";
     display: inline-block;
     width: 6px;
     height: 6px;
-    border-radius: 50%;
+    transform: rotate(45deg);
     background: #7caa78;
   }
 
   .about-eyebrow-dark {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 24px;
+    border-radius: 9999px;
     font-family: var(--font-body);
     font-size: 9px;
     font-weight: 700;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: rgba(126, 200, 160, 0.6);
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    color: #7ec8a0;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(8px);
+    box-shadow: 
+      inset 4px 4px 8px rgba(0, 0, 0, 0.2), 
+      inset -4px -4px 8px rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    width: fit-content;
   }
   .about-eyebrow-dark::before {
     content: "";
     display: inline-block;
     width: 6px;
     height: 6px;
-    border-radius: 50%;
+    transform: rotate(45deg);
     background: #7ec8a0;
   }
 
@@ -1359,5 +1511,29 @@ import Footer from "../components/Footer.astro";
       0 0 30px rgba(126, 200, 160, 0.08);
     transform: translateY(-2px);
     color: #7ec8a0 !important;
+  }
+
+  /* ── Scale Cards (Dark Neumorphism) ──────────── */
+  .dark-clay-card {
+    box-shadow: 18px 18px 36px #040907, -18px -18px 36px #183329;
+  }
+
+  /* ── Brand Highlighter ────────────────────────── */
+  .brand-highlight {
+    background-image: linear-gradient(
+      105deg,
+      transparent 0%,
+      rgba(124, 170, 120, 0.15) 1%,
+      rgba(124, 170, 120, 0.35) 10%,
+      rgba(124, 170, 120, 0.25) 90%,
+      rgba(124, 170, 120, 0.35) 99%,
+      transparent 100%
+    );
+    color: #0d1b16;
+    font-weight: 500;
+    padding: 0.1em 0.3em;
+    border-radius: 4px 12px 6px 10px / 12px 4px 10px 5px;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
   }
 </style>

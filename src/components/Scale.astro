@@ -25,7 +25,7 @@
         <!-- Metric 01: EXPERIENCE -->
         <div class="relative group flex flex-col items-center text-center p-8 lg:p-10 rounded-[2rem] bg-[#0d1b16] dark-clay-card hover:-translate-y-2 transition-transform duration-500 cursor-default">
           <div class="font-display text-5xl xl:text-6xl mb-4 text-white group-hover:text-[#a3c2a3] transition-colors duration-500">
-            5+
+            <span class="count-up" data-val="5">0</span>+
           </div>
           <div class="text-[11px] xl:text-[12px] text-[#9ca3af] uppercase tracking-[0.1em] font-semibold">
             Years delivering
@@ -35,7 +35,7 @@
         <!-- Metric 02: BREADTH -->
         <div class="relative group flex flex-col items-center text-center p-8 lg:p-10 rounded-[2rem] bg-[#0d1b16] dark-clay-card hover:-translate-y-2 transition-transform duration-500 cursor-default">
           <div class="font-display text-5xl xl:text-6xl mb-4 text-white group-hover:text-[#a3c2a3] transition-colors duration-500">
-            500+
+            <span class="count-up" data-val="500">0</span>+
           </div>
           <div class="text-[11px] xl:text-[12px] text-[#9ca3af] uppercase tracking-[0.1em] font-semibold">
             Businesses supported
@@ -45,7 +45,7 @@
         <!-- Metric 03: VOLUME -->
         <div class="relative group flex flex-col items-center text-center p-8 lg:p-10 rounded-[2rem] bg-[#0d1b16] dark-clay-card hover:-translate-y-2 transition-transform duration-500 cursor-default">
           <div class="font-display text-5xl xl:text-6xl mb-4 text-white group-hover:text-[#a3c2a3] transition-colors duration-500">
-            400k+
+            <span class="count-up" data-val="400">0</span>k+
           </div>
           <div class="text-[11px] xl:text-[12px] text-[#9ca3af] uppercase tracking-[0.1em] font-semibold">
             Work completed
@@ -55,7 +55,7 @@
         <!-- Metric 04: CAPACITY -->
         <div class="relative group flex flex-col items-center text-center p-8 lg:p-10 rounded-[2rem] bg-[#0d1b16] dark-clay-card hover:-translate-y-2 transition-transform duration-500 cursor-default">
           <div class="font-display text-5xl xl:text-6xl mb-4 text-white group-hover:text-[#a3c2a3] transition-colors duration-500">
-            30+
+            <span class="count-up" data-val="30">0</span>+
           </div>
           <div class="text-[11px] xl:text-[12px] text-[#9ca3af] uppercase tracking-[0.1em] font-semibold">
             ACCA accountants
@@ -65,7 +65,7 @@
         <!-- Metric 05: QUALITY -->
         <div class="relative group flex flex-col items-center text-center p-8 lg:p-10 rounded-[2rem] bg-[#0d1b16] dark-clay-card hover:-translate-y-2 transition-transform duration-500 cursor-default">
           <div class="font-display text-5xl xl:text-6xl mb-4 text-white group-hover:text-[#a3c2a3] transition-colors duration-500">
-            98%
+            <span class="count-up" data-val="98">0</span>%
           </div>
           <div class="text-[11px] xl:text-[12px] text-[#9ca3af] uppercase tracking-[0.1em] font-semibold">
             On-time delivery
@@ -88,3 +88,43 @@
     box-shadow: inset 6px 6px 12px #040907, inset -6px -6px 12px #183329;
   }
 </style>
+
+<script>
+  function initScaleCountUp() {
+    const counters = document.querySelectorAll('#scale .count-up');
+    if (counters.length === 0) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          if (el.classList.contains('counted')) return;
+          el.classList.add('counted');
+          
+          const target = parseInt(el.getAttribute('data-val') || '0', 10);
+          const duration = 2000;
+          let startTimestamp = null;
+          
+          const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            const easeProgress = 1 - Math.pow(1 - progress, 4);
+            el.innerText = Math.floor(easeProgress * target).toString();
+            if (progress < 1) {
+              window.requestAnimationFrame(step);
+            } else {
+              el.innerText = target.toString();
+            }
+          };
+          window.requestAnimationFrame(step);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    counters.forEach(counter => observer.observe(counter));
+  }
+
+  // Run on load and page transition
+  window.addEventListener('load', initScaleCountUp);
+  document.addEventListener('astro:page-load', initScaleCountUp);
+</script>
