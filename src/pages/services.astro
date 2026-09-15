@@ -1,0 +1,1103 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout>
+  <Navbar client:load />
+
+  <!-- ================================================================
+       SECTION 01 — HERO
+  ================================================================ -->
+  <header class="services-hero relative overflow-hidden flex flex-col" id="top">
+    <div class="services-hero-bg" aria-hidden="true"></div>
+    <div class="services-hero-gradient" aria-hidden="true"></div>
+
+    <main class="flex flex-col justify-center shell relative z-10 pt-[140px] pb-24">
+      <div class="w-full h-px mb-14" style="background: rgba(42,90,74,0.15);"></div>
+
+      <!-- Eyebrow -->
+      <div
+        class="inline-flex w-fit items-center gap-2 px-6 py-2.5 rounded-full text-[9px] tracking-widest uppercase font-bold mb-10 about-eyebrow opacity-0 a-fade-in"
+        style="animation-delay: 0.15s;"
+      >
+        <span aria-hidden="true" class="inline-block size-[6px] rotate-45" style="background: #7caa78;"></span>
+        <span>Our Services</span>
+      </div>
+
+      <div class="max-w-5xl">
+        <h1
+          class="font-display leading-[1.1] font-light"
+          style="font-size: clamp(2.5rem, 5vw, 4.5rem); color: #0d1b16;"
+        >
+          <span class="block opacity-0 a-fade-in" style="animation-delay: 0.3s;">The accounting work</span>
+          <span class="reveal-mask block">
+            <span
+              class="block italic opacity-0 a-reveal-up"
+              style="animation-delay: 0.5s; color: #2a5a4a;"
+            >your business needs handled.</span>
+          </span>
+        </h1>
+
+        <p
+          class="mt-10 max-w-2xl text-[1.1rem] leading-relaxed opacity-0 a-fade-in font-medium"
+          style="animation-delay: 0.9s; color: #0d1b16;"
+        >
+          From day-to-day bookkeeping to month-end, reporting, year-end and audit support, Calveris provides the accounting capacity to keep your work moving.
+        </p>
+
+        <div class="mt-12 opacity-0 a-fade-in" style="animation-delay: 1.1s;">
+          <a
+            href="/contact"
+            class="inline-flex items-center gap-3 px-8 py-4 rounded-full text-[11px] tracking-[0.18em] uppercase font-bold transition-all duration-300 services-cta-btn"
+          >
+            Build your team
+            <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
+          </a>
+        </div>
+      </div>
+    </main>
+  </header>
+
+  <!-- ================================================================
+       SECTION 02 — SERVICE CAROUSEL
+  ================================================================ -->
+  <section class="bg-background py-24 lg:py-36 border-b border-hairline overflow-hidden" id="service-overview">
+    <div class="shell">
+
+      <!-- Section Header -->
+      <div class="reveal mb-16 text-center">
+        <div class="about-eyebrow-light mb-6 mx-auto">Accounting Delivery</div>
+        <h2 class="font-display font-light leading-[1.1] mb-4" style="font-size: clamp(2rem, 4vw, 3rem); color: #0d1b16;">
+          One team for the accounting work that needs doing.
+        </h2>
+        <p class="text-[1rem] leading-relaxed max-w-xl mx-auto" style="color: #65665e;">
+          Choose the work you need handled. We build the right accounting capacity around it.
+        </p>
+      </div>
+
+      <!-- Carousel Wrapper -->
+      <div class="relative reveal">
+
+        <!-- Nav Arrows -->
+        <button id="svc-prev" aria-label="Previous service" class="svc-arrow svc-arrow-up">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+        </button>
+        <button id="svc-next" aria-label="Next service" class="svc-arrow svc-arrow-down">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+
+        <!-- Track -->
+        <div class="svc-track-outer">
+          <div id="svc-track" class="svc-track">
+
+            <!-- CARD 01 — BOOKKEEPING -->
+            <div class="svc-card">
+              <div class="svc-card-inner">
+                <div class="svc-card-left">
+                  <div class="svc-num">01 / Bookkeeping</div>
+                  <h3 class="svc-heading">Keep the books moving.</h3>
+                  <p class="svc-sub">Accurate, up-to-date bookkeeping gives everything downstream a cleaner starting point.</p>
+                </div>
+                <div class="svc-card-right">
+                  <div class="svc-col">
+                    <p class="svc-col-label">We can handle</p>
+                    <ul class="svc-list">
+                      <li><span class="svc-bullet">›</span>Transaction recording</li>
+                      <li><span class="svc-bullet">›</span>Bank reconciliations</li>
+                      <li><span class="svc-bullet">›</span>Ledger maintenance</li>
+                      <li><span class="svc-bullet">›</span>Bookkeeping support</li>
+                      <li><span class="svc-bullet">›</span>Ongoing bookkeeping requirements</li>
+                    </ul>
+                  </div>
+                  <div class="svc-col">
+                    <p class="svc-col-label">The result</p>
+                    <p class="svc-result">Your books stay current without your existing team having to carry every transaction internally.</p>
+                    <div class="svc-card-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 02 — PAYROLL -->
+            <div class="svc-card">
+              <div class="svc-card-inner">
+                <div class="svc-card-left">
+                  <div class="svc-num">02 / Payroll</div>
+                  <h3 class="svc-heading">Payroll handled properly, every pay cycle.</h3>
+                  <p class="svc-sub">Keep payroll moving accurately and on schedule without adding another recurring responsibility to your internal team.</p>
+                </div>
+                <div class="svc-card-right">
+                  <div class="svc-col">
+                    <p class="svc-col-label">We can handle</p>
+                    <ul class="svc-list">
+                      <li><span class="svc-bullet">›</span>Payroll processing</li>
+                      <li><span class="svc-bullet">›</span>Payroll administration</li>
+                      <li><span class="svc-bullet">›</span>Recurring payroll requirements</li>
+                      <li><span class="svc-bullet">›</span>Supporting payroll records</li>
+                    </ul>
+                  </div>
+                  <div class="svc-col">
+                    <p class="svc-col-label">The result</p>
+                    <p class="svc-result">A recurring function gets handled consistently while your team stays focused on higher-value work.</p>
+                    <div class="svc-card-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 03 — MONTH-END -->
+            <div class="svc-card">
+              <div class="svc-card-inner">
+                <div class="svc-card-left">
+                  <div class="svc-num">03 / Month-end</div>
+                  <h3 class="svc-heading">Close the month without carrying it forward.</h3>
+                  <p class="svc-sub">Month-end work shouldn't become a growing backlog for an already stretched team.</p>
+                </div>
+                <div class="svc-card-right">
+                  <div class="svc-col">
+                    <p class="svc-col-label">We can handle</p>
+                    <ul class="svc-list">
+                      <li><span class="svc-bullet">›</span>Month-end close</li>
+                      <li><span class="svc-bullet">›</span>Reconciliations</li>
+                      <li><span class="svc-bullet">›</span>Journal support</li>
+                      <li><span class="svc-bullet">›</span>Period-end accounting</li>
+                      <li><span class="svc-bullet">›</span>Supporting schedules</li>
+                    </ul>
+                  </div>
+                  <div class="svc-col">
+                    <p class="svc-col-label">The result</p>
+                    <p class="svc-result">The month gets closed, the records stay current, and the next period starts from a clean position.</p>
+                    <div class="svc-card-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 04 — PAYABLES & RECEIVABLES -->
+            <div class="svc-card">
+              <div class="svc-card-inner">
+                <div class="svc-card-left">
+                  <div class="svc-num">04 / Payables & Receivables</div>
+                  <h3 class="svc-heading">Keep money moving in both directions.</h3>
+                  <p class="svc-sub">The work behind paying suppliers and keeping receivables organised can become a significant operational load as the business grows.</p>
+                </div>
+                <div class="svc-card-right">
+                  <div class="svc-col">
+                    <p class="svc-col-label">We can handle</p>
+                    <ul class="svc-list">
+                      <li><span class="svc-bullet">›</span>Accounts payable</li>
+                      <li><span class="svc-bullet">›</span>Accounts receivable</li>
+                      <li><span class="svc-bullet">›</span>Invoice processing</li>
+                      <li><span class="svc-bullet">›</span>Supplier records</li>
+                      <li><span class="svc-bullet">›</span>Customer account support</li>
+                      <li><span class="svc-bullet">›</span>Reconciliation support</li>
+                    </ul>
+                  </div>
+                  <div class="svc-col">
+                    <p class="svc-col-label">The result</p>
+                    <p class="svc-result">Routine financial operations keep moving without requiring your internal team to carry the entire workload.</p>
+                    <div class="svc-card-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 05 — MANAGEMENT REPORTING -->
+            <div class="svc-card">
+              <div class="svc-card-inner">
+                <div class="svc-card-left">
+                  <div class="svc-num">05 / Management Reporting</div>
+                  <h3 class="svc-heading">Turn completed accounts into useful information.</h3>
+                  <p class="svc-sub">Management reporting gives the business a clearer view of what has happened, and gives the people responsible for decisions the information they need.</p>
+                </div>
+                <div class="svc-card-right">
+                  <div class="svc-col">
+                    <p class="svc-col-label">We can handle</p>
+                    <ul class="svc-list">
+                      <li><span class="svc-bullet">›</span>Management accounts</li>
+                      <li><span class="svc-bullet">›</span>Reporting packs</li>
+                      <li><span class="svc-bullet">›</span>Supporting schedules</li>
+                      <li><span class="svc-bullet">›</span>Regular reporting requirements</li>
+                      <li><span class="svc-bullet">›</span>Financial information preparation</li>
+                    </ul>
+                  </div>
+                  <div class="svc-col">
+                    <p class="svc-col-label">The result</p>
+                    <p class="svc-result">Your reporting is prepared consistently, so the people using it can spend their time interpreting the numbers rather than preparing them.</p>
+                    <div class="svc-card-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="18" y1="20" y2="10"/><line x1="12" x2="12" y1="20" y2="4"/><line x1="6" x2="6" y1="20" y2="14"/></svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 06 — YEAR-END & TAX SUPPORT -->
+            <div class="svc-card">
+              <div class="svc-card-inner">
+                <div class="svc-card-left">
+                  <div class="svc-num">06 / Year-end & Tax Support</div>
+                  <h3 class="svc-heading">Get year-end work off the backlog.</h3>
+                  <p class="svc-sub">Year-end brings another layer of accounting work. We provide the capacity to keep that work moving alongside your regular accounting requirements.</p>
+                </div>
+                <div class="svc-card-right">
+                  <div class="svc-col">
+                    <p class="svc-col-label">We can handle</p>
+                    <ul class="svc-list">
+                      <li><span class="svc-bullet">›</span>Year-end accounting support</li>
+                      <li><span class="svc-bullet">›</span>Accounts preparation support</li>
+                      <li><span class="svc-bullet">›</span>Supporting schedules</li>
+                      <li><span class="svc-bullet">›</span>Tax-related accounting support</li>
+                      <li><span class="svc-bullet">›</span>Information preparation</li>
+                    </ul>
+                  </div>
+                  <div class="svc-col">
+                    <p class="svc-col-label">The result</p>
+                    <p class="svc-result">Your year-end workload has additional capacity behind it when your existing team needs it most.</p>
+                    <div class="svc-card-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="22" y2="22"/><line x1="6" x2="6" y1="18" y2="11"/><line x1="10" x2="10" y1="18" y2="11"/><line x1="14" x2="14" y1="18" y2="11"/><line x1="18" x2="18" y1="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARD 07 — AUDIT SUPPORT -->
+            <div class="svc-card">
+              <div class="svc-card-inner">
+                <div class="svc-card-left">
+                  <div class="svc-num">07 / Audit Support</div>
+                  <h3 class="svc-heading">Be ready when the audit work begins.</h3>
+                  <p class="svc-sub">Audit preparation can pull significant time from an already busy accounting team. We provide the additional capacity needed to keep the underlying work organised and moving.</p>
+                </div>
+                <div class="svc-card-right">
+                  <div class="svc-col">
+                    <p class="svc-col-label">We can handle</p>
+                    <ul class="svc-list">
+                      <li><span class="svc-bullet">›</span>Audit preparation support</li>
+                      <li><span class="svc-bullet">›</span>Supporting schedules</li>
+                      <li><span class="svc-bullet">›</span>Documentation</li>
+                      <li><span class="svc-bullet">›</span>Reconciliations</li>
+                      <li><span class="svc-bullet">›</span>Information gathering and preparation</li>
+                    </ul>
+                  </div>
+                  <div class="svc-col">
+                    <p class="svc-col-label">The result</p>
+                    <p class="svc-result">Your team spends less time assembling the underlying accounting work and more time dealing with what actually requires their attention.</p>
+                    <div class="svc-card-icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="m8 11 2 2 4-4"/><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /svc-track -->
+        </div><!-- /svc-track-outer -->
+
+        <!-- Dot Indicators -->
+        <div id="svc-dots" class="svc-dots">
+          <button class="svc-dot svc-dot-active" data-index="0" aria-label="Service 1"></button>
+          <button class="svc-dot" data-index="1" aria-label="Service 2"></button>
+          <button class="svc-dot" data-index="2" aria-label="Service 3"></button>
+          <button class="svc-dot" data-index="3" aria-label="Service 4"></button>
+          <button class="svc-dot" data-index="4" aria-label="Service 5"></button>
+          <button class="svc-dot" data-index="5" aria-label="Service 6"></button>
+          <button class="svc-dot" data-index="6" aria-label="Service 7"></button>
+        </div>
+
+      </div><!-- /relative -->
+    </div><!-- /shell -->
+  </section>
+
+
+  <!-- ================================================================
+       SECTION 10 — NOT A PACKAGE
+  ================================================================ -->
+  <section class="bg-background py-24 lg:py-36 border-b border-hairline">
+    <div class="shell">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
+
+        <!-- Left -->
+        <div class="lg:col-span-5 reveal">
+          <div class="about-eyebrow-light mb-6">Built around the work</div>
+          <h2 class="font-display font-light leading-[1.1] mb-6" style="font-size: clamp(2rem, 4vw, 3rem); color: #0d1b16;">
+            You don't have to hand over everything.
+          </h2>
+          <p class="text-[1rem] leading-relaxed mb-6" style="color: #65665e;">
+            Some businesses need day-to-day accounting handled. Others need additional capacity around month-end, year-end or a particular part of the function.
+          </p>
+          <p class="text-[1rem] leading-relaxed" style="color: #65665e;">
+            Calveris can work around the requirement rather than forcing every business into the same package.
+          </p>
+          <div class="mt-10 pt-8 text-[0.9rem] leading-relaxed text-muted-foreground border-t border-hairline">
+            A single requirement. A defined workstream. Or additional accounting capacity across the function.
+          </div>
+        </div>
+
+        <!-- Right: Visual flow -->
+        <div class="lg:col-span-7 reveal">
+          <div class="flex flex-col items-center gap-0 max-w-sm mx-auto lg:mx-0">
+            <!-- Flow Step -->
+            <div class="w-full clay-flow-card rounded-[2rem] p-6 flex items-center gap-5">
+              <div class="w-10 h-10 rounded-full clay-flow-dot flex items-center justify-center shrink-0">
+                <div class="w-2 h-2 rounded-full bg-accent"></div>
+              </div>
+              <span class="font-display text-[1.1rem] font-light text-foreground">One function</span>
+            </div>
+            <div class="flex flex-col items-center py-3 text-accent text-lg opacity-60">↓</div>
+            <div class="w-full clay-flow-card rounded-[2rem] p-6 flex items-center gap-5">
+              <div class="w-10 h-10 rounded-full clay-flow-dot flex items-center justify-center shrink-0">
+                <div class="w-2 h-2 rounded-full bg-accent"></div>
+              </div>
+              <span class="font-display text-[1.1rem] font-light text-foreground">Several workstreams</span>
+            </div>
+            <div class="flex flex-col items-center py-3 text-accent text-lg opacity-60">↓</div>
+            <div class="w-full clay-flow-card-accent rounded-[2rem] p-6 flex items-center gap-5">
+              <div class="w-10 h-10 rounded-full clay-flow-dot-accent flex items-center justify-center shrink-0">
+                <div class="w-2 h-2 rounded-full bg-accent"></div>
+              </div>
+              <span class="font-display text-[1.1rem] font-light text-foreground">Choose what needs capacity</span>
+            </div>
+            <div class="flex flex-col items-center py-3 text-accent text-lg opacity-60">↓</div>
+            <div class="w-full rounded-[2rem] p-6 flex items-center gap-5" style="background: #0d1b16;">
+              <div class="w-10 h-10 rounded-full flex items-center justify-center shrink-0" style="background: rgba(126,200,160,0.1); box-shadow: inset 4px 4px 8px rgba(0,0,0,0.3), inset -2px -2px 5px rgba(255,255,255,0.05);">
+                <div class="w-2 h-2 rounded-full bg-accent" style="box-shadow: 0 0 8px rgba(126,200,160,0.8);"></div>
+              </div>
+              <span class="font-display text-[1.1rem] font-light" style="color: #f0f5f0;">Calveris handles it</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       SECTION 11 — WHO WE WORK WITH
+  ================================================================ -->
+  <section class="bg-background py-24 lg:py-36 border-b border-hairline">
+    <div class="shell">
+      <div class="reveal mb-16">
+        <div class="about-eyebrow-light mb-6">Two ways to work with Calveris</div>
+        <h2 class="font-display font-light leading-[1.1]" style="font-size: clamp(2rem, 4vw, 3rem); color: #0d1b16;">
+          Who we work with.
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 reveal">
+
+        <!-- Card: Growing businesses -->
+        <div class="who-card rounded-[2.5rem] p-10 lg:p-12 flex flex-col gap-8">
+          <div>
+            <div class="text-[10px] tracking-[0.18em] uppercase font-bold text-accent mb-4">Growing businesses</div>
+            <h3 class="font-display text-[1.6rem] font-light leading-[1.2] text-foreground mb-4">
+              Add accounting capacity without building the entire function internally.
+            </h3>
+          </div>
+          <div class="mt-auto pt-6 border-t border-hairline">
+            <a href="/contact" class="group inline-flex items-center text-[11px] tracking-[0.18em] font-bold uppercase text-foreground hover:text-forest transition-colors duration-300">
+              See how it works for businesses
+              <span class="ml-3 transition-transform duration-300 group-hover:translate-x-1">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card: Finance & accounting firms -->
+        <div class="who-card rounded-[2.5rem] p-10 lg:p-12 flex flex-col gap-8">
+          <div>
+            <div class="text-[10px] tracking-[0.18em] uppercase font-bold text-accent mb-4">Finance & accounting firms</div>
+            <h3 class="font-display text-[1.6rem] font-light leading-[1.2] text-foreground mb-4">
+              Extend your accounting delivery capacity while keeping the client relationship.
+            </h3>
+          </div>
+          <div class="mt-auto pt-6 border-t border-hairline">
+            <a href="/firms" class="group inline-flex items-center text-[11px] tracking-[0.18em] font-bold uppercase text-foreground hover:text-forest transition-colors duration-300">
+              See how it works for firms
+              <span class="ml-3 transition-transform duration-300 group-hover:translate-x-1">→</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       SECTION 12 — WORKFLOW
+  ================================================================ -->
+  <section class="bg-background py-24 lg:py-36 border-b border-hairline overflow-hidden">
+    <div class="shell">
+      <div class="reveal mb-16">
+        <div class="about-eyebrow-light mb-6">The Workflow</div>
+        <h2 class="font-display font-light leading-[1.1] mb-6" style="font-size: clamp(2rem, 4vw, 3rem); color: #0d1b16;">
+          From requirement to completed accounting work.
+        </h2>
+      </div>
+
+      <!-- Workflow Steps -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
+
+        <div class="workflow-step rounded-[2rem] p-8">
+          <div class="text-[10px] tracking-[0.18em] uppercase font-bold text-accent mb-6">01</div>
+          <h3 class="font-display text-[1.3rem] font-light text-foreground mb-4 leading-snug">Your Requirement</h3>
+          <p class="text-[0.9rem] leading-relaxed text-muted-foreground">What needs to be handled?</p>
+          <div class="mt-8 text-accent text-2xl opacity-40 hidden lg:block">↓</div>
+        </div>
+
+        <div class="workflow-step rounded-[2rem] p-8">
+          <div class="text-[10px] tracking-[0.18em] uppercase font-bold text-accent mb-6">02</div>
+          <h3 class="font-display text-[1.3rem] font-light text-foreground mb-4 leading-snug">Calveris</h3>
+          <p class="text-[0.9rem] leading-relaxed text-muted-foreground">The appropriate accounting resource takes responsibility for the work.</p>
+          <div class="mt-8 text-accent text-2xl opacity-40 hidden lg:block">↓</div>
+        </div>
+
+        <div class="workflow-step rounded-[2rem] p-8">
+          <div class="text-[10px] tracking-[0.18em] uppercase font-bold text-accent mb-6">03</div>
+          <h3 class="font-display text-[1.3rem] font-light text-foreground mb-4 leading-snug">Review</h3>
+          <p class="text-[0.9rem] leading-relaxed text-muted-foreground">Completed work passes through the agreed review process.</p>
+          <div class="mt-8 text-accent text-2xl opacity-40 hidden lg:block">↓</div>
+        </div>
+
+        <div class="workflow-step rounded-[2rem] p-8">
+          <div class="text-[10px] tracking-[0.18em] uppercase font-bold text-accent mb-6">04</div>
+          <h3 class="font-display text-[1.3rem] font-light text-foreground mb-4 leading-snug">Delivery</h3>
+          <p class="text-[0.9rem] leading-relaxed text-muted-foreground">The finished work reaches your team or client.</p>
+        </div>
+
+      </div>
+
+      <div class="mt-12 pt-10 border-t border-hairline reveal">
+        <p class="text-[0.95rem] leading-relaxed max-w-3xl" style="color: #65665e;">
+          The exact workflow depends on the work, your systems and how you want to operate. The principle stays the same: clear responsibility, controlled delivery and work that fits into the way you already operate.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       SECTION 13 — CAPACITY, NOT JUST SERVICES
+  ================================================================ -->
+  <section class="py-24 lg:py-36 border-b border-hairline" style="background: #0d1b16;">
+    <div class="shell">
+      <div class="reveal mb-16">
+        <div class="about-eyebrow-dark mb-6">More than a service list</div>
+        <h2 class="font-display font-light leading-[1.1] mb-6" style="font-size: clamp(2rem, 4vw, 3rem); color: #f0f5f0;">
+          The work can change.<br/>Your capacity can change with it.
+        </h2>
+        <p class="text-[1rem] leading-relaxed max-w-2xl" style="color: rgba(240,245,240,0.55);">
+          You may need additional help with one accounting function today and a broader delivery team tomorrow. Calveris can provide the level of accounting capacity the workload requires, without assuming that every business needs the same setup.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
+
+        <div class="capacity-card rounded-[2rem] p-8">
+          <div class="text-[10px] tracking-[0.18em] uppercase font-bold mb-4" style="color: #7ec8a0;">Defined Work</div>
+          <p class="text-[1rem] leading-relaxed font-light" style="color: rgba(240,245,240,0.75);">A specific requirement handled by our team.</p>
+        </div>
+
+        <div class="capacity-card rounded-[2rem] p-8">
+          <div class="text-[10px] tracking-[0.18em] uppercase font-bold mb-4" style="color: #7ec8a0;">Part-time Capacity</div>
+          <p class="text-[1rem] leading-relaxed font-light" style="color: rgba(240,245,240,0.75);">Additional capacity matched to the workload.</p>
+        </div>
+
+        <div class="capacity-card rounded-[2rem] p-8">
+          <div class="text-[10px] tracking-[0.18em] uppercase font-bold mb-4" style="color: #7ec8a0;">Dedicated Capacity</div>
+          <p class="text-[1rem] leading-relaxed font-light" style="color: rgba(240,245,240,0.75);">A consistent resource for ongoing accounting work.</p>
+        </div>
+
+        <div class="capacity-card rounded-[2rem] p-8">
+          <div class="text-[10px] tracking-[0.18em] uppercase font-bold mb-4" style="color: #7ec8a0;">Extended Team</div>
+          <p class="text-[1rem] leading-relaxed font-light" style="color: rgba(240,245,240,0.75);">Additional accounting capacity working alongside your existing team.</p>
+        </div>
+
+        <div class="capacity-card rounded-[2rem] p-8">
+          <div class="text-[10px] tracking-[0.18em] uppercase font-bold mb-4" style="color: #7ec8a0;">Ad hoc Support</div>
+          <p class="text-[1rem] leading-relaxed font-light" style="color: rgba(240,245,240,0.75);">Specific requirements without building an ongoing internal function.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       SECTION 14 — FINAL CTA
+  ================================================================ -->
+  <section class="py-24 lg:py-36 border-b border-hairline" style="background: #0d1b16;">
+    <div class="shell flex flex-col lg:flex-row lg:items-center justify-between gap-16 lg:gap-24 reveal">
+      <div class="max-w-2xl">
+        <div class="about-eyebrow-dark mb-8">Accounting Capacity</div>
+        <h2
+          class="font-display font-light leading-[1.15] mb-6"
+          style="font-size: clamp(2rem, 4.5vw, 3.5rem); color: #f0f5f0;"
+        >
+          Have accounting work that needs handling?
+        </h2>
+        <p class="text-[1.05rem] leading-relaxed" style="color: rgba(240,245,240,0.55);">
+          Tell us what needs to be done. We'll look at the requirement and work out what kind of capacity makes sense.
+        </p>
+      </div>
+      <div class="flex-shrink-0">
+        <a
+          href="/contact"
+          class="group about-cta-btn inline-flex items-center gap-4 px-10 py-5 rounded-full text-[11px] tracking-[0.22em] uppercase font-bold transition-all duration-400"
+          style="color: rgba(240,245,240,0.8);"
+        >
+          Start a conversation
+          <span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* ── Hero ─────────────────────────────────────── */
+  .services-hero {
+    min-height: 80vh;
+    background: var(--color-background);
+  }
+  .services-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(ellipse 70% 60% at 80% 40%, rgba(42, 90, 74, 0.06) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 50% at 20% 70%, rgba(124, 170, 120, 0.04) 0%, transparent 60%);
+  }
+  .services-hero-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 180px;
+    background: linear-gradient(to bottom, transparent, var(--color-background));
+    z-index: 5;
+  }
+
+  /* ── Hero CTA Button ──────────────────────────── */
+  .services-cta-btn {
+    background: #0d1b16;
+    color: rgba(240,245,240,0.85);
+    box-shadow: 12px 12px 24px #040907, -12px -12px 24px #183329;
+    transition: all 0.3s ease;
+  }
+  .services-cta-btn:hover {
+    box-shadow: 8px 8px 16px #040907, -8px -8px 16px #183329, 0 0 30px rgba(126, 200, 160, 0.1);
+    transform: translateY(-2px);
+    color: #7ec8a0;
+  }
+
+  /* ── Eyebrows ─────────────────────────────────── */
+  .about-eyebrow {
+    color: #2a5a4a;
+    background: rgba(232, 235, 229, 0.6);
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.08), inset -4px -4px 8px rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+  .about-eyebrow-light {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 24px;
+    border-radius: 9999px;
+    font-family: var(--font-body);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #7caa78;
+    background: rgba(232, 235, 229, 0.4);
+    backdrop-filter: blur(8px);
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.08), inset -4px -4px 8px rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: fit-content;
+  }
+  .about-eyebrow-light::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    transform: rotate(45deg);
+    background: #7caa78;
+  }
+  .about-eyebrow-dark {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 24px;
+    border-radius: 9999px;
+    font-family: var(--font-body);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #7ec8a0;
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.2), inset -4px -4px 8px rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    width: fit-content;
+  }
+  .about-eyebrow-dark::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    transform: rotate(45deg);
+    background: #7ec8a0;
+  }
+
+  /* ── Reveal animation ─────────────────────────── */
+  .reveal-mask {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: bottom;
+    padding-bottom: 0.15em;
+    padding-right: 0.1em;
+    margin-bottom: -0.15em;
+    margin-right: -0.1em;
+  }
+  @keyframes aFadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes aRevealUp {
+    from { transform: translateY(100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  .a-fade-in { animation: aFadeIn 1.4s ease-out forwards; }
+  .a-reveal-up { animation: aRevealUp 1s cubic-bezier(0.77, 0, 0.175, 1) forwards; }
+
+  /* ── Accordion ────────────────────────────────── */
+  .service-item {
+    border-color: var(--color-hairline);
+  }
+  .service-toggle {
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+  .service-panel {
+    overflow: hidden;
+  }
+  .service-icon.is-open {
+    transform: rotate(45deg);
+  }
+
+  /* ── Flow Cards ───────────────────────────────── */
+  .clay-flow-card {
+    background: var(--color-background);
+    box-shadow: 10px 10px 20px #c4c6cc, -10px -10px 20px #ffffff;
+  }
+  .clay-flow-dot {
+    background: var(--color-background);
+    box-shadow: inset 4px 4px 8px #c4c6cc, inset -4px -4px 8px #ffffff;
+  }
+  .clay-flow-card-accent {
+    background: var(--color-background);
+    box-shadow: 10px 10px 20px #c4c6cc, -10px -10px 20px #ffffff, 0 0 0 2px rgba(124, 170, 120, 0.2);
+  }
+  .clay-flow-dot-accent {
+    background: var(--color-background);
+    box-shadow: inset 4px 4px 8px #c4c6cc, inset -4px -4px 8px #ffffff;
+  }
+
+  /* ── Who cards ────────────────────────────────── */
+  .who-card {
+    background: var(--color-background);
+    box-shadow: 20px 20px 40px #c4c6cc, -20px -20px 40px #ffffff;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .who-card:hover {
+    transform: translateY(-6px);
+  }
+
+  /* ── Workflow steps ───────────────────────────── */
+  .workflow-step {
+    background: var(--color-background);
+    box-shadow: 14px 14px 28px #c4c6cc, -14px -14px 28px #ffffff;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .workflow-step:hover {
+    transform: translateY(-4px);
+  }
+
+  /* ── Capacity cards ───────────────────────────── */
+  .capacity-card {
+    background: #0d1b16;
+    box-shadow: 14px 14px 28px #040907, -14px -14px 28px #183329;
+    transition: transform 0.4s ease;
+  }
+  .capacity-card:hover {
+    transform: translateY(-4px);
+  }
+
+  /* ── Final CTA button ─────────────────────────── */
+  .about-cta-btn {
+    background: #0d1b16;
+    box-shadow: 12px 12px 24px #040907, -12px -12px 24px #183329;
+  }
+  .about-cta-btn:hover {
+    box-shadow: 8px 8px 16px #040907, -8px -8px 16px #183329, 0 0 30px rgba(126, 200, 160, 0.08);
+    transform: translateY(-2px);
+    color: #7ec8a0 !important;
+  }
+
+  /* ── Service Carousel ─────────────────────────── */
+  .svc-track-outer {
+    position: relative;
+    padding: 16px 0 64px;
+  }
+  .svc-track {
+    display: grid;
+    grid-template-areas: 'card';
+  }
+  .svc-card {
+    grid-area: card;
+    opacity: 0;
+    pointer-events: none;
+    transform-origin: top center;
+    transform: translateY(60px) scale(0.85);
+    transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+    z-index: 1;
+  }
+  .svc-card.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+    z-index: 10;
+  }
+  .svc-card.next-1 {
+    opacity: 0.65;
+    pointer-events: none;
+    transform: translateY(24px) scale(0.96);
+    z-index: 9;
+  }
+  .svc-card.next-2 {
+    opacity: 0.35;
+    pointer-events: none;
+    transform: translateY(48px) scale(0.92);
+    z-index: 8;
+  }
+  .svc-card.inactive-up {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-40px) scale(0.95);
+    z-index: 1;
+  }
+  .svc-card-inner {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    height: 100%;
+    background: var(--color-background);
+    border-radius: 2.5rem;
+    box-shadow: 12px 12px 32px rgba(180, 185, 196, 0.4), -12px -12px 32px rgba(255, 255, 255, 0.6);
+    overflow: hidden;
+    transition: box-shadow 0.4s ease;
+  }
+  @media (min-width: 768px) {
+    .svc-card-inner {
+      grid-template-columns: 1fr 1.4fr;
+    }
+  }
+  .svc-card-inner:hover {
+    box-shadow: 16px 16px 40px rgba(180, 185, 196, 0.5), -16px -16px 40px rgba(255, 255, 255, 0.8);
+  }
+  .svc-card-left {
+    padding: 48px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid var(--color-hairline);
+    background: linear-gradient(135deg, rgba(42, 90, 74, 0.03) 0%, transparent 60%);
+  }
+  @media (min-width: 768px) {
+    .svc-card-left {
+      border-bottom: none;
+      border-right: 1px solid var(--color-hairline);
+      padding: 56px 48px;
+    }
+  }
+  .svc-card-right {
+    padding: 48px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-content: start;
+  }
+  @media (max-width: 600px) {
+    .svc-card-right {
+      grid-template-columns: 1fr;
+      padding: 32px 28px;
+      gap: 28px;
+    }
+    .svc-card-left {
+      padding: 36px 28px;
+    }
+  }
+  .svc-num {
+    font-family: var(--font-body);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #7caa78;
+    margin-bottom: 16px;
+  }
+  .svc-heading {
+    font-family: var(--font-display);
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-weight: 300;
+    line-height: 1.2;
+    color: #0d1b16;
+    margin-bottom: 16px;
+  }
+  .svc-sub {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #65665e;
+  }
+  .svc-col {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .svc-card-icon {
+    position: absolute;
+    bottom: 48px;
+    right: 40px;
+    display: flex;
+    justify-content: flex-end;
+    color: rgba(42, 90, 74, 0.8);
+    filter: drop-shadow(0 0 16px rgba(42, 90, 74, 0.4));
+    pointer-events: none;
+  }
+  @media (max-width: 600px) {
+    .svc-card-icon {
+      bottom: 32px;
+      right: 28px;
+    }
+  }
+  .svc-card-icon svg {
+    width: 96px;
+    height: 96px;
+    stroke-width: 1;
+    transition: all 0.5s ease;
+  }
+  .svc-card-inner:hover .svc-card-icon {
+    color: rgba(42, 90, 74, 1);
+    filter: drop-shadow(0 0 24px rgba(42, 90, 74, 0.6));
+  }
+  .svc-card-inner:hover .svc-card-icon svg {
+    transform: scale(1.05) rotate(-2deg);
+  }
+  .svc-col-label {
+    font-family: var(--font-body);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #7caa78;
+    margin-bottom: 14px;
+  }
+  .svc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .svc-list li {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #65665e;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .svc-bullet {
+    color: #7caa78;
+    flex-shrink: 0;
+    margin-top: 1px;
+    font-size: 1rem;
+  }
+  .svc-result {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #65665e;
+  }
+
+  /* ── Carousel Arrows ─────────────────────────── */
+  .svc-arrow {
+    position: absolute;
+    right: 24px;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-background);
+    color: #0d1b16;
+    box-shadow: 8px 8px 16px #c4c6cc, -8px -8px 16px #ffffff;
+    transition: all 0.3s ease;
+  }
+  .svc-arrow:hover {
+    box-shadow: 4px 4px 8px #c4c6cc, -4px -4px 8px #ffffff;
+    color: #2a5a4a;
+    transform: scale(1.05);
+  }
+  .svc-arrow:active {
+    box-shadow: inset 4px 4px 8px #c4c6cc, inset -4px -4px 8px #ffffff;
+    transform: scale(0.98);
+  }
+  .svc-arrow-up {
+    top: calc(50% - 98px);
+  }
+  .svc-arrow-down {
+    top: calc(50% - 34px);
+  }
+
+  @media (min-width: 769px) {
+    .svc-track-outer { 
+      padding-right: 96px;
+      padding-left: 96px; 
+    }
+  }
+
+  @media (max-width: 768px) {
+    .svc-arrow { right: -8px; }
+    .svc-track-outer { padding: 16px 8px 64px; }
+  }
+  .svc-arrow:disabled {
+    opacity: 0.35;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  /* ── Dots ─────────────────────────────────────── */
+  .svc-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 28px;
+  }
+  .svc-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background: var(--color-background);
+    box-shadow: 3px 3px 6px #c4c6cc, -3px -3px 6px #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0;
+  }
+  .svc-dot-active, .svc-dot:hover {
+    background: #2a5a4a;
+    box-shadow: inset 2px 2px 4px rgba(0,0,0,0.3), inset -2px -2px 4px rgba(255,255,255,0.05);
+    width: 24px;
+    border-radius: 4px;
+  }
+</style>
+
+<script>
+  // ── Scroll reveal ──────────────────────────────
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -10% 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  // Add the CSS for .reveal transitions
+  const style = document.createElement('style');
+  style.textContent = `
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+    .reveal.revealed { opacity: 1; transform: translateY(0); }
+  `;
+  document.head.appendChild(style);
+
+
+  // ── Service Carousel ──────────────────────────
+  (() => {
+    const track = document.getElementById('svc-track');
+    const prevBtn = document.getElementById('svc-prev');
+    const nextBtn = document.getElementById('svc-next');
+    const dots = document.querySelectorAll('.svc-dot');
+    const cards = document.querySelectorAll('.svc-card');
+    const total = cards.length;
+    let current = 0;
+
+    function goTo(index) {
+      const oldIndex = current;
+      current = Math.max(0, Math.min(total - 1, index));
+      
+      cards.forEach((c, i) => {
+        c.className = 'svc-card';
+        if (i === current) {
+          c.classList.add('active');
+        } else if (i === current + 1) {
+          c.classList.add('next-1');
+        } else if (i === current + 2) {
+          c.classList.add('next-2');
+        } else if (i < current) {
+          c.classList.add('inactive-up');
+        }
+      });
+
+      dots.forEach((d, i) => {
+        d.classList.toggle('svc-dot-active', i === current);
+      });
+      prevBtn.disabled = current === 0;
+      nextBtn.disabled = current === total - 1;
+    }
+
+    prevBtn.addEventListener('click', () => goTo(current - 1));
+    nextBtn.addEventListener('click', () => goTo(current + 1));
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => goTo(i));
+    });
+
+    // Touch/swipe support (vertical and horizontal)
+    let touchStartX = 0;
+    let touchStartY = 0;
+    track.addEventListener('touchstart', e => { 
+      touchStartX = e.changedTouches[0].screenX; 
+      touchStartY = e.changedTouches[0].screenY;
+    }, { passive: true });
+    
+    track.addEventListener('touchend', e => {
+      const diffX = touchStartX - e.changedTouches[0].screenX;
+      const diffY = touchStartY - e.changedTouches[0].screenY;
+      
+      if (Math.abs(diffY) > Math.abs(diffX)) {
+        if (Math.abs(diffY) > 50) goTo(diffY > 0 ? current + 1 : current - 1);
+      } else {
+        if (Math.abs(diffX) > 50) goTo(diffX > 0 ? current + 1 : current - 1);
+      }
+    });
+
+    goTo(0);
+  })();
+</script>
