@@ -11,7 +11,7 @@ const scenarios = [
       "Your delivery capacity is stretched",
       "Calveris handles the accounting work"
     ],
-    outcome: "You stay focused on clients, finance and advisory — while your client stays yours."
+    outcome: "You stay focused on clients, finance and advisory, while your client stays yours."
   },
   {
     tab: "02",
@@ -122,7 +122,7 @@ export default function Model() {
             boxShadow: '20px 20px 40px #c4c6cc, -20px -20px 40px #ffffff',
           }}
         >
-          {/* Tab row — sits at the very top of the card */}
+          {/* Tab row, sits at the very top of the card */}
           <div
             className="flex"
             style={{ borderBottom: '1px solid rgba(0,0,0,0.07)' }}

@@ -138,7 +138,7 @@ export default function ContactBuilder() {
 
     if (hasNotSure && selectedServices.length === 0) {
       return { 
-        headline: "Looking for finance support — requirements to be discussed.",
+        headline: "Looking for finance support, requirements to be discussed.",
         details: null,
         subtext: "We'll work out the details together."
       };
@@ -167,7 +167,7 @@ export default function ContactBuilder() {
 
     if (hasNotSure) {
        return {
-         headline: `Looking for ${servicesText} — requirements to be discussed.`,
+         headline: `Looking for ${servicesText}, requirements to be discussed.`,
          details: details,
          subtext: ""
        }
@@ -569,7 +569,7 @@ export default function ContactBuilder() {
                         </span>
                         <div>
                           <div style={{ fontSize: '13px', fontWeight: '700', color: '#f0f5f0', marginBottom: '4px' }}>Enquiry received</div>
-                          <div style={{ fontSize: '13px', color: 'rgba(240,245,240,0.65)', lineHeight: '1.6' }}>Thanks, {firstName}. We'll review your requirement and come back to you directly — usually within one business day.</div>
+                          <div style={{ fontSize: '13px', color: 'rgba(240,245,240,0.65)', lineHeight: '1.6' }}>Thanks, {firstName}. We'll review your requirement and come back to you directly, usually within one business day.</div>
                         </div>
                       </div>
                     )}
