@@ -101,8 +101,8 @@ export default function Navbar() {
             <a
               href="/contact"
               className={`overflow-hidden rounded-full text-[10px] font-bold tracking-[0.2em] uppercase px-8 py-4 transition-all duration-500 flex items-center gap-2 group ${isDarkNav
-                ? 'bg-white/10 text-white backdrop-blur-md border border-white/20 hover:bg-white hover:text-[#0d1b16]'
-                : 'bg-[#2a5a4a] text-white hover:bg-[#3d7a66]'
+                ? 'bg-white/10 text-white backdrop-blur-md border border-white/20 hover:bg-white hover:text-[#0f2027]'
+                : 'text-white border border-[#7ec8a0]/20 bg-[linear-gradient(135deg,#0f2027_0%,#163028_45%,#28623a_100%)] shadow-[0_4px_12px_rgba(10,24,18,0.3)] hover:shadow-[0_6px_20px_rgba(10,24,18,0.4)]'
                 }`}
             >
               Build Your Team
@@ -148,7 +148,7 @@ export default function Navbar() {
 
       {/* Mobile Full-Screen Menu */}
       <div
-        className={`fixed inset-0 z-40 bg-[#06100c]/98 backdrop-blur-xl transition-all duration-500 md:hidden flex flex-col items-center justify-center gap-10 ${open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        className={`fixed inset-0 z-40 bg-[linear-gradient(135deg,rgba(15,32,39,0.98)_0%,rgba(22,48,40,0.98)_45%,rgba(40,98,58,0.98)_100%)] backdrop-blur-xl transition-all duration-500 md:hidden flex flex-col items-center justify-center gap-10 ${open ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
           }`}
       >
         <img
