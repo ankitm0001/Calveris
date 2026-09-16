@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer.astro";
+import Model from "../components/Model";
 ---
 
 <Layout>
@@ -645,13 +646,23 @@ import Footer from "../components/Footer.astro";
             You don't have to hand over everything.
           </h2>
           <ul
-            class="text-[1rem] leading-relaxed mb-6 list-disc list-inside space-y-2"
+            class="text-[1rem] leading-relaxed mb-6 space-y-4"
             style="color: #65665e;"
           >
-            <li>Some businesses need day-to-day accounting handled.</li>
-            <li>
-              Others need additional capacity around month-end, year-end or a
-              particular part of the function.
+            <li class="flex items-start gap-3">
+              <span
+                class="inline-block mt-[0.6rem] w-1.5 h-1.5 bg-[#7caa78] rotate-45 shrink-0"
+              ></span>
+              <span>Some businesses need day-to-day accounting handled.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span
+                class="inline-block mt-[0.6rem] w-1.5 h-1.5 bg-[#7caa78] rotate-45 shrink-0"
+              ></span>
+              <span>
+                Others need additional capacity around month-end, year-end or a
+                particular part of the function.
+              </span>
             </li>
           </ul>
           <p class="text-[1rem] leading-relaxed" style="color: #65665e;">
@@ -825,8 +836,7 @@ import Footer from "../components/Footer.astro";
       <div class="text-center mb-16 reveal">
         <div class="who-eyebrow mb-8">
           <span class="who-eyebrow-dot"></span>
-          <span>TWO WAYS TO WORK</span>
-          <span class="font-bold"> WITH CALVERIS</span>
+          <span>TWO WAYS TO WORK</span> <span class="font-bold">WITH CALVERIS</span>
         </div>
         <h2
           class="font-display font-light leading-[1.1] mb-6"
@@ -845,7 +855,7 @@ import Footer from "../components/Footer.astro";
 
       <!-- Two Cards -->
       <div
-        class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 reveal max-w-[1080px] mx-auto"
+        class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 reveal max-w-[1080px] mx-auto"
       >
         <!-- Card 01: Growing Businesses -->
         <div class="who-card-v2 rounded-[2.5rem] flex flex-col overflow-hidden">
@@ -896,19 +906,67 @@ import Footer from "../components/Footer.astro";
             class="grid grid-cols-4 gap-0 mx-6 lg:mx-8 mb-0 who-feature-grid rounded-[1.5rem] overflow-hidden"
           >
             <div class="who-feature-item">
-              <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#9edbb8" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              <svg
+                width="22"
+                height="22"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="#9edbb8"
+                stroke-width="1.5"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                ></path></svg
+              >
               <span>Day-to-day bookkeeping</span>
             </div>
             <div class="who-feature-item">
-              <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#9edbb8" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+              <svg
+                width="22"
+                height="22"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="#9edbb8"
+                stroke-width="1.5"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                ></path></svg
+              >
               <span>Management reporting</span>
             </div>
             <div class="who-feature-item">
-              <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#9edbb8" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              <svg
+                width="22"
+                height="22"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="#9edbb8"
+                stroke-width="1.5"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                ></path></svg
+              >
               <span>Year-end support</span>
             </div>
             <div class="who-feature-item">
-              <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#9edbb8" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/></svg>
+              <svg
+                width="22"
+                height="22"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="#9edbb8"
+                stroke-width="1.5"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"
+                ></path></svg
+              >
               <span>A team that scales with you</span>
             </div>
           </div>
@@ -920,7 +978,10 @@ import Footer from "../components/Footer.astro";
           <div class="mx-6 lg:mx-8 mb-8">
             <a href="/contact" class="who-cta-btn group">
               <span>See how it works for businesses</span>
-              <span class="who-cta-circle group-hover:scale-105 transition-transform duration-300">→</span>
+              <span
+                class="who-cta-circle group-hover:scale-105 transition-transform duration-300"
+                >→</span
+              >
             </a>
           </div>
         </div>
@@ -974,19 +1035,66 @@ import Footer from "../components/Footer.astro";
             class="grid grid-cols-4 gap-0 mx-6 lg:mx-8 mb-0 who-feature-grid rounded-[1.5rem] overflow-hidden"
           >
             <div class="who-feature-item">
-              <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#9edbb8" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+              <svg
+                width="22"
+                height="22"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="#9edbb8"
+                stroke-width="1.5"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                ></path></svg
+              >
               <span>White-label delivery</span>
             </div>
             <div class="who-feature-item">
-              <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#9edbb8" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"/></svg>
+              <svg
+                width="22"
+                height="22"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="#9edbb8"
+                stroke-width="1.5"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"
+                ></path></svg
+              >
               <span>Your clients, our support</span>
             </div>
             <div class="who-feature-item">
-              <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#9edbb8" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+              <svg
+                width="22"
+                height="22"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="#9edbb8"
+                stroke-width="1.5"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                ></path></svg
+              >
               <span>Consistent quality</span>
             </div>
             <div class="who-feature-item">
-              <svg width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#9edbb8" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <svg
+                width="22"
+                height="22"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="#9edbb8"
+                stroke-width="1.5"
+                ><path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg
+              >
               <span>More time for advisory</span>
             </div>
           </div>
@@ -998,7 +1106,10 @@ import Footer from "../components/Footer.astro";
           <div class="mx-6 lg:mx-8 mb-8">
             <a href="/firms" class="who-cta-btn group">
               <span>See how it works for firms</span>
-              <span class="who-cta-circle group-hover:scale-105 transition-transform duration-300">→</span>
+              <span
+                class="who-cta-circle group-hover:scale-105 transition-transform duration-300"
+                >→</span
+              >
             </a>
           </div>
         </div>
@@ -1023,86 +1134,401 @@ import Footer from "../components/Footer.astro";
         </h2>
       </div>
 
-      <!-- Workflow Steps -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
-        <div class="workflow-step rounded-[2rem] p-8">
-          <div
-            class="text-[10px] tracking-[0.18em] uppercase font-bold text-accent mb-6"
-          >
-            01
-          </div>
-          <h3
-            class="font-display text-[1.3rem] font-light text-foreground mb-4 leading-snug"
-          >
-            Your Requirement
-          </h3>
-          <p class="text-[0.9rem] leading-relaxed text-muted-foreground">
-            What needs to be handled?
-          </p>
-          <div class="mt-8 text-accent text-2xl opacity-40 hidden lg:block">
-            ↓
-          </div>
+      <!-- Workflow Steps Container -->
+      <div class="relative w-full max-w-7xl mx-auto reveal mt-12">
+        <!-- Dotted Connecting Line (Desktop) -->
+        <div
+          class="absolute top-[20px] left-[12%] right-[12%] h-[2px] border-t-2 border-dotted border-[#cbd5e1] hidden lg:block z-0 opacity-60"
+        >
         </div>
 
-        <div class="workflow-step rounded-[2rem] p-8">
-          <div
-            class="text-[10px] tracking-[0.18em] uppercase font-bold text-accent mb-6"
-          >
-            02
-          </div>
-          <h3
-            class="font-display text-[1.3rem] font-light text-foreground mb-4 leading-snug"
-          >
-            Calveris
-          </h3>
-          <p class="text-[0.9rem] leading-relaxed text-muted-foreground">
-            The appropriate accounting resource takes responsibility for the
-            work.
-          </p>
-          <div class="mt-8 text-accent text-2xl opacity-40 hidden lg:block">
-            ↓
-          </div>
-        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 relative z-10"
+        >
+          <!-- Step 01 -->
+          <div class="flex flex-col items-center group">
+            <!-- Number Circle -->
+            <div
+              class="w-10 h-10 rounded-full flex items-center justify-center text-[10px] font-bold text-[#7caa78] mb-6 bg-[#f8faf9] shadow-[inset_2px_2px_4px_#ffffff,inset_-2px_-2px_4px_rgba(0,0,0,0.03),4px_4px_10px_rgba(0,0,0,0.05)] border border-white relative z-10 transition-transform duration-300 group-hover:scale-110"
+            >
+              01
+            </div>
 
-        <div class="workflow-step rounded-[2rem] p-8">
-          <div
-            class="text-[10px] tracking-[0.18em] uppercase font-bold text-accent mb-6"
-          >
-            03
-          </div>
-          <h3
-            class="font-display text-[1.3rem] font-light text-foreground mb-4 leading-snug"
-          >
-            Review
-          </h3>
-          <p class="text-[0.9rem] leading-relaxed text-muted-foreground">
-            Completed work passes through the agreed review process.
-          </p>
-          <div class="mt-8 text-accent text-2xl opacity-40 hidden lg:block">
-            ↓
-          </div>
-        </div>
+            <!-- Card -->
+            <div
+              class="bg-background rounded-[2rem] p-8 w-full shadow-[-20px_-20px_28px_#ffffff,20px_20px_28px_rgba(13,39,80,0.12),inset_-20px_-20px_28px_#ffffff,inset_20px_20px_28px_rgba(13,39,80,0.12)] flex flex-col items-center text-center relative overflow-hidden transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-[-25px_-25px_35px_#ffffff,25px_25px_35px_rgba(13,39,80,0.15),inset_-15px_-15px_20px_#ffffff,inset_15px_15px_20px_rgba(13,39,80,0.08)] h-[320px]"
+            >
+              <h3
+                class="font-display text-[1.4rem] font-light text-[#0d1b16] mb-3"
+              >
+                Your Requirement
+              </h3>
+              <p class="text-[0.8rem] text-[#65665e] leading-relaxed mb-6">
+                What needs to be handled?
+              </p>
 
-        <div class="workflow-step rounded-[2rem] p-8">
-          <div
-            class="text-[10px] tracking-[0.18em] uppercase font-bold text-accent mb-6"
-          >
-            04
+              <!-- Icon Container -->
+              <div
+                class="relative w-32 h-32 mt-auto flex items-center justify-center transition-transform duration-500 group-hover:scale-105"
+              >
+                <!-- Back Document -->
+                <div
+                  class="absolute top-3 right-4 w-16 h-20 bg-gradient-to-br from-[#f4f7f5] to-[#dce6e0] rounded-[14px] shadow-[inset_1px_1px_2px_#ffffff,-2px_-2px_6px_rgba(255,255,255,0.8),4px_4px_10px_rgba(0,0,0,0.08)] rotate-[8deg] border border-white"
+                >
+                </div>
+                <!-- Front Document -->
+                <div
+                  class="absolute top-6 left-5 w-[4.5rem] h-[5.5rem] bg-gradient-to-br from-white to-[#e4ebe6] rounded-[14px] shadow-[inset_2px_2px_4px_#ffffff,-2px_-2px_8px_rgba(255,255,255,0.9),6px_6px_15px_rgba(0,0,0,0.08)] -rotate-3 border-[1.5px] border-white flex flex-col p-3 gap-2.5 z-10 backdrop-blur-md"
+                >
+                  <div
+                    class="w-2/3 h-1.5 bg-[#cbd5cf] rounded-full shadow-[inset_1px_1px_2px_rgba(0,0,0,0.06),1px_1px_1px_white]"
+                  >
+                  </div>
+                  <div
+                    class="w-full h-1.5 bg-[#cbd5cf] rounded-full shadow-[inset_1px_1px_2px_rgba(0,0,0,0.06),1px_1px_1px_white]"
+                  >
+                  </div>
+                  <div
+                    class="w-4/5 h-1.5 bg-[#cbd5cf] rounded-full shadow-[inset_1px_1px_2px_rgba(0,0,0,0.06),1px_1px_1px_white]"
+                  >
+                  </div>
+                </div>
+                <!-- Plus Badge -->
+                <div
+                  class="absolute bottom-2 right-2 w-9 h-9 rounded-full bg-gradient-to-br from-[#8ec899] to-[#5b9568] shadow-[inset_2px_2px_4px_rgba(255,255,255,0.5),inset_-2px_-2px_4px_rgba(0,0,0,0.1),4px_4px_10px_rgba(100,160,120,0.3)] flex items-center justify-center text-white font-medium text-xl border-[1.5px] border-[#a5e0bc]/50 z-20 hover:rotate-90 transition-transform duration-500 pb-0.5"
+                >
+                  +
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Tag -->
+            <div
+              class="mt-6 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#8e9089]"
+            >
+              <span
+                class="w-1.5 h-1.5 rounded-full bg-[#7caa78] shadow-[0_0_4px_rgba(124,170,120,0.6)]"
+              ></span>
+              YOU TELL US WHAT YOU NEED
+            </div>
           </div>
-          <h3
-            class="font-display text-[1.3rem] font-light text-foreground mb-4 leading-snug"
-          >
-            Delivery
-          </h3>
-          <p class="text-[0.9rem] leading-relaxed text-muted-foreground">
-            The finished work reaches your team or client.
-          </p>
+
+          <!-- Step 02 -->
+          <div class="flex flex-col items-center group">
+            <!-- Number Circle -->
+            <div
+              class="w-10 h-10 rounded-full flex items-center justify-center text-[10px] font-bold text-[#7caa78] mb-6 bg-[#f8faf9] shadow-[inset_2px_2px_4px_#ffffff,inset_-2px_-2px_4px_rgba(0,0,0,0.03),4px_4px_10px_rgba(0,0,0,0.05)] border border-white relative z-10 transition-transform duration-300 group-hover:scale-110"
+            >
+              02
+            </div>
+
+            <!-- Card -->
+            <div
+              class="bg-background rounded-[2rem] p-8 w-full shadow-[-20px_-20px_28px_#ffffff,20px_20px_28px_rgba(13,39,80,0.12),inset_-20px_-20px_28px_#ffffff,inset_20px_20px_28px_rgba(13,39,80,0.12)] flex flex-col items-center text-center relative overflow-hidden transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-[-25px_-25px_35px_#ffffff,25px_25px_35px_rgba(13,39,80,0.15),inset_-15px_-15px_20px_#ffffff,inset_15px_15px_20px_rgba(13,39,80,0.08)] h-[320px]"
+            >
+              <h3
+                class="font-display text-[1.4rem] font-light text-[#0d1b16] mb-3"
+              >
+                Calveris
+              </h3>
+              <p class="text-[0.8rem] text-[#65665e] leading-relaxed mb-6">
+                The appropriate resource takes responsibility.
+              </p>
+
+              <!-- Icon Container -->
+              <div
+                class="relative w-32 h-32 mt-auto flex items-center justify-center transition-transform duration-500 group-hover:scale-105"
+              >
+                <!-- Bottom Card -->
+                <div
+                  class="absolute w-[4.5rem] h-[5.5rem] bg-gradient-to-br from-[#f4f7f5] to-[#dce6e0] rounded-[14px] shadow-[inset_1px_1px_2px_#ffffff,4px_4px_8px_rgba(0,0,0,0.08)] rotate-12 border border-white translate-x-2.5 translate-y-2.5"
+                >
+                </div>
+                <!-- Middle Card -->
+                <div
+                  class="absolute w-[4.5rem] h-[5.5rem] bg-gradient-to-br from-white to-[#e4ebe6] rounded-[14px] shadow-[inset_1px_1px_2px_#ffffff,3px_3px_10px_rgba(0,0,0,0.08)] rotate-6 border-[1.5px] border-white translate-x-1 translate-y-1 z-10 backdrop-blur-sm"
+                >
+                </div>
+                <!-- Top Card -->
+                <div
+                  class="absolute w-[4.5rem] h-[5.5rem] bg-gradient-to-br from-white to-[#eef2f0] rounded-[14px] shadow-[inset_2px_2px_4px_#ffffff,-2px_-2px_6px_rgba(255,255,255,0.8),6px_6px_15px_rgba(0,0,0,0.1)] border-[1.5px] border-white flex flex-col items-center justify-center z-20 backdrop-blur-md"
+                >
+                  <!-- Debossed Avatar -->
+                  <div
+                    class="w-10 h-10 flex flex-col items-center justify-end gap-1 overflow-hidden opacity-90"
+                  >
+                    <div
+                      class="w-4 h-4 rounded-full bg-gradient-to-br from-[#8ec899] to-[#5b9568] shadow-[inset_1px_1px_2px_rgba(255,255,255,0.5),1px_1px_2px_rgba(0,0,0,0.1)] border border-[#a5e0bc]/40"
+                    >
+                    </div>
+                    <div
+                      class="w-8 h-4 rounded-t-full bg-gradient-to-br from-[#8ec899] to-[#5b9568] shadow-[inset_1px_1px_2px_rgba(255,255,255,0.5),1px_1px_2px_rgba(0,0,0,0.1)] border border-[#a5e0bc]/40"
+                    >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Tag -->
+            <div
+              class="mt-6 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#8e9089]"
+            >
+              <span
+                class="w-1.5 h-1.5 rounded-full bg-[#7caa78] shadow-[0_0_4px_rgba(124,170,120,0.6)]"
+              ></span>
+              WE ASSIGN THE RIGHT RESOURCE
+            </div>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="flex flex-col items-center group">
+            <!-- Number Circle -->
+            <div
+              class="w-10 h-10 rounded-full flex items-center justify-center text-[10px] font-bold text-[#7caa78] mb-6 bg-[#f8faf9] shadow-[inset_2px_2px_4px_#ffffff,inset_-2px_-2px_4px_rgba(0,0,0,0.03),4px_4px_10px_rgba(0,0,0,0.05)] border border-white relative z-10 transition-transform duration-300 group-hover:scale-110"
+            >
+              03
+            </div>
+
+            <!-- Card -->
+            <div
+              class="bg-background rounded-[2rem] p-8 w-full shadow-[-20px_-20px_28px_#ffffff,20px_20px_28px_rgba(13,39,80,0.12),inset_-20px_-20px_28px_#ffffff,inset_20px_20px_28px_rgba(13,39,80,0.12)] flex flex-col items-center text-center relative overflow-hidden transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-[-25px_-25px_35px_#ffffff,25px_25px_35px_rgba(13,39,80,0.15),inset_-15px_-15px_20px_#ffffff,inset_15px_15px_20px_rgba(13,39,80,0.08)] h-[320px]"
+            >
+              <h3
+                class="font-display text-[1.4rem] font-light text-[#0d1b16] mb-3"
+              >
+                Review
+              </h3>
+              <p class="text-[0.8rem] text-[#65665e] leading-relaxed mb-6">
+                Completed work passes through review.
+              </p>
+
+              <!-- Icon Container -->
+              <div
+                class="relative w-32 h-32 mt-auto flex items-center justify-center transition-transform duration-500 group-hover:scale-105"
+              >
+                <!-- Checklist Card -->
+                <div
+                  class="absolute w-[5.5rem] h-[6.5rem] bg-gradient-to-br from-white to-[#e4ebe6] rounded-[14px] shadow-[inset_2px_2px_4px_#ffffff,-2px_-2px_6px_rgba(255,255,255,0.9),6px_6px_15px_rgba(0,0,0,0.08)] border-[1.5px] border-white flex flex-col justify-center gap-3 p-4 z-10 -translate-x-3 -translate-y-1 backdrop-blur-md"
+                >
+                  <div class="flex items-center gap-2">
+                    <div
+                      class="w-3.5 h-3.5 rounded-full bg-gradient-to-br from-[#8ec899] to-[#5b9568] shadow-[inset_1px_1px_2px_rgba(255,255,255,0.5),1px_1px_2px_rgba(0,0,0,0.1)] flex items-center justify-center shrink-0 border border-[#a5e0bc]/40"
+                    >
+                      <svg
+                        class="w-2 h-2 text-white"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="4"
+                        ><path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M5 13l4 4L19 7"></path></svg
+                      >
+                    </div>
+                    <div
+                      class="w-full h-1.5 bg-[#cbd5cf] rounded-full shadow-[inset_1px_1px_2px_rgba(0,0,0,0.06),1px_1px_1px_white]"
+                    >
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <div
+                      class="w-3.5 h-3.5 rounded-full bg-gradient-to-br from-[#8ec899] to-[#5b9568] shadow-[inset_1px_1px_2px_rgba(255,255,255,0.5),1px_1px_2px_rgba(0,0,0,0.1)] flex items-center justify-center shrink-0 border border-[#a5e0bc]/40"
+                    >
+                      <svg
+                        class="w-2 h-2 text-white"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="4"
+                        ><path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M5 13l4 4L19 7"></path></svg
+                      >
+                    </div>
+                    <div
+                      class="w-full h-1.5 bg-[#cbd5cf] rounded-full shadow-[inset_1px_1px_2px_rgba(0,0,0,0.06),1px_1px_1px_white]"
+                    >
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <div
+                      class="w-3.5 h-3.5 rounded-full bg-gradient-to-br from-[#8ec899] to-[#5b9568] shadow-[inset_1px_1px_2px_rgba(255,255,255,0.5),1px_1px_2px_rgba(0,0,0,0.1)] flex items-center justify-center shrink-0 border border-[#a5e0bc]/40"
+                    >
+                      <svg
+                        class="w-2 h-2 text-white"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="4"
+                        ><path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M5 13l4 4L19 7"></path></svg
+                      >
+                    </div>
+                    <div
+                      class="w-3/4 h-1.5 bg-[#cbd5cf] rounded-full shadow-[inset_1px_1px_2px_rgba(0,0,0,0.06),1px_1px_1px_white]"
+                    >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Magnifying Glass -->
+                <div
+                  class="absolute w-14 h-14 bottom-1 right-1 z-20 drop-shadow-[2px_4px_6px_rgba(0,0,0,0.2)] group-hover:scale-110 group-hover:-translate-y-1 transition-transform duration-500"
+                >
+                  <div
+                    class="w-10 h-10 rounded-full border-[3px] border-[#f4f7f5] shadow-[inset_2px_2px_5px_rgba(255,255,255,0.9),inset_-2px_-2px_5px_rgba(0,0,0,0.08),0_0_0_1px_white] bg-gradient-to-br from-[#f4f7f5]/80 to-[#dce6e0]/60 backdrop-blur-md relative z-10"
+                  >
+                  </div>
+                  <div
+                    class="w-6 h-2.5 bg-gradient-to-r from-[#bccabc] to-[#9db0a3] rounded-full shadow-[inset_1px_1px_2px_rgba(255,255,255,0.8),inset_-1px_-1px_2px_rgba(0,0,0,0.1)] absolute bottom-0 right-[-4px] rotate-45 transform origin-top-left border-[0.5px] border-white z-0"
+                  >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Tag -->
+            <div
+              class="mt-6 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#8e9089]"
+            >
+              <span
+                class="w-1.5 h-1.5 rounded-full bg-[#7caa78] shadow-[0_0_4px_rgba(124,170,120,0.6)]"
+              ></span>
+              WE REVIEW FOR QUALITY
+            </div>
+          </div>
+
+          <!-- Step 04 -->
+          <div class="flex flex-col items-center group">
+            <!-- Number Circle -->
+            <div
+              class="w-10 h-10 rounded-full flex items-center justify-center text-[10px] font-bold text-[#7caa78] mb-6 bg-[#f8faf9] shadow-[inset_2px_2px_4px_#ffffff,inset_-2px_-2px_4px_rgba(0,0,0,0.03),4px_4px_10px_rgba(0,0,0,0.05)] border border-white relative z-10 transition-transform duration-300 group-hover:scale-110"
+            >
+              04
+            </div>
+
+            <!-- Card -->
+            <div
+              class="bg-background rounded-[2rem] p-8 w-full shadow-[-20px_-20px_28px_#ffffff,20px_20px_28px_rgba(13,39,80,0.12),inset_-20px_-20px_28px_#ffffff,inset_20px_20px_28px_rgba(13,39,80,0.12)] flex flex-col items-center text-center relative overflow-hidden transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-[-25px_-25px_35px_#ffffff,25px_25px_35px_rgba(13,39,80,0.15),inset_-15px_-15px_20px_#ffffff,inset_15px_15px_20px_rgba(13,39,80,0.08)] h-[320px]"
+            >
+              <h3
+                class="font-display text-[1.4rem] font-light text-[#0d1b16] mb-3"
+              >
+                Delivery
+              </h3>
+              <p class="text-[0.8rem] text-[#65665e] leading-relaxed mb-6">
+                The finished work reaches your team.
+              </p>
+
+              <!-- Icon Container -->
+              <div
+                class="relative w-32 h-32 mt-auto flex items-center justify-center transition-transform duration-500 group-hover:scale-105"
+              >
+                <!-- Target Background -->
+                <div
+                  class="absolute inset-0 flex items-center justify-center pointer-events-none"
+                >
+                  <div
+                    class="w-28 h-28 rounded-full shadow-[inset_2px_2px_6px_rgba(0,0,0,0.08),inset_-2px_-2px_6px_#ffffff,2px_2px_8px_#ffffff] flex items-center justify-center bg-transparent border border-white/60"
+                  >
+                    <div
+                      class="w-20 h-20 rounded-full shadow-[inset_2px_2px_5px_rgba(0,0,0,0.1),inset_-2px_-2px_5px_#ffffff,2px_2px_6px_#ffffff] flex items-center justify-center bg-transparent border border-[#dce6e0]/80"
+                    >
+                      <div
+                        class="w-10 h-10 rounded-full bg-gradient-to-br from-[#cbd5cf] to-[#e4ebe6] shadow-[inset_2px_2px_4px_#ffffff,inset_-1px_-1px_3px_rgba(0,0,0,0.05),2px_2px_6px_rgba(0,0,0,0.1)] border border-white"
+                      >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Paper Airplane SVG with 3D gradients -->
+                <div
+                  class="relative z-10 w-16 h-16 ml-3 -mt-2 drop-shadow-[4px_6px_10px_rgba(0,0,0,0.15)] transform -rotate-12 transition-transform duration-500 group-hover:-translate-y-2 group-hover:translate-x-2 group-hover:rotate-[-5deg]"
+                >
+                  <svg
+                    viewBox="0 0 100 100"
+                    class="w-full h-full overflow-visible"
+                  >
+                    <defs>
+                      <linearGradient
+                        id="plane-top"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="100%"
+                      >
+                        <stop offset="0%" stop-color="#ffffff"></stop>
+                        <stop offset="100%" stop-color="#dce6e0"></stop>
+                      </linearGradient>
+                      <linearGradient
+                        id="plane-bottom-wing"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="100%"
+                      >
+                        <stop offset="0%" stop-color="#8ec899"></stop>
+                        <stop offset="100%" stop-color="#5b9568"></stop>
+                      </linearGradient>
+                      <linearGradient
+                        id="plane-flap"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="100%"
+                      >
+                        <stop offset="0%" stop-color="#5b9568"></stop>
+                        <stop offset="100%" stop-color="#3a7548"></stop>
+                      </linearGradient>
+                    </defs>
+                    <!-- Top Wing -->
+                    <polygon
+                      points="5,45 95,5 45,60"
+                      fill="url(#plane-top)"
+                      stroke="#ffffff"
+                      stroke-width="1.5"
+                      stroke-linejoin="round"></polygon>
+                    <!-- Bottom Wing -->
+                    <polygon
+                      points="45,60 95,5 75,90"
+                      fill="url(#plane-bottom-wing)"
+                      stroke="#ffffff"
+                      stroke-width="1.5"
+                      stroke-linejoin="round"></polygon>
+                    <!-- 3D Flap (Keel) -->
+                    <polygon
+                      points="5,45 45,60 30,75"
+                      fill="url(#plane-flap)"
+                      stroke="#ffffff"
+                      stroke-width="1.5"
+                      stroke-linejoin="round"></polygon>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Tag -->
+            <div
+              class="mt-6 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#8e9089]"
+            >
+              <span
+                class="w-1.5 h-1.5 rounded-full bg-[#7caa78] shadow-[0_0_4px_rgba(124,170,120,0.6)]"
+              ></span>
+              YOU RECEIVE THE COMPLETED WORK
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="mt-12 pt-10 border-t border-hairline reveal">
+      <div class="mt-16 pt-10 border-t border-hairline reveal">
         <p
-          class="text-[0.95rem] leading-relaxed max-w-3xl"
+          class="text-[0.95rem] leading-relaxed max-w-3xl mx-auto text-center"
           style="color: #65665e;"
         >
           The exact workflow depends on the work, your systems and how you want
@@ -1117,104 +1543,29 @@ import Footer from "../components/Footer.astro";
   <!-- ================================================================
        SECTION 13 — CAPACITY, NOT JUST SERVICES
   ================================================================ -->
-  <section
-    class="py-24 lg:py-36 border-b border-hairline"
-    style="background: #0d1b16;"
-  >
+  <section class="bg-background py-24 lg:py-36 border-b border-hairline">
     <div class="shell">
-      <div class="reveal mb-16">
-        <div class="about-eyebrow-dark mb-6">More than a service list</div>
-        <h2
-          class="font-display font-light leading-[1.1] mb-6"
-          style="font-size: clamp(2rem, 4vw, 3rem); color: #f0f5f0;"
-        >
-          The work can change.<br />Your capacity can change with it.
-        </h2>
-        <p
-          class="text-[1rem] leading-relaxed max-w-2xl"
-          style="color: rgba(240,245,240,0.55);"
-        >
-          You may need additional help with one accounting function today and a
-          broader delivery team tomorrow. Calveris can provide the level of
-          accounting capacity the workload requires, without assuming that every
-          business needs the same setup.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
-        <div class="capacity-card rounded-[2rem] p-8">
-          <div
-            class="text-[10px] tracking-[0.18em] uppercase font-bold mb-4"
-            style="color: #7ec8a0;"
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+        <div class="reveal">
+          <div class="about-eyebrow-light mb-6">More than a service list</div>
+          <h2
+            class="font-display font-light leading-[1.1] mb-6 text-[#0d1b16]"
+            style="font-size: clamp(2rem, 4vw, 3rem);"
           >
-            Defined Work
+            The work can change.<br />Your capacity can change with it.
+          </h2>
+          <div class="space-y-4">
+            <p class="text-[1rem] text-[#65665e] leading-relaxed max-w-xl">
+              You may need additional help with one accounting function today and a broader delivery team tomorrow.
+            </p>
+            <p class="text-[1rem] text-[#65665e] leading-relaxed max-w-xl">
+              Calveris can provide the level of accounting capacity the workload requires, without assuming that every business needs the same setup.
+            </p>
           </div>
-          <p
-            class="text-[1rem] leading-relaxed font-light"
-            style="color: rgba(240,245,240,0.75);"
-          >
-            A specific requirement handled by our team.
-          </p>
         </div>
 
-        <div class="capacity-card rounded-[2rem] p-8">
-          <div
-            class="text-[10px] tracking-[0.18em] uppercase font-bold mb-4"
-            style="color: #7ec8a0;"
-          >
-            Part-time Capacity
-          </div>
-          <p
-            class="text-[1rem] leading-relaxed font-light"
-            style="color: rgba(240,245,240,0.75);"
-          >
-            Additional capacity matched to the workload.
-          </p>
-        </div>
-
-        <div class="capacity-card rounded-[2rem] p-8">
-          <div
-            class="text-[10px] tracking-[0.18em] uppercase font-bold mb-4"
-            style="color: #7ec8a0;"
-          >
-            Dedicated Capacity
-          </div>
-          <p
-            class="text-[1rem] leading-relaxed font-light"
-            style="color: rgba(240,245,240,0.75);"
-          >
-            A consistent resource for ongoing accounting work.
-          </p>
-        </div>
-
-        <div class="capacity-card rounded-[2rem] p-8">
-          <div
-            class="text-[10px] tracking-[0.18em] uppercase font-bold mb-4"
-            style="color: #7ec8a0;"
-          >
-            Extended Team
-          </div>
-          <p
-            class="text-[1rem] leading-relaxed font-light"
-            style="color: rgba(240,245,240,0.75);"
-          >
-            Additional accounting capacity working alongside your existing team.
-          </p>
-        </div>
-
-        <div class="capacity-card rounded-[2rem] p-8">
-          <div
-            class="text-[10px] tracking-[0.18em] uppercase font-bold mb-4"
-            style="color: #7ec8a0;"
-          >
-            Ad hoc Support
-          </div>
-          <p
-            class="text-[1rem] leading-relaxed font-light"
-            style="color: rgba(240,245,240,0.75);"
-          >
-            Specific requirements without building an ongoing internal function.
-          </p>
+        <div class="reveal">
+          <Model client:load visualOnly={true} />
         </div>
       </div>
     </div>
@@ -1460,15 +1811,14 @@ import Footer from "../components/Footer.astro";
       inset -4px -4px 8px #ffffff;
   }
 
-  /* ── Who cards v2 — Emerald Depth ─────────────── */
   .who-card-v2 {
     position: relative;
     background: linear-gradient(135deg, #0f2027 0%, #163028 45%, #28623a 100%);
     box-shadow:
-      0 30px 60px rgba(10, 24, 18, 0.6),
-      0 6px 20px rgba(10, 24, 18, 0.4),
-      inset 0 1px 0 rgba(124, 200, 160, 0.12);
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      inset 0 80px 140px rgba(5, 12, 8, 0.95),
+      inset 0 25px 50px rgba(5, 12, 8, 0.98),
+      inset 0 6px 15px rgba(0, 0, 0, 1),
+      0 2px 4px rgba(255, 255, 255, 0.05);
     overflow: hidden;
   }
   /* Grain texture overlay */
@@ -1504,37 +1854,32 @@ import Footer from "../components/Footer.astro";
     position: relative;
     z-index: 2;
   }
-  .who-card-v2:hover {
-    transform: translateY(-6px);
-    box-shadow:
-      0 40px 80px rgba(10, 24, 18, 0.7),
-      0 10px 30px rgba(10, 24, 18, 0.5),
-      inset 0 1px 0 rgba(124, 200, 160, 0.18);
-  }
 
   .who-eyebrow {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 8px 20px;
+    padding: 10px 24px;
     border-radius: 9999px;
     font-family: var(--font-body);
     font-size: 9px;
-    font-weight: 600;
-    letter-spacing: 0.2em;
+    font-weight: 700;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: rgba(180, 220, 190, 0.85);
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(124, 200, 160, 0.15);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    color: #7caa78;
+    background: rgba(232, 235, 229, 0.4);
+    backdrop-filter: blur(8px);
+    box-shadow:
+      inset 4px 4px 8px rgba(0, 0, 0, 0.08),
+      inset -4px -4px 8px rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
   .who-eyebrow-dot {
     display: inline-block;
     width: 6px;
     height: 6px;
-    border-radius: 50%;
     background: #7caa78;
-    box-shadow: 0 0 8px rgba(124, 170, 120, 0.8);
+    transform: rotate(45deg);
   }
 
   .who-tag {
@@ -1549,7 +1894,11 @@ import Footer from "../components/Footer.astro";
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: rgba(180, 220, 190, 0.8);
-    background: linear-gradient(145deg, rgba(12, 26, 22, 0.6), rgba(30, 68, 50, 0.45));
+    background: linear-gradient(
+      145deg,
+      rgba(12, 26, 22, 0.6),
+      rgba(30, 68, 50, 0.45)
+    );
     border: 1px solid rgba(124, 200, 160, 0.15);
     box-shadow:
       inset 3px 3px 8px rgba(5, 14, 10, 0.7),
@@ -1607,7 +1956,11 @@ import Footer from "../components/Footer.astro";
   }
 
   .who-feature-grid {
-    background: linear-gradient(145deg, rgba(12, 26, 22, 0.6), rgba(30, 68, 50, 0.45));
+    background: linear-gradient(
+      145deg,
+      rgba(12, 26, 22, 0.6),
+      rgba(30, 68, 50, 0.45)
+    );
     border: 1px solid rgba(124, 200, 160, 0.15);
     box-shadow:
       inset 3px 3px 8px rgba(5, 14, 10, 0.7),
@@ -1644,7 +1997,11 @@ import Footer from "../components/Footer.astro";
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: rgba(200, 235, 215, 0.9);
-    background: linear-gradient(145deg, rgba(12, 26, 22, 0.6), rgba(30, 68, 50, 0.45));
+    background: linear-gradient(
+      145deg,
+      rgba(12, 26, 22, 0.6),
+      rgba(30, 68, 50, 0.45)
+    );
     box-shadow:
       inset 3px 3px 8px rgba(5, 14, 10, 0.7),
       inset -2px -2px 6px rgba(50, 120, 75, 0.2),
@@ -1670,7 +2027,11 @@ import Footer from "../components/Footer.astro";
     height: 30px;
     border-radius: 50%;
     font-size: 13px;
-    background: linear-gradient(145deg, rgba(40, 98, 58, 0.7), rgba(15, 32, 27, 0.6));
+    background: linear-gradient(
+      145deg,
+      rgba(40, 98, 58, 0.7),
+      rgba(15, 32, 27, 0.6)
+    );
     box-shadow:
       3px 3px 7px rgba(5, 14, 10, 0.6),
       -2px -2px 5px rgba(50, 120, 75, 0.25);
@@ -1681,7 +2042,12 @@ import Footer from "../components/Footer.astro";
 
   .who-divider {
     height: 1px;
-    background: linear-gradient(to right, transparent, rgba(124, 200, 160, 0.25), transparent);
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(124, 200, 160, 0.25),
+      transparent
+    );
   }
 
   /* ── Workflow steps ───────────────────────────── */

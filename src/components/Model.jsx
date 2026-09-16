@@ -81,20 +81,23 @@ const CheckIcon = () => (
   </svg>
 );
 
-export default function Model() {
+export default function Model({ visualOnly = false }) {
   const [fIdx, setFIdx] = useState(0);
   const s = scenarios[fIdx];
 
+  const Container = visualOnly ? 'div' : 'section';
+
   return (
-    <section
-      id="model"
-      className="bg-background py-28 lg:py-40"
-      style={{ borderBottom: '1px solid var(--color-hairline)' }}
+    <Container
+      id={visualOnly ? undefined : "model"}
+      className={visualOnly ? "max-w-4xl mx-auto w-full" : "bg-background py-28 lg:py-40"}
+      style={visualOnly ? undefined : { borderBottom: '1px solid var(--color-hairline)' }}
     >
-      <div className="shell grid gap-16 lg:gap-20 lg:grid-cols-2 items-start">
+      <div className={visualOnly ? "" : "shell grid gap-16 lg:gap-20 lg:grid-cols-2 items-start"}>
 
         {/* ── Left: Heading + description ───────────── */}
-        <div className="lg:sticky lg:top-32">
+        {!visualOnly && (
+          <div className="lg:sticky lg:top-32">
           <div 
             className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full text-[9px] tracking-widest uppercase font-bold mb-8 lg:-mt-[52px]" 
             style={{ 
@@ -113,6 +116,7 @@ export default function Model() {
             There isn't a fixed way to work with Calveris. We shape the delivery model around the workload, capacity and systems already in place.
           </p>
         </div>
+        )}
 
         {/* ── Right: Clay card with tabs inside ───────── */}
         <div
@@ -269,6 +273,6 @@ export default function Model() {
         </div>
 
       </div>
-    </section>
+    </Container>
   );
 }

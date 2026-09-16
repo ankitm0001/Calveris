@@ -76,6 +76,7 @@ export default function Navbar() {
             {[
               { label: 'Home', href: '/' },
               { label: 'About us', href: '/about' },
+              { label: 'Services', href: '/services' },
               { label: 'Our Team', href: '/teams' },
               { label: 'Contact Us', href: '/contact' },
             ].map(({ label, href }) => (
@@ -161,6 +162,9 @@ export default function Navbar() {
         </a>
         <a href="/about" onClick={() => setOpen(false)} className="font-serif text-4xl text-white hover:text-white/70 transition-colors">
           About us
+        </a>
+        <a href="/services" onClick={() => setOpen(false)} className="font-serif text-4xl text-white hover:text-white/70 transition-colors">
+          Services
         </a>
         <a href="/teams" onClick={() => setOpen(false)} className="font-serif text-4xl text-white hover:text-white/70 transition-colors">
           Our Team
