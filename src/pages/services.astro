@@ -93,7 +93,7 @@ import Model from "../components/Model";
   </header>
 
   <!-- ================================================================
-       SECTION 02 — SERVICE CAROUSEL
+       SECTION 02 — ACCOUNTING DELIVERY
   ================================================================ -->
   <section
     class="bg-background py-24 lg:py-36 border-b border-hairline overflow-hidden"
@@ -101,11 +101,12 @@ import Model from "../components/Model";
   >
     <div class="shell">
       <!-- Section Header -->
-      <div class="reveal mb-16 text-center">
+      <div class="reveal mb-16 text-center svc-section-header">
         <div class="about-eyebrow-light mb-6 mx-auto">Accounting Delivery</div>
         <h2
+          id="svc-headline"
           class="font-display font-light leading-[1.1] mb-4"
-          style="font-size: clamp(2rem, 4vw, 3rem); color: #0d1b16;"
+          style="font-size: clamp(2rem, 4vw, 3rem); color: #0d1b16; scroll-margin-top: 100px;"
         >
           One team for the accounting work that needs doing.
         </h2>
@@ -118,513 +119,456 @@ import Model from "../components/Model";
         </p>
       </div>
 
-      <!-- Carousel Wrapper -->
-      <div class="relative reveal">
-        <!-- Nav Arrows -->
-        <button
-          id="svc-prev"
-          aria-label="Previous service"
-          class="svc-arrow svc-arrow-up"
-        >
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            ><polyline points="18 15 12 9 6 15"></polyline></svg
-          >
-        </button>
-        <button
-          id="svc-next"
-          aria-label="Next service"
-          class="svc-arrow svc-arrow-down"
-        >
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            ><polyline points="6 9 12 15 18 9"></polyline></svg
-          >
-        </button>
-
-        <!-- Track -->
-        <div class="svc-track-outer">
-          <div id="svc-track" class="svc-track">
-            <!-- CARD 01 — BOOKKEEPING -->
-            <div class="svc-card">
-              <div class="svc-card-inner">
-                <div class="svc-card-left">
-                  <div class="svc-num">01 / Bookkeeping</div>
-                  <h3 class="svc-heading">Keep the books moving.</h3>
-                  <p class="svc-sub">
-                    Accurate, up-to-date bookkeeping gives everything downstream
-                    a cleaner starting point.
-                  </p>
-                </div>
-                <div class="svc-card-right">
-                  <div class="svc-col">
-                    <p class="svc-col-label">We can handle</p>
-                    <ul class="svc-list">
-                      <li>
-                        <span class="svc-bullet">›</span>Transaction recording
-                      </li>
-                      <li>
-                        <span class="svc-bullet">›</span>Bank reconciliations
-                      </li>
-                      <li>
-                        <span class="svc-bullet">›</span>Ledger maintenance
-                      </li>
-                      <li>
-                        <span class="svc-bullet">›</span>Bookkeeping support
-                      </li>
-                      <li>
-                        <span class="svc-bullet">›</span>Ongoing bookkeeping
-                        requirements
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="svc-col">
-                    <p class="svc-col-label">The result</p>
-                    <p class="svc-result">
-                      Your books stay current without your existing team having
-                      to carry every transaction internally.
-                    </p>
-                    <div class="svc-card-icon">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="64"
-                        height="64"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        ><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"
-                        ></path><path
-                          d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"
-                        ></path></svg
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- CARD 02 — PAYROLL -->
-            <div class="svc-card">
-              <div class="svc-card-inner">
-                <div class="svc-card-left">
-                  <div class="svc-num">02 / Payroll</div>
-                  <h3 class="svc-heading">
-                    Payroll handled properly, every pay cycle.
-                  </h3>
-                  <p class="svc-sub">
-                    Keep payroll moving accurately and on schedule without
-                    adding another recurring responsibility to your internal
-                    team.
-                  </p>
-                </div>
-                <div class="svc-card-right">
-                  <div class="svc-col">
-                    <p class="svc-col-label">We can handle</p>
-                    <ul class="svc-list">
-                      <li>
-                        <span class="svc-bullet">›</span>Payroll processing
-                      </li>
-                      <li>
-                        <span class="svc-bullet">›</span>Payroll administration
-                      </li>
-                      <li>
-                        <span class="svc-bullet">›</span>Recurring payroll
-                        requirements
-                      </li>
-                      <li>
-                        <span class="svc-bullet">›</span>Supporting payroll
-                        records
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="svc-col">
-                    <p class="svc-col-label">The result</p>
-                    <p class="svc-result">
-                      A recurring function gets handled consistently while your
-                      team stays focused on higher-value work.
-                    </p>
-                    <div class="svc-card-icon">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="64"
-                        height="64"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        ><rect width="20" height="12" x="2" y="6" rx="2"
-                        ></rect><circle cx="12" cy="12" r="2"></circle><path
-                          d="M6 12h.01M18 12h.01"></path></svg
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- CARD 03 — MONTH-END -->
-            <div class="svc-card">
-              <div class="svc-card-inner">
-                <div class="svc-card-left">
-                  <div class="svc-num">03 / Month-end</div>
-                  <h3 class="svc-heading">
-                    Close the month without carrying it forward.
-                  </h3>
-                  <p class="svc-sub">
-                    Month-end work shouldn't become a growing backlog for an
-                    already stretched team.
-                  </p>
-                </div>
-                <div class="svc-card-right">
-                  <div class="svc-col">
-                    <p class="svc-col-label">We can handle</p>
-                    <ul class="svc-list">
-                      <li><span class="svc-bullet">›</span>Month-end close</li>
-                      <li><span class="svc-bullet">›</span>Reconciliations</li>
-                      <li><span class="svc-bullet">›</span>Journal support</li>
-                      <li>
-                        <span class="svc-bullet">›</span>Period-end accounting
-                      </li>
-                      <li>
-                        <span class="svc-bullet">›</span>Supporting schedules
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="svc-col">
-                    <p class="svc-col-label">The result</p>
-                    <p class="svc-result">
-                      The month gets closed, the records stay current, and the
-                      next period starts from a clean position.
-                    </p>
-                    <div class="svc-card-icon">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="64"
-                        height="64"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        ><path d="M8 2v4"></path><path d="M16 2v4"></path><rect
-                          width="18"
-                          height="18"
-                          x="3"
-                          y="4"
-                          rx="2"></rect><path d="M3 10h18"></path><path
-                          d="M8 14h.01"></path><path d="M12 14h.01"></path><path
-                          d="M16 14h.01"></path><path d="M8 18h.01"></path><path
-                          d="M12 18h.01"></path><path d="M16 18h.01"
-                        ></path></svg
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- CARD 04 — PAYABLES & RECEIVABLES -->
-            <div class="svc-card">
-              <div class="svc-card-inner">
-                <div class="svc-card-left">
-                  <div class="svc-num">04 / Payables & Receivables</div>
-                  <h3 class="svc-heading">
-                    Keep money moving in both directions.
-                  </h3>
-                  <p class="svc-sub">
-                    The work behind paying suppliers and keeping receivables
-                    organised can become a significant operational load as the
-                    business grows.
-                  </p>
-                </div>
-                <div class="svc-card-right">
-                  <div class="svc-col">
-                    <p class="svc-col-label">We can handle</p>
-                    <ul class="svc-list">
-                      <li><span class="svc-bullet">›</span>Accounts payable</li>
-                      <li>
-                        <span class="svc-bullet">›</span>Accounts receivable
-                      </li>
-                      <li>
-                        <span class="svc-bullet">›</span>Invoice processing
-                      </li>
-                      <li><span class="svc-bullet">›</span>Supplier records</li>
-                      <li>
-                        <span class="svc-bullet">›</span>Customer account
-                        support
-                      </li>
-                      <li>
-                        <span class="svc-bullet">›</span>Reconciliation support
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="svc-col">
-                    <p class="svc-col-label">The result</p>
-                    <p class="svc-result">
-                      Routine financial operations keep moving without requiring
-                      your internal team to carry the entire workload.
-                    </p>
-                    <div class="svc-card-icon">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="64"
-                        height="64"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        ><path d="m16 3 4 4-4 4"></path><path d="M20 7H4"
-                        ></path><path d="m8 21-4-4 4-4"></path><path
-                          d="M4 17h16"></path></svg
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- CARD 05 — MANAGEMENT REPORTING -->
-            <div class="svc-card">
-              <div class="svc-card-inner">
-                <div class="svc-card-left">
-                  <div class="svc-num">05 / Management Reporting</div>
-                  <h3 class="svc-heading">
-                    Turn completed accounts into useful information.
-                  </h3>
-                  <p class="svc-sub">
-                    Management reporting gives the business a clearer view of
-                    what has happened, and gives the people responsible for
-                    decisions the information they need.
-                  </p>
-                </div>
-                <div class="svc-card-right">
-                  <div class="svc-col">
-                    <p class="svc-col-label">We can handle</p>
-                    <ul class="svc-list">
-                      <li>
-                        <span class="svc-bullet">›</span>Management accounts
-                      </li>
-                      <li><span class="svc-bullet">›</span>Reporting packs</li>
-                      <li>
-                        <span class="svc-bullet">›</span>Supporting schedules
-                      </li>
-                      <li>
-                        <span class="svc-bullet">›</span>Regular reporting
-                        requirements
-                      </li>
-                      <li>
-                        <span class="svc-bullet">›</span>Financial information
-                        preparation
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="svc-col">
-                    <p class="svc-col-label">The result</p>
-                    <p class="svc-result">
-                      Your reporting is prepared consistently, so the people
-                      using it can spend their time interpreting the numbers
-                      rather than preparing them.
-                    </p>
-                    <div class="svc-card-icon">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="64"
-                        height="64"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        ><line x1="18" x2="18" y1="20" y2="10"></line><line
-                          x1="12"
-                          x2="12"
-                          y1="20"
-                          y2="4"></line><line x1="6" x2="6" y1="20" y2="14"
-                        ></line></svg
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- CARD 06 — YEAR-END & TAX SUPPORT -->
-            <div class="svc-card">
-              <div class="svc-card-inner">
-                <div class="svc-card-left">
-                  <div class="svc-num">06 / Year-end & Tax Support</div>
-                  <h3 class="svc-heading">
-                    Get year-end work off the backlog.
-                  </h3>
-                  <p class="svc-sub">
-                    Year-end brings another layer of accounting work. We provide
-                    the capacity to keep that work moving alongside your regular
-                    accounting requirements.
-                  </p>
-                </div>
-                <div class="svc-card-right">
-                  <div class="svc-col">
-                    <p class="svc-col-label">We can handle</p>
-                    <ul class="svc-list">
-                      <li>
-                        <span class="svc-bullet">›</span>Year-end accounting
-                        support
-                      </li>
-                      <li>
-                        <span class="svc-bullet">›</span>Accounts preparation
-                        support
-                      </li>
-                      <li>
-                        <span class="svc-bullet">›</span>Supporting schedules
-                      </li>
-                      <li>
-                        <span class="svc-bullet">›</span>Tax-related accounting
-                        support
-                      </li>
-                      <li>
-                        <span class="svc-bullet">›</span>Information preparation
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="svc-col">
-                    <p class="svc-col-label">The result</p>
-                    <p class="svc-result">
-                      Your year-end workload has additional capacity behind it
-                      when your existing team needs it most.
-                    </p>
-                    <div class="svc-card-icon">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="64"
-                        height="64"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        ><line x1="3" x2="21" y1="22" y2="22"></line><line
-                          x1="6"
-                          x2="6"
-                          y1="18"
-                          y2="11"></line><line x1="10" x2="10" y1="18" y2="11"
-                        ></line><line x1="14" x2="14" y1="18" y2="11"
-                        ></line><line x1="18" x2="18" y1="18" y2="11"
-                        ></line><polygon points="12 2 20 7 4 7"></polygon></svg
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- CARD 07 — AUDIT SUPPORT -->
-            <div class="svc-card">
-              <div class="svc-card-inner">
-                <div class="svc-card-left">
-                  <div class="svc-num">07 / Audit Support</div>
-                  <h3 class="svc-heading">
-                    Be ready when the audit work begins.
-                  </h3>
-                  <p class="svc-sub">
-                    Audit preparation can pull significant time from an already
-                    busy accounting team. We provide the additional capacity
-                    needed to keep the underlying work organised and moving.
-                  </p>
-                </div>
-                <div class="svc-card-right">
-                  <div class="svc-col">
-                    <p class="svc-col-label">We can handle</p>
-                    <ul class="svc-list">
-                      <li>
-                        <span class="svc-bullet">›</span>Audit preparation
-                        support
-                      </li>
-                      <li>
-                        <span class="svc-bullet">›</span>Supporting schedules
-                      </li>
-                      <li><span class="svc-bullet">›</span>Documentation</li>
-                      <li><span class="svc-bullet">›</span>Reconciliations</li>
-                      <li>
-                        <span class="svc-bullet">›</span>Information gathering
-                        and preparation
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="svc-col">
-                    <p class="svc-col-label">The result</p>
-                    <p class="svc-result">
-                      Your team spends less time assembling the underlying
-                      accounting work and more time dealing with what actually
-                      requires their attention.
-                    </p>
-                    <div class="svc-card-icon">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="64"
-                        height="64"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        ><path d="m8 11 2 2 4-4"></path><circle
-                          cx="11"
-                          cy="11"
-                          r="8"></circle><path d="m21 21-4.3-4.3"></path></svg
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div><!-- /svc-track -->
-        </div><!-- /svc-track-outer -->
-
-        <!-- Dot Indicators -->
-        <div id="svc-dots" class="svc-dots">
-          <button
-            class="svc-dot svc-dot-active"
-            data-index="0"
-            aria-label="Service 1"></button>
-          <button class="svc-dot" data-index="1" aria-label="Service 2"
-          ></button>
-          <button class="svc-dot" data-index="2" aria-label="Service 3"
-          ></button>
-          <button class="svc-dot" data-index="3" aria-label="Service 4"
-          ></button>
-          <button class="svc-dot" data-index="4" aria-label="Service 5"
-          ></button>
-          <button class="svc-dot" data-index="5" aria-label="Service 6"
-          ></button>
-          <button class="svc-dot" data-index="6" aria-label="Service 7"
-          ></button>
+      <!-- ── Split panel wrapper ───────────────── -->
+      <div class="svc-split" id="svc-split">
+        <!-- Left: service menu -->
+        <div class="svc-split-menu" id="svc-split-menu">
+          <div class="svc-menu">
+            <button class="svc-menu-item" data-svc="0">
+              <span class="svc-menu-num">01</span>
+              <span class="svc-menu-name">Bookkeeping</span>
+              <span class="svc-menu-arrow">→</span>
+            </button>
+            <button class="svc-menu-item" data-svc="1">
+              <span class="svc-menu-num">02</span>
+              <span class="svc-menu-name">Payroll</span>
+              <span class="svc-menu-arrow">→</span>
+            </button>
+            <button class="svc-menu-item" data-svc="2">
+              <span class="svc-menu-num">03</span>
+              <span class="svc-menu-name">Month-end</span>
+              <span class="svc-menu-arrow">→</span>
+            </button>
+            <button class="svc-menu-item" data-svc="3">
+              <span class="svc-menu-num">04</span>
+              <span class="svc-menu-name">Payables & Receivables</span>
+              <span class="svc-menu-arrow">→</span>
+            </button>
+            <button class="svc-menu-item" data-svc="4">
+              <span class="svc-menu-num">05</span>
+              <span class="svc-menu-name">Management Reporting</span>
+              <span class="svc-menu-arrow">→</span>
+            </button>
+            <button class="svc-menu-item" data-svc="5">
+              <span class="svc-menu-num">06</span>
+              <span class="svc-menu-name">Year-end & Tax Support</span>
+              <span class="svc-menu-arrow">→</span>
+            </button>
+            <button class="svc-menu-item" data-svc="6">
+              <span class="svc-menu-num">07</span>
+              <span class="svc-menu-name">Audit Support</span>
+              <span class="svc-menu-arrow">→</span>
+            </button>
+          </div>
         </div>
-      </div><!-- /relative -->
+
+        <!-- Right: detail panel -->
+        <div class="svc-split-detail" id="svc-split-detail" aria-live="polite">
+          <div id="svc-detail-content"></div>
+        </div>
+      </div><!-- /svc-split -->
+
+      <!-- ── Hidden service data ──────────────── -->
+      <div id="svc-data" class="hidden" aria-hidden="true">
+        <div data-svc-id="0">
+          <div class="svc-card-inner">
+            <div class="svc-card-left">
+              <div class="svc-num">01 / Bookkeeping</div>
+              <h3 class="svc-heading">Keep the books moving.</h3>
+              <p class="svc-sub">
+                Accurate, up-to-date bookkeeping gives everything downstream a
+                cleaner starting point.
+              </p>
+            </div>
+            <div class="svc-card-right">
+              <div class="svc-col">
+                <p class="svc-col-label">We can handle</p>
+                <ul class="svc-list">
+                  <li>
+                    <span class="svc-bullet">›</span>Transaction recording
+                  </li>
+                  <li><span class="svc-bullet">›</span>Bank reconciliations</li>
+                  <li><span class="svc-bullet">›</span>Ledger maintenance</li>
+                  <li><span class="svc-bullet">›</span>Bookkeeping support</li>
+                  <li>
+                    <span class="svc-bullet">›</span>Ongoing bookkeeping
+                    requirements
+                  </li>
+                </ul>
+              </div>
+              <div class="svc-col">
+                <p class="svc-col-label">The result</p>
+                <p class="svc-result">
+                  Your books stay current without your existing team having to
+                  carry every transaction internally.
+                </p>
+                <div class="svc-card-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="64"
+                    height="64"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"
+                    ></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"
+                    ></path></svg
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-svc-id="1">
+          <div class="svc-card-inner">
+            <div class="svc-card-left">
+              <div class="svc-num">02 / Payroll</div>
+              <h3 class="svc-heading">
+                Payroll handled properly, every pay cycle.
+              </h3>
+              <p class="svc-sub">
+                Keep payroll moving accurately and on schedule without adding
+                another recurring responsibility to your internal team.
+              </p>
+            </div>
+            <div class="svc-card-right">
+              <div class="svc-col">
+                <p class="svc-col-label">We can handle</p>
+                <ul class="svc-list">
+                  <li><span class="svc-bullet">›</span>Payroll processing</li>
+                  <li>
+                    <span class="svc-bullet">›</span>Payroll administration
+                  </li>
+                  <li>
+                    <span class="svc-bullet">›</span>Recurring payroll
+                    requirements
+                  </li>
+                  <li>
+                    <span class="svc-bullet">›</span>Supporting payroll records
+                  </li>
+                </ul>
+              </div>
+              <div class="svc-col">
+                <p class="svc-col-label">The result</p>
+                <p class="svc-result">
+                  A recurring function gets handled consistently while your team
+                  stays focused on higher-value work.
+                </p>
+                <div class="svc-card-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="64"
+                    height="64"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><rect width="20" height="12" x="2" y="6" rx="2"
+                    ></rect><circle cx="12" cy="12" r="2"></circle><path
+                      d="M6 12h.01M18 12h.01"></path></svg
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-svc-id="2">
+          <div class="svc-card-inner">
+            <div class="svc-card-left">
+              <div class="svc-num">03 / Month-end</div>
+              <h3 class="svc-heading">
+                Close the month without carrying it forward.
+              </h3>
+              <p class="svc-sub">
+                Month-end work shouldn't become a growing backlog for an already
+                stretched team.
+              </p>
+            </div>
+            <div class="svc-card-right">
+              <div class="svc-col">
+                <p class="svc-col-label">We can handle</p>
+                <ul class="svc-list">
+                  <li><span class="svc-bullet">›</span>Month-end close</li>
+                  <li><span class="svc-bullet">›</span>Reconciliations</li>
+                  <li><span class="svc-bullet">›</span>Journal support</li>
+                  <li>
+                    <span class="svc-bullet">›</span>Period-end accounting
+                  </li>
+                  <li><span class="svc-bullet">›</span>Supporting schedules</li>
+                </ul>
+              </div>
+              <div class="svc-col">
+                <p class="svc-col-label">The result</p>
+                <p class="svc-result">
+                  The month gets closed, the records stay current, and the next
+                  period starts from a clean position.
+                </p>
+                <div class="svc-card-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="64"
+                    height="64"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><path d="M8 2v4"></path><path d="M16 2v4"></path><rect
+                      width="18"
+                      height="18"
+                      x="3"
+                      y="4"
+                      rx="2"></rect><path d="M3 10h18"></path><path
+                      d="M8 14h.01"></path><path d="M12 14h.01"></path><path
+                      d="M16 14h.01"></path><path d="M8 18h.01"></path><path
+                      d="M12 18h.01"></path><path d="M16 18h.01"></path></svg
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-svc-id="3">
+          <div class="svc-card-inner">
+            <div class="svc-card-left">
+              <div class="svc-num">04 / Payables & Receivables</div>
+              <h3 class="svc-heading">Keep money moving in both directions.</h3>
+              <p class="svc-sub">
+                The work behind paying suppliers and keeping receivables
+                organised can become a significant operational load as the
+                business grows.
+              </p>
+            </div>
+            <div class="svc-card-right">
+              <div class="svc-col">
+                <p class="svc-col-label">We can handle</p>
+                <ul class="svc-list">
+                  <li><span class="svc-bullet">›</span>Accounts payable</li>
+                  <li><span class="svc-bullet">›</span>Accounts receivable</li>
+                  <li><span class="svc-bullet">›</span>Invoice processing</li>
+                  <li><span class="svc-bullet">›</span>Supplier records</li>
+                  <li>
+                    <span class="svc-bullet">›</span>Customer account support
+                  </li>
+                  <li>
+                    <span class="svc-bullet">›</span>Reconciliation support
+                  </li>
+                </ul>
+              </div>
+              <div class="svc-col">
+                <p class="svc-col-label">The result</p>
+                <p class="svc-result">
+                  Routine financial operations keep moving without requiring
+                  your internal team to carry the entire workload.
+                </p>
+                <div class="svc-card-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="64"
+                    height="64"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><path d="m16 3 4 4-4 4"></path><path d="M20 7H4"
+                    ></path><path d="m8 21-4-4 4-4"></path><path d="M4 17h16"
+                    ></path></svg
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-svc-id="4">
+          <div class="svc-card-inner">
+            <div class="svc-card-left">
+              <div class="svc-num">05 / Management Reporting</div>
+              <h3 class="svc-heading">
+                Turn completed accounts into useful information.
+              </h3>
+              <p class="svc-sub">
+                Management reporting gives the business a clearer view of what
+                has happened, and gives the people responsible for decisions the
+                information they need.
+              </p>
+            </div>
+            <div class="svc-card-right">
+              <div class="svc-col">
+                <p class="svc-col-label">We can handle</p>
+                <ul class="svc-list">
+                  <li><span class="svc-bullet">›</span>Management accounts</li>
+                  <li><span class="svc-bullet">›</span>Reporting packs</li>
+                  <li><span class="svc-bullet">›</span>Supporting schedules</li>
+                  <li>
+                    <span class="svc-bullet">›</span>Regular reporting
+                    requirements
+                  </li>
+                  <li>
+                    <span class="svc-bullet">›</span>Financial information
+                    preparation
+                  </li>
+                </ul>
+              </div>
+              <div class="svc-col">
+                <p class="svc-col-label">The result</p>
+                <p class="svc-result">
+                  Your reporting is prepared consistently, so the people using
+                  it can spend their time interpreting the numbers rather than
+                  preparing them.
+                </p>
+                <div class="svc-card-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="64"
+                    height="64"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><line x1="18" x2="18" y1="20" y2="10"></line><line
+                      x1="12"
+                      x2="12"
+                      y1="20"
+                      y2="4"></line><line x1="6" x2="6" y1="20" y2="14"
+                    ></line></svg
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-svc-id="5">
+          <div class="svc-card-inner">
+            <div class="svc-card-left">
+              <div class="svc-num">06 / Year-end & Tax Support</div>
+              <h3 class="svc-heading">Get year-end work off the backlog.</h3>
+              <p class="svc-sub">
+                Year-end brings another layer of accounting work. We provide the
+                capacity to keep that work moving alongside your regular
+                accounting requirements.
+              </p>
+            </div>
+            <div class="svc-card-right">
+              <div class="svc-col">
+                <p class="svc-col-label">We can handle</p>
+                <ul class="svc-list">
+                  <li>
+                    <span class="svc-bullet">›</span>Year-end accounting support
+                  </li>
+                  <li>
+                    <span class="svc-bullet">›</span>Accounts preparation
+                    support
+                  </li>
+                  <li><span class="svc-bullet">›</span>Supporting schedules</li>
+                  <li>
+                    <span class="svc-bullet">›</span>Tax-related accounting
+                    support
+                  </li>
+                  <li>
+                    <span class="svc-bullet">›</span>Information preparation
+                  </li>
+                </ul>
+              </div>
+              <div class="svc-col">
+                <p class="svc-col-label">The result</p>
+                <p class="svc-result">
+                  Your year-end workload has additional capacity behind it when
+                  your existing team needs it most.
+                </p>
+                <div class="svc-card-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="64"
+                    height="64"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><line x1="3" x2="21" y1="22" y2="22"></line><line
+                      x1="6"
+                      x2="6"
+                      y1="18"
+                      y2="11"></line><line x1="10" x2="10" y1="18" y2="11"
+                    ></line><line x1="14" x2="14" y1="18" y2="11"></line><line
+                      x1="18"
+                      x2="18"
+                      y1="18"
+                      y2="11"></line><polygon points="12 2 20 7 4 7"
+                    ></polygon></svg
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-svc-id="6">
+          <div class="svc-card-inner">
+            <div class="svc-card-left">
+              <div class="svc-num">07 / Audit Support</div>
+              <h3 class="svc-heading">Be ready when the audit work begins.</h3>
+              <p class="svc-sub">
+                Audit preparation can pull significant time from an already busy
+                accounting team. We provide the additional capacity needed to
+                keep the underlying work organised and moving.
+              </p>
+            </div>
+            <div class="svc-card-right">
+              <div class="svc-col">
+                <p class="svc-col-label">We can handle</p>
+                <ul class="svc-list">
+                  <li>
+                    <span class="svc-bullet">›</span>Audit preparation support
+                  </li>
+                  <li><span class="svc-bullet">›</span>Supporting schedules</li>
+                  <li><span class="svc-bullet">›</span>Documentation</li>
+                  <li><span class="svc-bullet">›</span>Reconciliations</li>
+                  <li>
+                    <span class="svc-bullet">›</span>Information gathering and
+                    preparation
+                  </li>
+                </ul>
+              </div>
+              <div class="svc-col">
+                <p class="svc-col-label">The result</p>
+                <p class="svc-result">
+                  Your team spends less time assembling the underlying
+                  accounting work and more time dealing with what actually
+                  requires their attention.
+                </p>
+                <div class="svc-card-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="64"
+                    height="64"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><path d="m8 11 2 2 4-4"></path><circle
+                      cx="11"
+                      cy="11"
+                      r="8"></circle><path d="m21 21-4.3-4.3"></path></svg
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /svc-data -->
     </div><!-- /shell -->
   </section>
 
@@ -836,7 +780,8 @@ import Model from "../components/Model";
       <div class="text-center mb-16 reveal">
         <div class="who-eyebrow mb-8">
           <span class="who-eyebrow-dot"></span>
-          <span>TWO WAYS TO WORK</span> <span class="font-bold">WITH CALVERIS</span>
+          <span>TWO WAYS TO WORK</span>
+          <span class="font-bold">WITH CALVERIS</span>
         </div>
         <h2
           class="font-display font-light leading-[1.1] mb-6"
@@ -1556,10 +1501,13 @@ import Model from "../components/Model";
           </h2>
           <div class="space-y-4">
             <p class="text-[1rem] text-[#65665e] leading-relaxed max-w-xl">
-              You may need additional help with one accounting function today and a broader delivery team tomorrow.
+              You may need additional help with one accounting function today
+              and a broader delivery team tomorrow.
             </p>
             <p class="text-[1rem] text-[#65665e] leading-relaxed max-w-xl">
-              Calveris can provide the level of accounting capacity the workload requires, without assuming that every business needs the same setup.
+              Calveris can provide the level of accounting capacity the workload
+              requires, without assuming that every business needs the same
+              setup.
             </p>
           </div>
         </div>
@@ -2139,7 +2087,7 @@ import Model from "../components/Model";
     display: grid;
     grid-template-columns: 1fr;
     gap: 0;
-    height: 100%;
+    height: auto;
     background: var(--color-background);
     border-radius: 2.5rem;
     box-shadow:
@@ -2378,6 +2326,166 @@ import Model from "../components/Model";
     width: 24px;
     border-radius: 4px;
   }
+
+  /* ── Split panel layout ─────────────────────── */
+  .svc-split {
+    display: grid;
+    grid-template-columns: 1fr 0fr;
+    grid-template-rows: auto;
+    gap: 0;
+    width: 100%;
+    margin-left: 0;
+    transition:
+      grid-template-columns 1s ease-in-out,
+      gap 1s ease-in-out,
+      width 1s ease-in-out,
+      margin-left 1s ease-in-out;
+  }
+  .svc-split.is-open {
+    /* Break out of the .shell container to use empty screen space */
+    width: min(94vw, 1600px);
+    margin-left: calc(50% - min(47vw, 800px));
+    /* Give left column more fraction (1.25) so buttons don't wrap */
+    grid-template-columns: 1.25fr 2fr;
+    gap: 64px;
+  }
+  @media (max-width: 860px) {
+    .svc-split.is-open {
+      width: 100%;
+      margin-left: 0;
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+  }
+
+  /* ── Service Menu List ─────────────────────── */
+  .svc-split-menu {
+    min-width: 0;
+  }
+  .svc-menu {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px; /* Slightly narrower buttons */
+    margin: 0 auto;
+    gap: 16px;
+    transition: max-width 1s ease-in-out;
+  }
+  .svc-split.is-open .svc-menu {
+    max-width: 400px; /* Shrinks the button width when open */
+  }
+  .svc-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    background: #eef0f2;
+    border: none;
+    border-radius: 16px;
+    padding: 18px 28px; /* Reduced padding to make them less tall */
+    box-shadow:
+      12px 12px 24px rgba(170, 178, 189, 0.55),
+      -12px -12px 24px #ffffff;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  .svc-menu-item:hover,
+  .svc-menu-item.is-active {
+    box-shadow:
+      inset 6px 6px 12px rgba(170, 178, 189, 0.45),
+      inset -6px -6px 12px #ffffff;
+    background: #eef0f2;
+  }
+  .svc-menu-num {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: #7caa78;
+    min-width: 36px;
+    flex-shrink: 0;
+    opacity: 0.9;
+    transition: color 0.2s ease;
+  }
+  .svc-menu-item.is-active .svc-menu-num {
+    color: #2a5a4a;
+  }
+  .svc-menu-name {
+    font-family: var(--font-display);
+    font-size: clamp(1.1rem, 2vw, 1.45rem);
+    font-weight: 300;
+    color: #0d1b16;
+    flex: 1; /* Pushes arrow to far right */
+    white-space: nowrap; /* Prevents wrapping glitch during animation */
+    transition:
+      color 0.2s ease,
+      flex 1s ease-in-out;
+  }
+  .svc-menu-item:hover .svc-menu-name,
+  .svc-menu-item.is-active .svc-menu-name {
+    color: #2a5a4a;
+  }
+  .svc-menu-arrow {
+    font-size: 1.1rem;
+    color: #7caa78;
+    opacity: 0.6;
+    transform: none;
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
+  }
+  .svc-menu-item:hover .svc-menu-arrow,
+  .svc-menu-item.is-active .svc-menu-arrow {
+    opacity: 1;
+    transform: translateX(4px);
+  }
+
+  /* ── Detail panel ──────────────────────────── */
+  .svc-split-detail {
+    min-width: 0;
+    opacity: 0;
+    transform: translateX(20px);
+    pointer-events: none;
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* Vertically center the card */
+    transition:
+      opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  #svc-detail-content {
+    min-width: 800px;
+    height: auto;
+  }
+  @media (max-width: 1200px) {
+    #svc-detail-content {
+      min-width: 600px;
+    }
+  }
+  @media (max-width: 860px) {
+    #svc-detail-content {
+      min-width: 100%;
+    }
+  }
+
+  .svc-split.is-open .svc-split-detail {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+    overflow: visible;
+  }
+  @media (max-width: 860px) {
+    .svc-split-detail {
+      max-width: 9999px;
+      overflow: visible;
+      margin-top: 32px;
+    }
+    .svc-split.is-open .svc-split-detail {
+      transform: translateX(0) translateY(0);
+    }
+  }
 </style>
 
 <script>
@@ -2406,70 +2514,87 @@ import Model from "../components/Model";
   `;
   document.head.appendChild(style);
 
-  // ── Service Carousel ──────────────────────────
+  // ── Service Split Panel ─────────────────────────
   (() => {
-    const track = document.getElementById("svc-track");
-    const prevBtn = document.getElementById("svc-prev");
-    const nextBtn = document.getElementById("svc-next");
-    const dots = document.querySelectorAll(".svc-dot");
-    const cards = document.querySelectorAll(".svc-card");
-    const total = cards.length;
-    let current = 0;
+    let current = -1;
+    const split = document.getElementById("svc-split");
+    const detail = document.getElementById("svc-split-detail");
+    const content = document.getElementById("svc-detail-content");
+    const dataEl = document.getElementById("svc-data");
+    if (!split || !dataEl) return;
 
-    function goTo(index) {
-      const oldIndex = current;
-      current = Math.max(0, Math.min(total - 1, index));
+    function show(index) {
+      const node = dataEl.querySelector('[data-svc-id="' + index + '"]');
+      if (!node) return;
 
-      cards.forEach((c, i) => {
-        c.className = "svc-card";
-        if (i === current) {
-          c.classList.add("active");
-        } else if (i === current + 1) {
-          c.classList.add("next-1");
-        } else if (i === current + 2) {
-          c.classList.add("next-2");
-        } else if (i < current) {
-          c.classList.add("inactive-up");
-        }
-      });
-
-      dots.forEach((d, i) => {
-        d.classList.toggle("svc-dot-active", i === current);
-      });
-      prevBtn.disabled = current === 0;
-      nextBtn.disabled = current === total - 1;
+      if (current === -1) {
+        // Initial open: let the CSS parent transition handle the animation
+        content.style.transition = "none";
+        content.style.opacity = "1";
+        content.style.transform = "none";
+        content.innerHTML = node.innerHTML;
+      } else {
+        // Swapping services: crossfade the inner content
+        content.style.transition = "opacity 0.2s ease, transform 0.2s ease";
+        content.style.opacity = "0";
+        content.style.transform = "translateY(4px)";
+        setTimeout(() => {
+          content.innerHTML = node.innerHTML;
+          content.style.opacity = "1";
+          content.style.transform = "translateY(0)";
+        }, 200);
+      }
     }
 
-    prevBtn.addEventListener("click", () => goTo(current - 1));
-    nextBtn.addEventListener("click", () => goTo(current + 1));
-    dots.forEach((dot, i) => {
-      dot.addEventListener("click", () => goTo(i));
-    });
-
-    // Touch/swipe support (vertical and horizontal)
-    let touchStartX = 0;
-    let touchStartY = 0;
-    track.addEventListener(
-      "touchstart",
-      (e) => {
-        touchStartX = e.changedTouches[0].screenX;
-        touchStartY = e.changedTouches[0].screenY;
-      },
-      { passive: true },
-    );
-
-    track.addEventListener("touchend", (e) => {
-      const diffX = touchStartX - e.changedTouches[0].screenX;
-      const diffY = touchStartY - e.changedTouches[0].screenY;
-
-      if (Math.abs(diffY) > Math.abs(diffX)) {
-        if (Math.abs(diffY) > 50) goTo(diffY > 0 ? current + 1 : current - 1);
-      } else {
-        if (Math.abs(diffX) > 50) goTo(diffX > 0 ? current + 1 : current - 1);
+    function open(index) {
+      // Mark active menu item
+      document.querySelectorAll(".svc-menu-item").forEach((el, i) => {
+        el.classList.toggle("is-active", i === index);
+      });
+      show(index);
+      if (!split.classList.contains("is-open")) {
+        split.classList.add("is-open");
       }
+      current = index;
+
+      // Ensure the section is perfectly framed in the viewport
+      const headline = document.getElementById("svc-headline");
+      if (headline) {
+        headline.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+
+    function close() {
+      split.classList.remove("is-open");
+      document
+        .querySelectorAll(".svc-menu-item")
+        .forEach((el) => el.classList.remove("is-active"));
+      setTimeout(() => {
+        content.innerHTML = "";
+      }, 800);
+      current = -1;
+    }
+
+    document.querySelectorAll(".svc-menu-item").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const idx = parseInt(btn.dataset.svc, 10);
+        if (idx === current) {
+          close(); // click same service again → collapse
+        } else {
+          open(idx);
+        }
+      });
     });
 
-    goTo(0);
+    // Check URL parameters for direct linking
+    const params = new URLSearchParams(window.location.search);
+    if (params.has("service")) {
+      const idx = parseInt(params.get("service"), 10);
+      if (!isNaN(idx)) {
+        // Use setTimeout to ensure the CSS transitions animate the opening
+        setTimeout(() => open(idx), 100);
+      }
+    }
   })();
 
   // ── Serpentine Flow ─────────────────────────────

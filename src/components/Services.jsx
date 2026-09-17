@@ -127,9 +127,10 @@ export default function Services() {
             
             <div className="flex flex-col gap-4" role="list">
               {services.map((service, j) => (
-                <div 
+                <a 
                   key={j}
-                  className="group relative flex justify-between items-center py-4 px-6 lg:py-5 lg:px-8 rounded-2xl transition-all duration-500 hover:-translate-y-1 cursor-default"
+                  href={`/services?service=${j}#svc-headline`}
+                  className="group relative flex justify-between items-center py-4 px-6 lg:py-5 lg:px-8 rounded-2xl transition-all duration-500 hover:-translate-y-1 cursor-pointer"
                   style={{
                     background: 'var(--color-background)',
                     boxShadow: '10px 10px 20px #c4c6cc, -10px -10px 20px #ffffff'
@@ -146,7 +147,7 @@ export default function Services() {
                   <span className="text-lg text-accent/60 transition-transform duration-500 group-hover:translate-x-1" aria-hidden="true">
                     →
                   </span>
-                </div>
+                </a>
               ))}
             </div>
           </div>
