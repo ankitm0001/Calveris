@@ -1,14 +1,14 @@
 import { useState } from 'react';
-import { BarChart3, Shield, Clock, Database } from 'lucide-react';
+import { Repeat, Zap, CalendarCheck, TrendingUp } from 'lucide-react';
 
 export default function InteractiveDeck() {
   const [hoverIdx, setHoverIdx] = useState(null);
   
   const cards = [
-      { id: 4, label: "2024", title: "Strategic Forecast", subtitle: "Predictive financial modeling", icon: <BarChart3 size={24}/> },
-      { id: 3, label: "2023", title: "Tax & Compliance", subtitle: "Finalized year-end filings", icon: <Shield size={24}/> },
-      { id: 2, label: "Q3", title: "Month-End Close", subtitle: "Comprehensive reconciliation", icon: <Clock size={24}/> },
-      { id: 1, label: "Live", title: "Ledger Engine", subtitle: "Real-time sync & visibility", icon: <Database size={24}/> },
+      { id: 4, label: "01", title: "Recurring Work", subtitle: "Handled week after week.", icon: <Repeat size={24}/> },
+      { id: 3, label: "02", title: "Workload Spikes", subtitle: "Extra capacity when the load changes.", icon: <Zap size={24}/> },
+      { id: 2, label: "03", title: "Month-End Pressure", subtitle: "Keep the close moving without stretching the team.", icon: <CalendarCheck size={24}/> },
+      { id: 1, label: "04", title: "Growth", subtitle: "Add capacity without building it all in-house.", icon: <TrendingUp size={24}/> },
   ];
 
   return (
